@@ -1,2 +1,1 @@
-# magnolia-fabrics-api
-Magnolia Fabrics API
+# Magnolia Fabrics API

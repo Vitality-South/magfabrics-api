@@ -1,0 +1,40 @@
+syntax = "proto3";
+package magnoliafabrics;
+
+option go_package = "vs.local/projects/magnolia-fabrics/api/pkg/inventory";
+
+message Inventory {
+    // @gotags: dynamo:"FabricProductCode"
+    string ProductCode = 1;
+
+    message Roll {
+        // @gotags: dynamo:"InventoryRollID"
+        string ID = 1;
+
+        // @gotags: dynamo:"InventoryRollQuantity"
+        string Quantity = 2;
+    }
+
+    // @gotags: dynamo:"InventoryRolls"
+    repeated Roll Rolls = 2;
+
+    // @gotags: dynamo:"InventoryTotal"
+    string Total = 3;
+
+    message PO {
+        // @gotags: dynamo:"InventoryPOETA"
+        string ETA = 1;
+
+        // @gotags: dynamo:"InventoryPOAmount"
+        string Amount = 2;
+    }
+
+    // @gotags: dynamo:"InventoryPO"
+    repeated PO PurchaseOrders = 4;
+
+    // @gotags: dynamo:"InventoryTotalOnPO"
+    string TotalOnPO = 5;
+
+    // @gotags: dynamo:"InventoryOnBackorder"
+    string OnBackorder = 6;
+}

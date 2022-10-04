@@ -1,0 +1,92 @@
+syntax = "proto3";
+package magnoliafabrics;
+
+option go_package = "vs.local/projects/magnolia-fabrics/api/pkg/fabric";
+
+import "inventory.proto";
+
+message Fabric {
+    // @gotags: dynamo:"FabricSKU"
+    string SKU = 1;
+
+    // @gotags: dynamo:"FabricProductCode"
+    string ProductCode = 2;
+
+    // @gotags: dynamo:"FabricPattern"
+    string Pattern = 3;
+
+    // @gotags: dynamo:"FabricPrimaryColor"
+    string PrimaryColor = 4;
+
+    // @gotags: dynamo:"FabricPatternColorCombo"
+    string PatternColorCombo = 5;
+
+    // @gotags: dynamo:"FabricStatus"
+    string Status = 6;
+
+    // @gotags: dynamo:"FabricIntroDate"
+    string IntroDate = 7;
+
+    // @gotags: dynamo:"FabricContents"
+    string Contents = 8;
+
+    // @gotags: dynamo:"FabricWidth"
+    string Width = 9;
+
+    // @gotags: dynamo:"FabricDirection"
+    string Direction = 10;
+
+    // @gotags: dynamo:"FabricHRepeat"
+    string HRepeat = 11;
+
+    // @gotags: dynamo:"FabricVRepeat"
+    string VRepeat = 12;
+
+    // @gotags: dynamo:"FabricCleaningCode"
+    string CleaningCode = 13;
+
+    // @gotags: dynamo:"FabricDoubleRubs"
+    string DoubleRubs = 14;
+
+    // @gotags: dynamo:"FabricMisc"
+    string Misc = 15;
+
+    // @gotags: dynamo:"FabricDisclaimer"
+    string Disclaimer = 16;
+
+    // @gotags: dynamo:"FabricUses"
+    repeated string Uses = 17;
+
+    // @gotags: dynamo:"FabricDesigns"
+    repeated string Designs = 18;
+
+    // @gotags: dynamo:"FabricColors"
+    repeated string Colors = 19;
+
+    // @gotags: dynamo:"FabricOrigin"
+    string Origin = 20;
+
+    // @gotags: dynamo:"FabricPillingGrade"
+    string PillingGrade = 21;
+
+    // @gotags: dynamo:"FabricFireCode"
+    string FireCode = 22;
+
+    // @gotags: dynamo:"FabricCategories"
+    repeated string Categories = 23;
+
+    // @gotags: dynamo:"FabricBrand"
+    string Brand = 24;
+
+    // @gotags: dynamo:"FabricIsDropShipped"
+    bool IsDropShipped = 25;
+
+    // @gotags: dynamo:"FabricImages"
+    repeated string Images = 26;
+
+    // @gotags: dynamo:"FabricMAPPrice"
+    string Price = 27;
+
+    // @gotags: dynamo:"-"
+    Inventory inventory = 28;
+}

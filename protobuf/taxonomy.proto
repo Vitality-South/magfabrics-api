@@ -1,0 +1,21 @@
+syntax = "proto3";
+package magnoliafabrics;
+
+option go_package = "vs.local/projects/magnolia-fabrics/api/pkg/taxonomy";
+
+message Taxonomy {
+    // @gotags: dynamo:"TaxonomyBrands"
+    repeated string Brands = 1;
+
+    // @gotags: dynamo:"TaxonomyUses"
+    repeated string Uses = 2;
+
+    // @gotags: dynamo:"TaxonomyColors"
+    repeated string Colors = 3;
+
+    // @gotags: dynamo:"TaxonomyDesigns"
+    repeated string Designs = 4;
+
+    // @gotags: dynamo:"TaxonomyCategories"
+    repeated string Categories = 5;
+}

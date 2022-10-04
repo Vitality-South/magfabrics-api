@@ -1,0 +1,64 @@
+syntax = "proto3";
+package magnoliafabrics;
+
+option go_package = "github.com/Vitality-South/magnolia-fabrics-api/service";
+
+import "inventory.proto";
+import "fabric.proto";
+import "taxonomy.proto";
+
+service MagnoliaFabricsService {
+	rpc GetAllFabrics(GetAllFabricsRequest) returns (GetAllFabricsResponse) {}
+	rpc GetAllFabricsWithoutInventory(GetAllFabricsWithoutInventoryRequest) returns (GetAllFabricsWithoutInventoryResponse) {}
+	rpc GetAllInventory(GetAllInventoryRequest) returns (GetAllInventoryResponse) {}
+	rpc GetFabricByID(GetFabricByIDRequest) returns (GetFabricByIDResponse) {}
+	rpc GetFabricByName(GetFabricByNameRequest) returns (GetFabricByNameResponse) {}
+	rpc GetAllFabricTaxonomy(GetAllFabricTaxonomyRequest) returns (GetAllFabricTaxonomyResponse) {}
+	rpc GetCleaningCodes(GetCleaningCodesRequest) returns (GetCleaningCodesResponse) {}
+}
+
+message GetAllFabricsRequest {}
+
+message GetAllFabricsResponse {
+	repeated Fabric fabrics = 1;
+}
+
+message GetAllFabricsWithoutInventoryRequest {}
+
+message GetAllFabricsWithoutInventoryResponse {
+	repeated Fabric fabrics = 1;
+}
+
+message GetAllInventoryRequest {}
+
+message GetAllInventoryResponse {
+	repeated Inventory inventory = 1;
+}
+
+message GetFabricByIDRequest {
+	string fabric_id = 1;
+}
+
+message GetFabricByIDResponse {
+	Fabric fabric = 1;
+}
+
+message GetFabricByNameRequest {
+	string fabric_name = 1;
+}
+
+message GetFabricByNameResponse {
+	Fabric fabric = 1;
+}
+
+message GetAllFabricTaxonomyRequest {}
+
+message GetAllFabricTaxonomyResponse {
+	Taxonomy taxonomy = 1;
+}
+
+message GetCleaningCodesRequest {}
+
+message GetCleaningCodesResponse {
+	map<string, string> cleaning_codes = 1;
+}
