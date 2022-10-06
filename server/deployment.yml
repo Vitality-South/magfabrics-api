@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: magnoliafabrics
+  labels:
+    app: magnoliafabrics
+spec:
+  ports:
+    - port: 27019
+  selector:
+    app: magnoliafabrics
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magnoliafabrics
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: magnoliafabrics
+  template:
+    metadata:
+      labels:
+        app: magnoliafabrics
+    spec:
+      serviceAccountName: magnoliafabricssa
+      containers:
+        - name: magnoliafabrics
+          image: 608943053856.dkr.ecr.us-east-1.amazonaws.com/fenrir:magnoliafabrics-service-{{VERSION_NUMBER}}
+          imagePullPolicy: Always
+          env:
+            - name: AWS_REGION
+              value: "us-east-1"
+            - name: DEBUG
+              value: "FALSE"
+            - name: STACKTRACE
+              value: "FALSE"
+            - name: DYNAMO_TABLE
+              value: "MagnoliaFabrics"
+          ports:
+            - containerPort: 27019
+              name: magfab-port
