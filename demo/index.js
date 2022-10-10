@@ -17,5 +17,5 @@ document.addEventListener("DOMContentLoaded", function () {
   fabSection.appendChild(createFabricsCard());
 
   const magnoliaAPIClient = magnolia.initialize();
-  magnolia.getAllFabrics().then((result) => console.log("HERE" + result));
+  magnolia.getAllFabrics().then((result) => console.log("HERE" + JSON.stringify(result)));
 });
