@@ -1,0 +1,27 @@
+{
+  "name": "magnolia-api",
+  "version": "1.0.0",
+  "description": "Access Fabrics Data From Magnolia Fabrics",
+  "source": "src/index.js",
+  "global": "dist/magnoliafabrics.min.js",
+  "targets": {
+    "global": {
+      "context": "browser",
+      "outputFormat": "global"
+    }
+  },
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "author": "VitalitySouth LLC.",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "google-protobuf": "^3.21.1",
+    "grpc-web": "^1.4.1"
+  }
+}

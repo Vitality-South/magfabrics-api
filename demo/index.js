@@ -15,4 +15,7 @@ function createFabricsCard() {
 document.addEventListener("DOMContentLoaded", function () {
   const fabSection = document.getElementById("fab-section");
   fabSection.appendChild(createFabricsCard());
+
+  const magnoliaAPIClient = magnolia.initialize();
+  magnolia.getAllFabrics().then((result) => console.log("HERE" + result));
 });
