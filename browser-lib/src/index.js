@@ -28,7 +28,6 @@ magnolia.initialize = (apiKey) => {
     throw "Argument must be of type string. Please supply an API key for authentication.";
   }
 
-  // magnolia.metadata.add("x-api-key", apiKey);
   magnolia.metadata = { "x-api-key": apiKey };
 
   try {
