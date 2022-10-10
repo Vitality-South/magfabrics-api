@@ -17,15 +17,23 @@ import {
 ///////////////////////////////////////
 const magnolia = {
   client: null,
+  metadata: null,
 };
 
 ///////////////////////////////////////
 // Creates the gRPC Web Client
 ///////////////////////////////////////
-magnolia.initialize = () => {
+magnolia.initialize = (apiKey) => {
+  if (!apiKey || typeof apiKey !== "string") {
+    throw "Argument must be of type string. Please supply an API key for authentication.";
+  }
+
+  // magnolia.metadata.add("x-api-key", apiKey);
+  magnolia.metadata = { "x-api-key": apiKey };
+
   try {
     magnolia.client = new MagnoliaFabricsServicePromiseClient(
-      "https://grpcweb.vitalitysouthosting.net"
+      "https://api.magnoliaco.com"
     );
   } catch (err) {
     return createReturnObj(
@@ -45,7 +53,7 @@ magnolia.getAllFabrics = async () => {
 
   try {
     const request = new GetAllFabricsRequest();
-    fabrics = await magnolia.client.getAllFabrics(request, {});
+    fabrics = await magnolia.client.getAllFabrics(request, magnolia.metadata);
     console.log(`Fabrics: `, fabrics);
   } catch (err) {
     return createReturnObj(null, `Failed to request full catalog\n ${err}`);
@@ -63,7 +71,10 @@ magnolia.getAllFabricsWithoutInventory = async () => {
 
   try {
     const request = new GetAllFabricsWithoutInventoryRequest();
-    fabrics = await magnolia.client.getAllFabricsWithoutInventory(request, {});
+    fabrics = await magnolia.client.getAllFabricsWithoutInventory(
+      request,
+      magnolia.metadata
+    );
     console.log(`Fabrics: `, fabrics);
   } catch (err) {
     return createReturnObj(
@@ -84,7 +95,10 @@ magnolia.getAllFabricTaxonomies = async () => {
 
   try {
     const request = new GetAllFabricTaxonomiesRequest();
-    taxonomies = await magnolia.client.getAllFabricTaxonomies(request, {});
+    taxonomies = await magnolia.client.getAllFabricTaxonomies(
+      request,
+      magnolia.metadata
+    );
   } catch (err) {
     return createReturnObj(
       null,
@@ -102,7 +116,10 @@ magnolia.getAllInventory = async () => {
 
   try {
     const request = new GetAllInventoryRequest();
-    inventory = await magnolia.client.getAllInventory(request, {});
+    inventory = await magnolia.client.getAllInventory(
+      request,
+      magnolia.metadata
+    );
   } catch (err) {
     return createReturnObj(null, `Failed to request all Inventory\n ${err}`);
   }
@@ -117,15 +134,18 @@ magnolia.getAllInventory = async () => {
 magnolia.getCleaningCodes = async () => {
   let cleaningCodes;
 
-  try{
+  try {
     const request = new GetCleaningCodesRequest();
-    cleaningCodes = await magnolia.client.getCleaningCodes(request, {})
-    console.log(`Cleaning Codes: ${cleaningCodes}`)
-  }catch(err){
-    return createReturnObj(null, `Failed to request cleaning codes\n ${err}`)
+    cleaningCodes = await magnolia.client.getCleaningCodes(
+      request,
+      magnolia.metadata
+    );
+    console.log(`Cleaning Codes: ${cleaningCodes}`);
+  } catch (err) {
+    return createReturnObj(null, `Failed to request cleaning codes\n ${err}`);
   }
 
-  return createReturnObj(cleaningCodes, null)
+  return createReturnObj(cleaningCodes, null);
 };
 
 ///////////////////////////////////////
@@ -138,7 +158,7 @@ magnolia.getFabricById = async (id) => {
   try {
     const request = new GetFabricByIDRequest();
     request.setFabricId(id);
-    fabric = await magnolia.client.getFabricById(request, {});
+    fabric = await magnolia.client.getFabricById(request, magnolia.metadata);
   } catch (err) {
     return createReturnObj(null, `Failed to request fabric by id\n ${err}`);
   }
@@ -156,7 +176,7 @@ magnolia.getFabricByName = async (name) => {
   try {
     const request = new GetFabricByNameRequest();
     request.setFabricName(name);
-    fabric = await magnolia.client.getFabricByName(request, {});
+    fabric = await magnolia.client.getFabricByName(request, magnolia.metadata);
   } catch (err) {
     return createReturnObj(null, `Failed to request fabric by name\n ${err}`);
   }

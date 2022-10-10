@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const fabSection = document.getElementById("fab-section");
   fabSection.appendChild(createFabricsCard());
 
-  const magnoliaAPIClient = magnolia.initialize();
+  const apiKey = 'dCBv2g&G7CpG9Az#';
+
+  const magnoliaAPIClient = magnolia.initialize(apiKey);
   magnolia.getAllFabrics().then((result) => console.log("HERE" + JSON.stringify(result)));
 });
