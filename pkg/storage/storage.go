@@ -16,9 +16,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/guregu/dynamo"
 
-	"vs.local/projects/magnolia-fabrics/api/pkg/fabric"
-	"vs.local/projects/magnolia-fabrics/api/pkg/inventory"
-	"vs.local/projects/magnolia-fabrics/api/pkg/taxonomy"
+	"github.com/Vitality-South/magnolia-fabrics-api/pkg/fabric"
+	"github.com/Vitality-South/magnolia-fabrics-api/pkg/inventory"
+	"github.com/Vitality-South/magnolia-fabrics-api/pkg/taxonomy"
 )
 
 const (
@@ -31,7 +31,7 @@ const (
 
 	// s3 config.
 	CMSBucket       = "cms.magnoliaco.com"
-	CMSFabricsKey   = "fabrics/all.gob"
+	CMSFabricsKey   = "fabrics/api.gob"
 	CMSInventoryKey = "inventory/all.gob"
 )
 

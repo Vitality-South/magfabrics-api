@@ -12,8 +12,8 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 
-	"vs.local/projects/magnolia-fabrics/api/pkg/storage"
-	"vs.local/projects/magnolia-fabrics/api/service"
+	"github.com/Vitality-South/magnolia-fabrics-api/pkg/storage"
+	"github.com/Vitality-South/magnolia-fabrics-api/service"
 )
 
 const (

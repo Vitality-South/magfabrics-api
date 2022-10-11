@@ -22,7 +22,7 @@ grpc.web = require('grpc-web');
 
 var inventory_pb = require('./inventory_pb.js')
 
-var fabric_pb = require('./fabric_pb.js')
+var api_fabric_pb = require('./api_fabric_pb.js')
 
 var taxonomy_pb = require('./taxonomy_pb.js')
 

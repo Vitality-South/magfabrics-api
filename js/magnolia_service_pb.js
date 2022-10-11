@@ -23,8 +23,8 @@ var global =
 
 var inventory_pb = require('./inventory_pb.js');
 goog.object.extend(proto, inventory_pb);
-var fabric_pb = require('./fabric_pb.js');
-goog.object.extend(proto, fabric_pb);
+var api_fabric_pb = require('./api_fabric_pb.js');
+goog.object.extend(proto, api_fabric_pb);
 var taxonomy_pb = require('./taxonomy_pb.js');
 goog.object.extend(proto, taxonomy_pb);
 var cleaning_code_pb = require('./cleaning_code_pb.js');
@@ -478,7 +478,7 @@ proto.magnoliafabrics.GetAllFabricsResponse.prototype.toObject = function(opt_in
 proto.magnoliafabrics.GetAllFabricsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
-    fabric_pb.Fabric.toObject, includeInstance)
+    api_fabric_pb.Fabric.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -516,8 +516,8 @@ proto.magnoliafabrics.GetAllFabricsResponse.deserializeBinaryFromReader = functi
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new fabric_pb.Fabric;
-      reader.readMessage(value,fabric_pb.Fabric.deserializeBinaryFromReader);
+      var value = new api_fabric_pb.Fabric;
+      reader.readMessage(value,api_fabric_pb.Fabric.deserializeBinaryFromReader);
       msg.addFabrics(value);
       break;
     default:
@@ -554,7 +554,7 @@ proto.magnoliafabrics.GetAllFabricsResponse.serializeBinaryToWriter = function(m
     writer.writeRepeatedMessage(
       1,
       f,
-      fabric_pb.Fabric.serializeBinaryToWriter
+      api_fabric_pb.Fabric.serializeBinaryToWriter
     );
   }
 };
@@ -566,7 +566,7 @@ proto.magnoliafabrics.GetAllFabricsResponse.serializeBinaryToWriter = function(m
  */
 proto.magnoliafabrics.GetAllFabricsResponse.prototype.getFabricsList = function() {
   return /** @type{!Array<!proto.magnoliafabrics.Fabric>} */ (
-    jspb.Message.getRepeatedWrapperField(this, fabric_pb.Fabric, 1));
+    jspb.Message.getRepeatedWrapperField(this, api_fabric_pb.Fabric, 1));
 };
 
 
@@ -739,7 +739,7 @@ proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.prototype.toObject =
 proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
-    fabric_pb.Fabric.toObject, includeInstance)
+    api_fabric_pb.Fabric.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -777,8 +777,8 @@ proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.deserializeBinaryFro
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new fabric_pb.Fabric;
-      reader.readMessage(value,fabric_pb.Fabric.deserializeBinaryFromReader);
+      var value = new api_fabric_pb.Fabric;
+      reader.readMessage(value,api_fabric_pb.Fabric.deserializeBinaryFromReader);
       msg.addFabrics(value);
       break;
     default:
@@ -815,7 +815,7 @@ proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.serializeBinaryToWri
     writer.writeRepeatedMessage(
       1,
       f,
-      fabric_pb.Fabric.serializeBinaryToWriter
+      api_fabric_pb.Fabric.serializeBinaryToWriter
     );
   }
 };
@@ -827,7 +827,7 @@ proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.serializeBinaryToWri
  */
 proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.prototype.getFabricsList = function() {
   return /** @type{!Array<!proto.magnoliafabrics.Fabric>} */ (
-    jspb.Message.getRepeatedWrapperField(this, fabric_pb.Fabric, 1));
+    jspb.Message.getRepeatedWrapperField(this, api_fabric_pb.Fabric, 1));
 };
 
 
@@ -1282,7 +1282,7 @@ proto.magnoliafabrics.GetFabricByIDResponse.prototype.toObject = function(opt_in
  */
 proto.magnoliafabrics.GetFabricByIDResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabric: (f = msg.getFabric()) && fabric_pb.Fabric.toObject(includeInstance, f)
+    fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1320,8 +1320,8 @@ proto.magnoliafabrics.GetFabricByIDResponse.deserializeBinaryFromReader = functi
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new fabric_pb.Fabric;
-      reader.readMessage(value,fabric_pb.Fabric.deserializeBinaryFromReader);
+      var value = new api_fabric_pb.Fabric;
+      reader.readMessage(value,api_fabric_pb.Fabric.deserializeBinaryFromReader);
       msg.setFabric(value);
       break;
     default:
@@ -1358,7 +1358,7 @@ proto.magnoliafabrics.GetFabricByIDResponse.serializeBinaryToWriter = function(m
     writer.writeMessage(
       1,
       f,
-      fabric_pb.Fabric.serializeBinaryToWriter
+      api_fabric_pb.Fabric.serializeBinaryToWriter
     );
   }
 };
@@ -1370,7 +1370,7 @@ proto.magnoliafabrics.GetFabricByIDResponse.serializeBinaryToWriter = function(m
  */
 proto.magnoliafabrics.GetFabricByIDResponse.prototype.getFabric = function() {
   return /** @type{?proto.magnoliafabrics.Fabric} */ (
-    jspb.Message.getWrapperField(this, fabric_pb.Fabric, 1));
+    jspb.Message.getWrapperField(this, api_fabric_pb.Fabric, 1));
 };
 
 
@@ -1563,7 +1563,7 @@ proto.magnoliafabrics.GetFabricByNameResponse.prototype.toObject = function(opt_
  */
 proto.magnoliafabrics.GetFabricByNameResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabric: (f = msg.getFabric()) && fabric_pb.Fabric.toObject(includeInstance, f)
+    fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1601,8 +1601,8 @@ proto.magnoliafabrics.GetFabricByNameResponse.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new fabric_pb.Fabric;
-      reader.readMessage(value,fabric_pb.Fabric.deserializeBinaryFromReader);
+      var value = new api_fabric_pb.Fabric;
+      reader.readMessage(value,api_fabric_pb.Fabric.deserializeBinaryFromReader);
       msg.setFabric(value);
       break;
     default:
@@ -1639,7 +1639,7 @@ proto.magnoliafabrics.GetFabricByNameResponse.serializeBinaryToWriter = function
     writer.writeMessage(
       1,
       f,
-      fabric_pb.Fabric.serializeBinaryToWriter
+      api_fabric_pb.Fabric.serializeBinaryToWriter
     );
   }
 };
@@ -1651,7 +1651,7 @@ proto.magnoliafabrics.GetFabricByNameResponse.serializeBinaryToWriter = function
  */
 proto.magnoliafabrics.GetFabricByNameResponse.prototype.getFabric = function() {
   return /** @type{?proto.magnoliafabrics.Fabric} */ (
-    jspb.Message.getWrapperField(this, fabric_pb.Fabric, 1));
+    jspb.Message.getWrapperField(this, api_fabric_pb.Fabric, 1));
 };
 
 
