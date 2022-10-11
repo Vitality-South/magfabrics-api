@@ -1,3 +1,5 @@
+"use strict";
+
 import createReturnObj from "./createReturnObj.js";
 import {
   MagnoliaFabricsServicePromiseClient,
@@ -53,12 +55,11 @@ magnolia.getAllFabrics = async () => {
   try {
     const request = new GetAllFabricsRequest();
     fabrics = await magnolia.client.getAllFabrics(request, magnolia.metadata);
-    console.log(`Fabrics: `, fabrics);
   } catch (err) {
     return createReturnObj(null, `Failed to request full catalog\n ${err}`);
   }
 
-  return createReturnObj(fabrics, null);
+  return createReturnObj(fabrics.toObject(), null);
 };
 
 ///////////////////////////////////////
@@ -82,7 +83,7 @@ magnolia.getAllFabricsWithoutInventory = async () => {
     );
   }
 
-  return createReturnObj(fabrics, null);
+  return createReturnObj(fabrics.toObject(), null);
 };
 
 ///////////////////////////////////////
@@ -104,6 +105,8 @@ magnolia.getAllFabricTaxonomies = async () => {
       `Failed to request fabric taxonomies\n ${err}`
     );
   }
+
+  return createReturnObj(taxonomies.toObject(), null);
 };
 
 ///////////////////////////////////////
@@ -123,7 +126,7 @@ magnolia.getAllInventory = async () => {
     return createReturnObj(null, `Failed to request all Inventory\n ${err}`);
   }
 
-  return createReturnObj(inventory, null);
+  return createReturnObj(inventory.toObject(), null);
 };
 
 ///////////////////////////////////////
@@ -144,7 +147,7 @@ magnolia.getCleaningCodes = async () => {
     return createReturnObj(null, `Failed to request cleaning codes\n ${err}`);
   }
 
-  return createReturnObj(cleaningCodes, null);
+  return createReturnObj(cleaningCodes.toObject(), null);
 };
 
 ///////////////////////////////////////
@@ -157,12 +160,12 @@ magnolia.getFabricById = async (id) => {
   try {
     const request = new GetFabricByIDRequest();
     request.setFabricId(id);
-    fabric = await magnolia.client.getFabricById(request, magnolia.metadata);
+    fabric = await magnolia.client.getFabricByID(request, magnolia.metadata);
   } catch (err) {
     return createReturnObj(null, `Failed to request fabric by id\n ${err}`);
   }
 
-  return createReturnObj(fabric, null);
+  return createReturnObj(fabric.toObject(), null);
 };
 
 ///////////////////////////////////////
@@ -180,7 +183,7 @@ magnolia.getFabricByName = async (name) => {
     return createReturnObj(null, `Failed to request fabric by name\n ${err}`);
   }
 
-  return createReturnObj(fabric, null);
+  return createReturnObj(fabric.toObject(), null);
 };
 
 window.magnolia = magnolia;

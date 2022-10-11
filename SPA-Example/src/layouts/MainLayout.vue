@@ -12,7 +12,7 @@
         /> -->
 
         <q-toolbar-title>
-          Magnolia Fabrics API - SPA Example
+          Magnolia Fabrics API
         </q-toolbar-title>
 
       </q-toolbar>
@@ -32,8 +32,8 @@
           Examples
         </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
+        <MenuLink
+          v-for="link in linksList"
           :key="link.title"
           v-bind="link"
         />
@@ -48,32 +48,24 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import MenuLink from 'src/components/MenuLink.vue'
 
 const linksList = [
   {
     title: 'Fabrics',
-    // caption: '',
-    // icon: 'school',
-    link: 'https://quasar.dev'
+    link: '/fabrics'
   },
   {
     title: 'Cleaning Codes',
-    // caption: 'github.com/quasarframework',
-    // icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: '/cleaning-codes'
   },
   {
     title: 'Taxonomies',
-    // caption: 'chat.quasar.dev',
-    // icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    link: 'taxonomies'
   },
   {
     title: 'Other',
-    // caption: 'forum.quasar.dev',
-    // icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    link: 'other'
   },
 
 ]
@@ -82,14 +74,14 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    MenuLink
   },
 
   setup () {
     const leftDrawerOpen = ref(false)
 
     return {
-      essentialLinks: linksList,
+       linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
