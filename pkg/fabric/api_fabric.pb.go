@@ -32,67 +32,67 @@ type Fabric struct {
 	unknownFields protoimpl.UnknownFields
 
 	// @gotags: dynamo:"FabricSKU"
-	Sku string `protobuf:"bytes,1,opt,name=sku,proto3" json:"sku,omitempty"`
+	Sku string `protobuf:"bytes,1,opt,name=sku,proto3" json:"sku,omitempty" dynamo:"FabricSKU"`
 	// @gotags: dynamo:"FabricProductCode"
-	ProductCode string `protobuf:"bytes,2,opt,name=product_code,json=productCode,proto3" json:"product_code,omitempty"`
+	ProductCode string `protobuf:"bytes,2,opt,name=product_code,json=productCode,proto3" json:"product_code,omitempty" dynamo:"FabricProductCode"`
 	// @gotags: dynamo:"FabricPattern"
-	Pattern string `protobuf:"bytes,3,opt,name=pattern,proto3" json:"pattern,omitempty"`
+	Pattern string `protobuf:"bytes,3,opt,name=pattern,proto3" json:"pattern,omitempty" dynamo:"FabricPattern"`
 	// @gotags: dynamo:"FabricPrimaryColor"
-	Color string `protobuf:"bytes,4,opt,name=color,proto3" json:"color,omitempty"`
+	Color string `protobuf:"bytes,4,opt,name=color,proto3" json:"color,omitempty" dynamo:"FabricPrimaryColor"`
 	// @gotags: dynamo:"FabricPatternColorCombo"
-	PatternColorCombo string `protobuf:"bytes,5,opt,name=pattern_color_combo,json=patternColorCombo,proto3" json:"pattern_color_combo,omitempty"`
+	PatternColorCombo string `protobuf:"bytes,5,opt,name=pattern_color_combo,json=patternColorCombo,proto3" json:"pattern_color_combo,omitempty" dynamo:"FabricPatternColorCombo"`
 	// @gotags: dynamo:"FabricStatus"
-	Status string `protobuf:"bytes,6,opt,name=status,proto3" json:"status,omitempty"`
+	Status string `protobuf:"bytes,6,opt,name=status,proto3" json:"status,omitempty" dynamo:"FabricStatus"`
 	// @gotags: dynamo:"FabricIntroDate"
-	IntroDate string `protobuf:"bytes,7,opt,name=intro_date,json=introDate,proto3" json:"intro_date,omitempty"`
+	IntroDate string `protobuf:"bytes,7,opt,name=intro_date,json=introDate,proto3" json:"intro_date,omitempty" dynamo:"FabricIntroDate"`
 	// @gotags: dynamo:"FabricContents"
-	Contents string `protobuf:"bytes,8,opt,name=contents,proto3" json:"contents,omitempty"`
+	Contents string `protobuf:"bytes,8,opt,name=contents,proto3" json:"contents,omitempty" dynamo:"FabricContents"`
 	// @gotags: dynamo:"FabricWidth"
-	Width string `protobuf:"bytes,9,opt,name=width,proto3" json:"width,omitempty"`
+	Width string `protobuf:"bytes,9,opt,name=width,proto3" json:"width,omitempty" dynamo:"FabricWidth"`
 	// @gotags: dynamo:"FabricDirection"
-	Direction string `protobuf:"bytes,10,opt,name=direction,proto3" json:"direction,omitempty"`
+	Direction string `protobuf:"bytes,10,opt,name=direction,proto3" json:"direction,omitempty" dynamo:"FabricDirection"`
 	// @gotags: dynamo:"FabricHRepeat"
-	HRepeat string `protobuf:"bytes,11,opt,name=h_repeat,json=hRepeat,proto3" json:"h_repeat,omitempty"`
+	HRepeat string `protobuf:"bytes,11,opt,name=h_repeat,json=hRepeat,proto3" json:"h_repeat,omitempty" dynamo:"FabricHRepeat"`
 	// @gotags: dynamo:"FabricVRepeat"
-	VRepeat string `protobuf:"bytes,12,opt,name=v_repeat,json=vRepeat,proto3" json:"v_repeat,omitempty"`
+	VRepeat string `protobuf:"bytes,12,opt,name=v_repeat,json=vRepeat,proto3" json:"v_repeat,omitempty" dynamo:"FabricVRepeat"`
 	// @gotags: dynamo:"FabricCleaningCode"
-	CleaningCode string `protobuf:"bytes,13,opt,name=cleaning_code,json=cleaningCode,proto3" json:"cleaning_code,omitempty"`
+	CleaningCode string `protobuf:"bytes,13,opt,name=cleaning_code,json=cleaningCode,proto3" json:"cleaning_code,omitempty" dynamo:"FabricCleaningCode"`
 	// @gotags: dynamo:"FabricDoubleRubs"
-	DoubleRubs string `protobuf:"bytes,14,opt,name=double_rubs,json=doubleRubs,proto3" json:"double_rubs,omitempty"`
+	DoubleRubs string `protobuf:"bytes,14,opt,name=double_rubs,json=doubleRubs,proto3" json:"double_rubs,omitempty" dynamo:"FabricDoubleRubs"`
 	// @gotags: dynamo:"FabricMisc"
-	Misc string `protobuf:"bytes,15,opt,name=misc,proto3" json:"misc,omitempty"`
+	Misc string `protobuf:"bytes,15,opt,name=misc,proto3" json:"misc,omitempty" dynamo:"FabricMisc"`
 	// @gotags: dynamo:"FabricDisclaimer"
-	Disclaimer string `protobuf:"bytes,16,opt,name=disclaimer,proto3" json:"disclaimer,omitempty"`
+	Disclaimer string `protobuf:"bytes,16,opt,name=disclaimer,proto3" json:"disclaimer,omitempty" dynamo:"FabricDisclaimer"`
 	// @gotags: dynamo:"FabricUses"
-	Uses []string `protobuf:"bytes,17,rep,name=uses,proto3" json:"uses,omitempty"`
+	Uses []string `protobuf:"bytes,17,rep,name=uses,proto3" json:"uses,omitempty" dynamo:"FabricUses"`
 	// @gotags: dynamo:"FabricDesigns"
-	Designs []string `protobuf:"bytes,18,rep,name=designs,proto3" json:"designs,omitempty"`
+	Designs []string `protobuf:"bytes,18,rep,name=designs,proto3" json:"designs,omitempty" dynamo:"FabricDesigns"`
 	// @gotags: dynamo:"FabricColors"
-	Colors []string `protobuf:"bytes,19,rep,name=colors,proto3" json:"colors,omitempty"`
+	Colors []string `protobuf:"bytes,19,rep,name=colors,proto3" json:"colors,omitempty" dynamo:"FabricColors"`
 	// @gotags: dynamo:"FabricOrigin"
-	Origin string `protobuf:"bytes,20,opt,name=origin,proto3" json:"origin,omitempty"`
+	Origin string `protobuf:"bytes,20,opt,name=origin,proto3" json:"origin,omitempty" dynamo:"FabricOrigin"`
 	// @gotags: dynamo:"FabricPillingGrade"
-	PillingGrade string `protobuf:"bytes,21,opt,name=pilling_grade,json=pillingGrade,proto3" json:"pilling_grade,omitempty"`
+	PillingGrade string `protobuf:"bytes,21,opt,name=pilling_grade,json=pillingGrade,proto3" json:"pilling_grade,omitempty" dynamo:"FabricPillingGrade"`
 	// @gotags: dynamo:"FabricFireCode"
-	FireCode string `protobuf:"bytes,22,opt,name=fire_code,json=fireCode,proto3" json:"fire_code,omitempty"`
+	FireCode string `protobuf:"bytes,22,opt,name=fire_code,json=fireCode,proto3" json:"fire_code,omitempty" dynamo:"FabricFireCode"`
 	// @gotags: dynamo:"FabricCategories"
-	Categories []string `protobuf:"bytes,23,rep,name=categories,proto3" json:"categories,omitempty"`
+	Categories []string `protobuf:"bytes,23,rep,name=categories,proto3" json:"categories,omitempty" dynamo:"FabricCategories"`
 	// @gotags: dynamo:"FabricBrand"
-	Brand string `protobuf:"bytes,24,opt,name=brand,proto3" json:"brand,omitempty"`
+	Brand string `protobuf:"bytes,24,opt,name=brand,proto3" json:"brand,omitempty" dynamo:"FabricBrand"`
 	// @gotags: dynamo:"FabricIsDropShipped"
-	IsDropShipped bool `protobuf:"varint,25,opt,name=is_drop_shipped,json=isDropShipped,proto3" json:"is_drop_shipped,omitempty"`
+	IsDropShipped bool `protobuf:"varint,25,opt,name=is_drop_shipped,json=isDropShipped,proto3" json:"is_drop_shipped,omitempty" dynamo:"FabricIsDropShipped"`
 	// @gotags: dynamo:"FabricMainImage"
-	Image string `protobuf:"bytes,26,opt,name=image,proto3" json:"image,omitempty"`
+	Image string `protobuf:"bytes,26,opt,name=image,proto3" json:"image,omitempty" dynamo:"FabricMainImage"`
 	// @gotags: dynamo:"FabricAPIDisplayPrice"
-	DisplayPrice string `protobuf:"bytes,27,opt,name=display_price,json=displayPrice,proto3" json:"display_price,omitempty"`
+	DisplayPrice string `protobuf:"bytes,27,opt,name=display_price,json=displayPrice,proto3" json:"display_price,omitempty" dynamo:"FabricAPIDisplayPrice"`
 	// @gotags: dynamo:"FabricAPIPrice"
-	Price int32 `protobuf:"varint,28,opt,name=price,proto3" json:"price,omitempty"`
+	Price int32 `protobuf:"varint,28,opt,name=price,proto3" json:"price,omitempty" dynamo:"FabricAPIPrice"`
 	// @gotags: dynamo:"FabricOtherImages"
-	SupplementalImages []string `protobuf:"bytes,29,rep,name=supplemental_images,json=supplementalImages,proto3" json:"supplemental_images,omitempty"`
+	SupplementalImages []string `protobuf:"bytes,29,rep,name=supplemental_images,json=supplementalImages,proto3" json:"supplemental_images,omitempty" dynamo:"FabricOtherImages"`
 	// @gotags: dynamo:"FabricFullWidthImages"
-	FullWidthImages []string `protobuf:"bytes,30,rep,name=full_width_images,json=fullWidthImages,proto3" json:"full_width_images,omitempty"`
+	FullWidthImages []string `protobuf:"bytes,30,rep,name=full_width_images,json=fullWidthImages,proto3" json:"full_width_images,omitempty" dynamo:"FabricFullWidthImages"`
 	// @gotags: dynamo:"-"
-	Inventory *inventory.Inventory `protobuf:"bytes,31,opt,name=inventory,proto3" json:"inventory,omitempty"`
+	Inventory *inventory.Inventory `protobuf:"bytes,31,opt,name=inventory,proto3" json:"inventory,omitempty" dynamo:"-"`
 }
 
 func (x *Fabric) Reset() {

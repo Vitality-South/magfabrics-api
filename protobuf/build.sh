@@ -20,7 +20,7 @@ protoc-go-inject-tag -input=../pkg/inventory/inventory.pb.go
 protoc -I. --go_out=../pkg/fabric --go_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \
 	api_fabric.proto
-protoc-go-inject-tag -input=../pkg/fabric/fabric.pb.go
+protoc-go-inject-tag -input=../pkg/fabric/api_fabric.pb.go
 
 protoc -I. --go_out=../service --go_opt=paths=source_relative \
 	--go-grpc_out=../service --go-grpc_opt=paths=source_relative \
