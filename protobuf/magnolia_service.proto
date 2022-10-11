@@ -8,9 +8,9 @@ package magnoliafabrics;
 
 option go_package = "github.com/Vitality-South/magnolia-fabrics-api/service";
 
-import "inventory.proto";
+import "api_inventory.proto";
 import "api_fabric.proto";
-import "taxonomy.proto";
+import "api_taxonomy.proto";
 import "cleaning_code.proto";
 
 service MagnoliaFabricsService {

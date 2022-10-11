@@ -20,11 +20,11 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
-var inventory_pb = require('./inventory_pb.js')
+var api_inventory_pb = require('./api_inventory_pb.js')
 
 var api_fabric_pb = require('./api_fabric_pb.js')
 
-var taxonomy_pb = require('./taxonomy_pb.js')
+var api_taxonomy_pb = require('./api_taxonomy_pb.js')
 
 var cleaning_code_pb = require('./cleaning_code_pb.js')
 const proto = {};

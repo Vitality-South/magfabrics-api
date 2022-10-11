@@ -4,8 +4,8 @@ mkdir -p  ../pkg/taxonomy ../pkg/fabric ../pkg/inventory ../pkg/cleaningcode ../
 
 protoc -I. --go_out=../pkg/taxonomy --go_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \
-	taxonomy.proto
-protoc-go-inject-tag -input=../pkg/taxonomy/taxonomy.pb.go
+	api_taxonomy.proto
+protoc-go-inject-tag -input=../pkg/taxonomy/api_taxonomy.pb.go
 
 protoc -I. --go_out=../pkg/cleaningcode --go_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \
@@ -14,8 +14,8 @@ protoc-go-inject-tag -input=../pkg/cleaningcode/cleaning_code.pb.go
 
 protoc -I. --go_out=../pkg/inventory --go_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \
-	inventory.proto
-protoc-go-inject-tag -input=../pkg/inventory/inventory.pb.go
+	api_inventory.proto
+protoc-go-inject-tag -input=../pkg/inventory/api_inventory.pb.go
 
 protoc -I. --go_out=../pkg/fabric --go_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \

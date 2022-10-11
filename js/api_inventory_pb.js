@@ -1,4 +1,4 @@
-// source: inventory.proto
+// source: api_inventory.proto
 /**
  * @fileoverview
  * @enhanceable

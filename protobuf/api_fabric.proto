@@ -8,7 +8,7 @@ package magnoliafabrics;
 
 option go_package = "github.com/Vitality-South/magnolia-fabrics-api/pkg/fabric";
 
-import "inventory.proto";
+import "api_inventory.proto";
 
 message Fabric {
     // @gotags: dynamo:"FabricSKU"

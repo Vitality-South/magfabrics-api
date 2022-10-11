@@ -1,4 +1,4 @@
-// source: taxonomy.proto
+// source: api_taxonomy.proto
 /**
  * @fileoverview
  * @enhanceable

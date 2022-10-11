@@ -21,12 +21,12 @@ var global =
     (function () { return this; }).call(null) ||
     Function('return this')();
 
-var inventory_pb = require('./inventory_pb.js');
-goog.object.extend(proto, inventory_pb);
+var api_inventory_pb = require('./api_inventory_pb.js');
+goog.object.extend(proto, api_inventory_pb);
 var api_fabric_pb = require('./api_fabric_pb.js');
 goog.object.extend(proto, api_fabric_pb);
-var taxonomy_pb = require('./taxonomy_pb.js');
-goog.object.extend(proto, taxonomy_pb);
+var api_taxonomy_pb = require('./api_taxonomy_pb.js');
+goog.object.extend(proto, api_taxonomy_pb);
 var cleaning_code_pb = require('./cleaning_code_pb.js');
 goog.object.extend(proto, cleaning_code_pb);
 goog.exportSymbol('proto.magnoliafabrics.GetAllFabricTaxonomyRequest', null, global);
@@ -1000,7 +1000,7 @@ proto.magnoliafabrics.GetAllInventoryResponse.prototype.toObject = function(opt_
 proto.magnoliafabrics.GetAllInventoryResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     inventoryList: jspb.Message.toObjectList(msg.getInventoryList(),
-    inventory_pb.Inventory.toObject, includeInstance)
+    api_inventory_pb.Inventory.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1038,8 +1038,8 @@ proto.magnoliafabrics.GetAllInventoryResponse.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new inventory_pb.Inventory;
-      reader.readMessage(value,inventory_pb.Inventory.deserializeBinaryFromReader);
+      var value = new api_inventory_pb.Inventory;
+      reader.readMessage(value,api_inventory_pb.Inventory.deserializeBinaryFromReader);
       msg.addInventory(value);
       break;
     default:
@@ -1076,7 +1076,7 @@ proto.magnoliafabrics.GetAllInventoryResponse.serializeBinaryToWriter = function
     writer.writeRepeatedMessage(
       1,
       f,
-      inventory_pb.Inventory.serializeBinaryToWriter
+      api_inventory_pb.Inventory.serializeBinaryToWriter
     );
   }
 };
@@ -1088,7 +1088,7 @@ proto.magnoliafabrics.GetAllInventoryResponse.serializeBinaryToWriter = function
  */
 proto.magnoliafabrics.GetAllInventoryResponse.prototype.getInventoryList = function() {
   return /** @type{!Array<!proto.magnoliafabrics.Inventory>} */ (
-    jspb.Message.getRepeatedWrapperField(this, inventory_pb.Inventory, 1));
+    jspb.Message.getRepeatedWrapperField(this, api_inventory_pb.Inventory, 1));
 };
 
 
@@ -1815,7 +1815,7 @@ proto.magnoliafabrics.GetAllFabricTaxonomyResponse.prototype.toObject = function
  */
 proto.magnoliafabrics.GetAllFabricTaxonomyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    taxonomy: (f = msg.getTaxonomy()) && taxonomy_pb.Taxonomy.toObject(includeInstance, f)
+    taxonomy: (f = msg.getTaxonomy()) && api_taxonomy_pb.Taxonomy.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1853,8 +1853,8 @@ proto.magnoliafabrics.GetAllFabricTaxonomyResponse.deserializeBinaryFromReader =
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new taxonomy_pb.Taxonomy;
-      reader.readMessage(value,taxonomy_pb.Taxonomy.deserializeBinaryFromReader);
+      var value = new api_taxonomy_pb.Taxonomy;
+      reader.readMessage(value,api_taxonomy_pb.Taxonomy.deserializeBinaryFromReader);
       msg.setTaxonomy(value);
       break;
     default:
@@ -1891,7 +1891,7 @@ proto.magnoliafabrics.GetAllFabricTaxonomyResponse.serializeBinaryToWriter = fun
     writer.writeMessage(
       1,
       f,
-      taxonomy_pb.Taxonomy.serializeBinaryToWriter
+      api_taxonomy_pb.Taxonomy.serializeBinaryToWriter
     );
   }
 };
@@ -1903,7 +1903,7 @@ proto.magnoliafabrics.GetAllFabricTaxonomyResponse.serializeBinaryToWriter = fun
  */
 proto.magnoliafabrics.GetAllFabricTaxonomyResponse.prototype.getTaxonomy = function() {
   return /** @type{?proto.magnoliafabrics.Taxonomy} */ (
-    jspb.Message.getWrapperField(this, taxonomy_pb.Taxonomy, 1));
+    jspb.Message.getWrapperField(this, api_taxonomy_pb.Taxonomy, 1));
 };
 
 
