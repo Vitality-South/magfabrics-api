@@ -1,7 +1,7 @@
 .phony: test build
 
 appname = magnoliafabrics
-version = 1
+version = 3
 
 test:
 	@echo "Running go test -v..."
