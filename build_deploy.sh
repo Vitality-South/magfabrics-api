@@ -54,6 +54,7 @@ git add .
 git commit -m "Updated builds, create tags, bump version to $version"
 git tag $version
 git tag latest -f
+git push origin :latest
 git push origin latest
 git push origin $version
 git push
