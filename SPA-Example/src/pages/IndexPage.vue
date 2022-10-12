@@ -10,8 +10,19 @@
 
 <script>
 import { defineComponent } from 'vue'
+import magnolia from 'magnolia-fabrics';
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: 'IndexPage',
+
+  setup() {
+    magnolia.initialize('Zah3QYGl471fdlhw');
+    magnolia.getAllFabrics().then((fabrics)=>{
+      console.log(fabrics)
+    });
+    return {
+
+    };
+  },
 })
 </script>

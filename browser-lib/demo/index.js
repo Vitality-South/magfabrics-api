@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const fabSection = document.getElementById("fab-section");
   // fabSection.appendChild(createFabricsCard());
 
-  const apiKey = "Zah3QYGl471fdlhw--";
+  const apiKey = "Zah3QYGl471fdlhw";
 
   const magnoliaAPIClient = magnolia.initialize(apiKey);
 

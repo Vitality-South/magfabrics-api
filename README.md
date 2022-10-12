@@ -1,1 +1,107 @@
 # Magnolia Fabrics API
+
+## Install
+**NPM**
+
+Check tags for available versions.
+
+```bash
+yarn add github:Vitality-South/magnolia-fabrics-api.git#1.0.0
+# or
+npm install github:Vitality-South/magnolia-fabrics-api.git#1.0.0
+```
+Then
+```javascript
+import magnolia from 'magnolia-fabrics';
+```
+
+**CDN**
+```html
+<script src="https://magnolia.vitalitysouth.com/magnoliafabrics.min.js"></script>
+```
+
+---
+
+## Usage
+
+**Important**: You must call 
+```javascript
+magnolia.initialize('<Your API Key>');
+``` 
+first before making any more calls to the API.
+
+
+All methods(except for magnolia.initialize) are asyncronous and return an object in the shape of:
+```javascript
+{
+  value: {}, // either Object or null
+  error: '', // either string or null
+}
+```
+Supported API Methods:
+```javascript
+// Initializes the API client. Required before making any of the below API calls.
+magnolia.initialize('<Your API Key>');
+
+// Returns the full array of fabrics data including images
+magnolia.getAllFabrics().then((data) => {
+  if(data.error) {
+    console.error(data.error);
+    return;
+  }
+
+  const fabrics = data?.value?.fabricsList;
+
+  console.log(fabrics);
+});
+
+// Following the example above
+
+// Returns the full array of fabrics data excluding inventory data
+magnolia.getAllFabricsWithoutInventory().then((data) => {...});
+
+// Returns Taxonomies data for the full array of fabrics
+magnolia.getAllFabricTaxonomies().then((data) => {...});
+
+// Returns Inventory data for the full array of fabrics
+magnolia.getAllInventory().then((data) => {...});
+
+// Returns cleaning codes
+magnolia.getCleaningCodes().then((data) => {...});
+
+// Retrieves any fabric by its id(aka productCode)
+magnolia.getFabricById('<productCode>').then((data) => {...});
+
+// Retrieves any fabric by its name(aka patternColorCombo)
+magnolia.getFabricByName('<patternColorCombo>').then((data) => {...});
+```
+
+---
+
+## Examples
+
+**CDN**
+
+The browser-lib/demo folder contains a working example using a script tag loaded from the CDN to demonstrate how to consume the API.
+
+**SPA's etc.**
+
+The SPA-Example folder contains an example of how to consume the API in Vue based SPA. The same example is valid for any bundled js/ts project.
+
+---
+
+## License
+
+Copyright (c) 2022 Vitality South, LLC <chris@vitalitysouth.com>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
