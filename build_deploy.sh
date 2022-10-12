@@ -37,6 +37,14 @@ else
     exit
 fi
 
+# get checksum and add to script tag and README
+checksum=$(shasum -b -a 384 browser-lib/dist/magnoliafabrics.min.js | awk '{ print $1 }' 
+| xxd -r -p | base64)
+sriRegex="integrity=\"(.*)\""
+checksumNew="integrity=\"sha384-$checksum\""
+sed -i.bak -E "s/$sriRegex/$checksumNew/" ./README.md
+sed -i.bak -E "s/$sriRegex/$checksumNew/" ./browser-lib/demo/index.html
+
 # build the npm lib
 cd npm-lib
 yarn build
