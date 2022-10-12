@@ -4,9 +4,13 @@
 ./version.sh -p
 
 if [ $? -eq 0 ]; then
+    echo "#################################################"
     echo "Version bumped successfully"
+    echo "#################################################"
 else
+    echo "#################################################"
     echo "Version bump failed"
+    echo "#################################################"
     exit
 fi
 
@@ -19,9 +23,13 @@ cd protobuf
 cd ..
 
 if [ $? -eq 0 ]; then
+    echo "#################################################"
     echo "GRPC services generated successfully"
+    echo "#################################################"
 else
+    echo "#################################################"
     echo "GRPC services generation failed"
+    echo "#################################################"
     exit
 fi
 
@@ -31,9 +39,13 @@ yarn build
 cd ..
 
 if [ $? -eq 0 ]; then
+    echo "#################################################"
     echo "Browser-lib built successfully"
+    echo "#################################################"
 else
+    echo "#################################################"
     echo "Browser-lib build failure"
+    echo "#################################################"
     exit
 fi
 
@@ -60,9 +72,13 @@ yarn build
 cd ..
 
 if [ $? -eq 0 ]; then
+    echo "#################################################"
     echo "Npm-lib built successfully"
+    echo "#################################################"
 else
+    echo "#################################################"
     echo "Npm-lib build failure"
+    echo "#################################################"
     exit
 fi
 
@@ -72,9 +88,13 @@ npm publish
 cd ..
 
 if [ $? -eq 0 ]; then
+    echo "#################################################"
     echo "NPM lib published successfully"
+    echo "#################################################"
 else
+    echo "#################################################"
     echo "NPM lib publish failed"
+    echo "#################################################"
     exit
 fi
 
@@ -275,8 +295,12 @@ git push origin $version
 git push
 
 if [ $? -eq 0 ]; then
+    echo "#################################################"
     echo "Build deployed succesfully"
+    echo "#################################################"
 else
+    echo "#################################################"
     echo "Deployment failure"
+    echo "#################################################"
     exit
 fi
