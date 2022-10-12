@@ -3,12 +3,20 @@
 ## Install
 **NPM**
 
-Check tags for available versions.
+First add the following to your .npmrc file:
+
+```
+@vitality-south:registry=https://npm.pkg.github.com
+```
+If you don't have a .npmrc file in your root directory, create one.
+
 
 ```bash
-yarn add github:Vitality-South/magnolia-fabrics-api.git#1.0.0
-# or
-npm install github:Vitality-South/magnolia-fabrics-api.git#1.0.0
+yarn add @vitality-south/magnolia-fabrics
+```
+or
+ ```bash
+npm install @vitality-south/magnolia-fabrics
 ```
 Then
 ```javascript
