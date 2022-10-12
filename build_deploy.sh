@@ -26,11 +26,10 @@ echo "$(tput setaf 2)
 888  Y8P  888 .d888888 888  888 888  888 888  888 888 888 .d888888        d88P   888 888         888        
 888   \"   888 888  888 Y88b 888 888  888 Y88..88P 888 888 888  888       d8888888888 888         888        
 888       888 \"Y888888  \"Y88888 888  888  \"Y88P\"  888 888 \"Y888888      d88P     888 888       8888888      
-                            888                                                    $(tput setaf 6)Version $version$(tput sgr0)                         
+                            888                                                        $(tput setaf 6)Version $version                      
                        Y8b d88P                                                                             
                         \"Y88P\"                                                                              
 $(tput sgr0)"
-echo "$(tput setaf 6)Version $version$(tput sgr0)"
 
 # build grpc web files from protobuf
 cd protobuf
