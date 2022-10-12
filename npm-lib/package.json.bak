@@ -1,0 +1,54 @@
+{
+  "name": "@vitality-south/magnolia-fabrics",
+  "version": "1.0.1",
+  "description": "Access fabrics data from Magnolia Fabrics",
+  "source": "src/index.js",
+  "main": "dist/magnolia-fabrics.js",
+  "module": "dist/magnolia-fabrics-es.js",
+  "targets": {
+    "main": {
+      "context": "node",
+      "outputFormat": "commonjs",
+      "optimize": true
+    },
+    "module": {
+      "context": "node",
+      "outputFormat": "esmodule",
+      "optimize": true
+    }
+  },
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitality-South/magnolia-fabrics-api.git#main"
+  },
+  "author": "VitalitySouth LLC",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Vitality-South/magnolia-fabrics-api/issues"
+  },
+  "homepage": "https://github.com/Vitality-South/magnolia-fabrics-api/tree/main#readme",
+  "devDependencies": {
+    "@parcel/packager-ts": "2.7.0",
+    "@parcel/transformer-typescript-types": "2.7.0",
+    "parcel": "^2.7.0",
+    "publish-to-git": "^1.1.9"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.21.2",
+    "grpc-web": "^1.4.1"
+  },
+  "files": [
+    "dist/magnolia-fabrics.js",
+    "dist/magnolia-fabrics-es.js",
+    "dist/magnolia-fabrics.js.map",
+    "dist/magnolia-fabrics-es.js.map",
+    "../LICENSE"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
