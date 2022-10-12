@@ -1,19 +1,13 @@
 {
   "name": "@vitality-south/magnolia-fabrics",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Access fabrics data from Magnolia Fabrics",
   "source": "src/index.js",
   "main": "dist/magnolia-fabrics.js",
-  "module": "dist/magnolia-fabrics-es.js",
   "targets": {
     "main": {
       "context": "node",
       "outputFormat": "commonjs",
-      "optimize": true
-    },
-    "module": {
-      "context": "node",
-      "outputFormat": "esmodule",
       "optimize": true
     }
   },
@@ -43,10 +37,8 @@
   },
   "files": [
     "dist/magnolia-fabrics.js",
-    "dist/magnolia-fabrics-es.js",
     "dist/magnolia-fabrics.js.map",
-    "dist/magnolia-fabrics-es.js.map",
-    "../LICENSE"
+    "LICENSE"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
