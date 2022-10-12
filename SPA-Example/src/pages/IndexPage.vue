@@ -14,23 +14,40 @@
 
     <div class="q-pa-xl flex justify-center items-center">
       <q-spinner-gears v-if="loading" size="150px" color="grey-9" />
-      <template v-for="fabric in fabrics.slice(0,200)" :key="fabric.productCode">
-      <q-card class="fabCard q-ma-md cursor-pointer" >
-        <div class="w-full">
-          <q-img :src="fabric.image" />
-        </div>
-        <q-card-section>
-          <div class="text-h6">
-            {{ fabric.patternColorCombo}}
+      <template
+        v-for="fabric in fabrics.slice(0, 200)"
+        :key="fabric.productCode"
+      >
+        <q-card
+          class="fabCard q-ma-md cursor-pointer"
+          @click="onFabCardClicked(fabric)"
+        >
+          <div class="w-full">
+            <q-img :src="fabric.image" />
           </div>
-          <div class="text-grey">
-            Best used for {{ fabric.usesList.join(', ')}}
-          </div>
-        </q-card-section>
-      </q-card>
+          <q-card-section>
+            <div class="text-h6">
+              {{ fabric.patternColorCombo }}
+            </div>
+            <div class="text-grey">
+              Best used for {{ fabric.usesList.join(", ") }}
+            </div>
+          </q-card-section>
+        </q-card>
       </template>
     </div>
   </q-page>
+
+  <q-dialog v-model="infoPopup">
+    <q-card class="bg-white q-pa-md scroll info-dialog">
+      <template v-for="[key, value] of Object.entries(activeData)" :key="value">
+        <div class="w-full row">
+          <div class="col">{{ key }}</div>
+          <div class="col">{{ value }}</div>
+        </div>
+      </template>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
@@ -43,6 +60,8 @@ export default defineComponent({
   setup() {
     const fabrics = ref([]);
     const loading = ref(true);
+    const activeData = ref({});
+    const infoPopup = ref(false);
 
     onMounted(async () => {
       magnolia.initialize("Zah3QYGl471fdlhw");
@@ -53,9 +72,18 @@ export default defineComponent({
       loading.value = false;
     });
 
+    const onFabCardClicked = (fabricInfo) => {
+      activeData.value = fabricInfo;
+      infoPopup.value = true;
+
+    };
+
     return {
       fabrics,
-      loading
+      loading,
+      onFabCardClicked,
+      activeData,
+      infoPopup,
     };
   },
 });
