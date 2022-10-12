@@ -15,6 +15,9 @@ Then
 import magnolia from 'magnolia-fabrics';
 ```
 
+Or:
+
+
 **CDN**
 ```html
 <script src="https://magnolia.vitalitysouth.com/magnoliafabrics.min.js"></script>
@@ -83,10 +86,25 @@ magnolia.getFabricByName('<patternColorCombo>').then((data) => {...});
 **CDN**
 
 The browser-lib/demo folder contains a working example using a script tag loaded from the CDN to demonstrate how to consume the API.
+To run: 
+```
+# clone this repo
+# cd into browser-lib/demo
+# add your API Key to index.js
+# open index.html
+```
 
 **SPA's etc.**
 
 The SPA-Example folder contains an example of how to consume the API in Vue based SPA. The same example is valid for any bundled js/ts project.
+To run: 
+```
+# clone this repo
+# cd into SPA-Example
+# yarn install
+# add your api key to src/api.js
+# yarn quasar dev
+```
 
 ---
 
