@@ -1,6 +1,6 @@
 {
   "name": "magnolia-api",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Access Fabrics Data From Magnolia Fabrics",
   "source": "src/index.js",
   "global": "dist/magnoliafabrics.min.js",

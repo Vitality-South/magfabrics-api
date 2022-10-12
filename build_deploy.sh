@@ -67,8 +67,8 @@ fi
 # get checksum and add to script tag and README
 checksum=$(cat browser-lib/dist/magnoliafabrics.min.js | openssl dgst -sha384 -binary | openssl base64 -A
 )
-sriRegex="integrity=\"(.*)\""
-checksumNew="integrity=\"sha384-$checksum\""
+sriRegex="src=\"magnoliafabrics-(.*).min.js\"[\n\r\s]+integrity=\"(.*)\""
+checksumNew="src=\"magnoliafabrics-$version.min.js\"\nintegrity=\"sha384-$checksum\""
 sed -i.bak -E "s/$sriRegex/$checksumNew/" ./README.md
 sed -i.bak -E "s/$sriRegex/$checksumNew/" ./browser-lib/demo/index.html
 
@@ -77,7 +77,7 @@ cp ./browser-lib/dist/magnoliafabrics.min.js ./browser-lib/versions/magnoliafabr
 
 # replace brower-lib filename in README and in demo/index.html
 cdnVersionRegex="magnoliafabrics-(.*).min.js"
-cdnVersionNew="magnoliafabrics-$version.min.js",
+cdnVersionNew="magnoliafabrics-$version.min.js"
 sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./README.md
 sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./browser-lib/demo/index.html
 
