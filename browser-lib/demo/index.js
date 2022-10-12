@@ -6,7 +6,7 @@ function createFabricsCard(data) {
   fabricCard.innerHTML = `<div class="card fab-card m-2 shadow-sm" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
   <img src="${
     data.image || "logo_dark.png"
-  }" class="card-img-top p-2" alt="fabric">
+  }" class="card-img-top p-2" alt="fabric" />
 
   <div class="card-body">
       <h5 class="card-title">${data.patternColorCombo}

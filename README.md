@@ -102,7 +102,7 @@ To run:
 # clone this repo
 # cd into SPA-Example
 # yarn install
-# add your api key to src/api.js
+# add your api key to src/pages/IndexPage.vue
 # yarn quasar dev
 ```
 
