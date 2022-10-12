@@ -17,7 +17,7 @@ fi
 # get the version number from the VERSION file
 version=$(./version.sh -v)
 
-echo "
+echo "$(tput setaf 2)
 888b     d888                                     888 d8b                      d8888 8888888b. 8888888      
 8888b   d8888                                     888 Y8P                     d88888 888   Y88b  888        
 88888b.d88888                                     888                        d88P888 888    888  888        
@@ -29,7 +29,8 @@ echo "
                             888                                                                             
                        Y8b d88P                                                                             
                         \"Y88P\"                                                                              
-"
+$(tput sgr0)"
+echo "$(tput setaf 6) Deploying Version $version... $(tput sgr0)"
 
 # build grpc web files from protobuf
 cd protobuf
@@ -116,7 +117,7 @@ fi
 # publish demo site
 
 # temporarily copy contents browser-lib/versions into demo folder
-cp ./browser-lib/versions/* ./brower-lib/demo
+cp ./browser-lib/versions/* ./browser-lib/demo
 
 BUCKET_NAME=magnolia-api-demo
 SRC=browser-lib/demo/
