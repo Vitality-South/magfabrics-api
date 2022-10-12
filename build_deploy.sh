@@ -17,6 +17,20 @@ fi
 # get the version number from the VERSION file
 version=$(./version.sh -v)
 
+echo "
+888b     d888                                     888 d8b                      d8888 8888888b. 8888888      
+8888b   d8888                                     888 Y8P                     d88888 888   Y88b  888        
+88888b.d88888                                     888                        d88P888 888    888  888        
+888Y88888P888  8888b.   .d88b.  88888b.   .d88b.  888 888  8888b.           d88P 888 888   d88P  888        
+888 Y888P 888     \"88b d88P\"88b 888 \"88b d88\"\"88b 888 888     \"88b         d88P  888 8888888P\"   888        
+888  Y8P  888 .d888888 888  888 888  888 888  888 888 888 .d888888        d88P   888 888         888        
+888   \"   888 888  888 Y88b 888 888  888 Y88..88P 888 888 888  888       d8888888888 888         888        
+888       888 \"Y888888  \"Y88888 888  888  \"Y88P\"  888 888 \"Y888888      d88P     888 888       8888888      
+                            888                                                                             
+                       Y8b d88P                                                                             
+                        \"Y88P\"                                                                              
+"
+
 # build grpc web files from protobuf
 cd protobuf
 ./build.sh
@@ -102,7 +116,7 @@ fi
 # publish demo site
 
 # temporarily copy contents browser-lib/versions into demo folder
-cp ./browser-lib/versions/* ./demo
+cp ./browser-lib/versions/* ./brower-lib/demo
 
 BUCKET_NAME=magnolia-api-demo
 SRC=browser-lib/demo/
