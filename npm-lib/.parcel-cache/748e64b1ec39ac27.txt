@@ -1,5 +1,5 @@
 5005
-62/home/zachacious/src/magnolia-fabrics-api/npm-lib/package.json1665604609783951043 0
+62/home/zachacious/src/magnolia-fabrics-api/npm-lib/package.json1665604876053944742 0
 67/home/zachacious/src/magnolia-fabrics-api/npm-lib/package-lock.json1665591327144400603 0
 59/home/zachacious/src/magnolia-fabrics-api/npm-lib/yarn.lock1665591327164400603 0
 69/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/mkdirp1665589229124474618 1
@@ -72,7 +72,7 @@
 89/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/csso/lib/replace/String.js1665412986612999000 0
 92/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/csso/lib/replace/Dimension.js1665412986612999000 0
 103/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/csso/lib/replace/property/font-weight.js1665412986612999000 0
-66/home/zachacious/src/magnolia-fabrics-api/npm-lib/package.json.bak1665604454223956330 0
+66/home/zachacious/src/magnolia-fabrics-api/npm-lib/package.json.bak1665604609783951043 0
 108/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/csso/lib/restructure/2-initialMergeRuleset.js1665412986612999000 0
 101/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/csso/lib/restructure/7-mergeRuleset.js1665412986612999000 0
 104/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/csso/lib/restructure/8-restructRuleset.js1665412986612999000 0
@@ -3084,7 +3084,7 @@
 77/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/domhandler/lib1665589229194474609 1
 83/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/terser/lib/minify.js1665412985743000000 0
 89/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/@parcel/core/lib/Parcel.js1665412984203000000 0
-49/home/zachacious/src/magnolia-fabrics-api/npm-lib1665604609783951043 1
+49/home/zachacious/src/magnolia-fabrics-api/npm-lib1665604876053944742 1
 94/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/OM.js1665346487382999000 0
 97/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/@parcel/core/src/RequestTracker.js1665412984203000000 0
 120/home/zachacious/src/magnolia-fabrics-api/npm-lib/node_modules/typescript/loc/lcl/CHS/Targets/TypeScriptCompile.xaml.lcl1665591314754399487 0
