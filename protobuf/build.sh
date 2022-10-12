@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p  ../pkg/taxonomy ../pkg/fabric ../pkg/inventory ../pkg/cleaningcode ../ts ../js ../js/doc
+mkdir -p  ../pkg/taxonomy ../pkg/fabric ../pkg/inventory ../pkg/cleaningcode ../ts ../js ../js/doc ../npm-lib/api
 
 protoc -I. --go_out=../pkg/taxonomy --go_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \
@@ -32,3 +32,4 @@ jsdoc -d=../js/doc ../js/*.js > /dev/null
 
 # just copy the output into the example projects
 cp ../js ../SPA-Example/src/api -r
+cp ../js ../npm-lib/api -r
