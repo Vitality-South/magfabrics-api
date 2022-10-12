@@ -38,8 +38,8 @@ else
 fi
 
 # get checksum and add to script tag and README
-checksum=$(shasum -b -a 384 browser-lib/dist/magnoliafabrics.min.js | awk '{ print $1 }' 
-| xxd -r -p | base64)
+checksum=$(cat browser-lib/dist/magnoliafabrics.min.js | openssl dgst -sha384 -binary | openssl base64 -A
+)
 sriRegex="integrity=\"(.*)\""
 checksumNew="integrity=\"sha384-$checksum\""
 sed -i.bak -E "s/$sriRegex/$checksumNew/" ./README.md
