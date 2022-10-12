@@ -46,6 +46,7 @@ while getopts ":hvpmM" option; do
         packageReplacement="\"version\": \"$replacement\""
         sed -i.bak -E "s/$versionRegex/$replacement/" $versionFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile
+        sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile2
         exit;;
     m) # bump minor
         minor=$((minor+1))
@@ -54,6 +55,7 @@ while getopts ":hvpmM" option; do
         packageReplacement="\"version\": \"$replacement\""
         sed -i.bak -E "s/$versionRegex/$replacement/" $versionFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile
+        sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile2
         exit;;
     M) # bump major
         major=$((major+1))
@@ -63,6 +65,7 @@ while getopts ":hvpmM" option; do
         packageReplacement="\"version\": \"$replacement\""
         sed -i.bak -E "s/$versionRegex/$replacement/" $versionFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile
+        sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile2
         exit;;
     \?) # invalid option
         echo "Invalid option"
