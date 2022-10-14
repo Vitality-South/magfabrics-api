@@ -5,7 +5,7 @@ import {
   MagnoliaFabricsServicePromiseClient,
   GetAllFabricsRequest,
   GetAllFabricsWithoutInventoryRequest,
-  GetAllFabricTaxonomiesRequest,
+  GetAllFabricTaxonomyRequest,
   GetAllInventoryRequest,
   GetCleaningCodesRequest,
   GetFabricByIDRequest,
@@ -94,8 +94,8 @@ magnolia.getAllFabricTaxonomies = async () => {
   let taxonomies;
 
   try {
-    const request = new GetAllFabricTaxonomiesRequest();
-    taxonomies = await magnolia.client.getAllFabricTaxonomies(
+    const request = new GetAllFabricTaxonomyRequest();
+    taxonomies = await magnolia.client.getAllFabricTaxonomy(
       request,
       magnolia.metadata
     );

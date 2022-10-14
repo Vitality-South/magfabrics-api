@@ -1,5 +1,5 @@
-4244
-66/home/zachacious/src/magnolia-fabrics-api/browser-lib/package.json1665762412231855684 0
+4245
+66/home/zachacious/src/magnolia-fabrics-api/browser-lib/package.json1665764107381430329 0
 63/home/zachacious/src/magnolia-fabrics-api/browser-lib/yarn.lock1665581564994729851 0
 122/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/react-refresh/cjs/react-refresh-babel.production.min.js1665430050424510176 0
 124/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/react-refresh/cjs/react-refresh-runtime.production.min.js1665430050464510174 0
@@ -1161,7 +1161,6 @@
 132/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_class_check_private_static_field_descriptor.mjs1665430050884510163 0
 96/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_type_of.mjs1665430051084510152 0
 104/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_read_only_error.mjs1665430051024510157 0
-112/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_interop_require_default.mjs1665430050984510155 0
 118/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_iterable_to_array_limit_loose.mjs1665430050994510155 0
 81/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/domhandler/lib1665430050194510184 1
 104/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/Environment.test.js1665430051554510135 0
@@ -1207,6 +1206,9 @@
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/lib/_await_value.js1665430050464510174 0
 122/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/fixtures/invalid-targets/package.json1665430051654510132 0
 83/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/json5/LICENSE.md1665430050594510173 0
+97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@jridgewell/trace-mapping/dist1665430050394510178 1
+106/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_non_iterable_rest.mjs1665430051004510155 0
+109/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/fixtures/invalid-targets1665430051654510132 1
 122/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/document-scrollingelement.js1665430051384510142 0
 110/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/fixtures/config/subfolder1665430051494510140 1
 116/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/source-map/parcel_sourcemap_node/build.rs1665430051394510142 0
@@ -1761,6 +1763,7 @@
 110/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/runtime-service-worker/package.json1665430051064510154 0
 102/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/properties.schema.json1665430050534510172 0
 90/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/types.json1665430050574510171 0
+100/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/at-rules.schema.json1665430050194510184 0
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/serializer.js1665430051604510133 0
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/GL.js1665430051504510137 0
 94/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/dom-serializer/package.json1665430050194510184 0
@@ -1798,7 +1801,7 @@
 101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/readFile.d.ts.map1665430050534510172 0
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/MZ.js1665430051614510133 0
 94/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/transformer-css/src1665430050954510157 1
-62/home/zachacious/src/magnolia-fabrics-api/browser-lib/versions1665762200921907734 1
+62/home/zachacious/src/magnolia-fabrics-api/browser-lib/versions1665762416221854686 1
 87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/browserslist/LICENSE1665430050504510176 0
 103/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/ExplorerBase.js.map1665430050444510176 0
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/dom-serializer/lib/esm/index.js1665430050144510186 0
@@ -1856,7 +1859,7 @@
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/yaml/dist/warnings-1000a372.js1665430050744510164 0
 90/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/lmdb/dist/index.cjs.map1665430051304510147 0
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/MH.js1665430051594510137 0
-53/home/zachacious/src/magnolia-fabrics-api/browser-lib1665762412231855684 1
+53/home/zachacious/src/magnolia-fabrics-api/browser-lib1665764107381430329 1
 101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/abortcontroller-polyfill/README.md1665430050614510169 0
 84/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/callsites/license1665430050114510188 0
 110/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/compressor-raw/lib/RawCompressor.js1665430051284510145 0
@@ -1890,8 +1893,6 @@
 72/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/logo_dark.png1665410510942775779 0
 89/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/.eslintignore1665430050404510179 0
 91/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/fs/src/NodeFS.js1665430051214510151 0
-101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/css-what/lib/es/stringify.d.ts.map1665430050364510181 0
-105/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/packager-js/lib/dev-prelude.js1665430051114510154 0
 107/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/requests/PathRequest.js1665430051594510137 0
 154/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/package-alias-exclude/package.json1665430051224510147 0
 84/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/types/lib1665430050794510162 1
@@ -2001,7 +2002,7 @@
 90/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/transformer-svg1665430050714510166 1
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/source-map/dist/types.js1665430050684510167 0
 100/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/lib/modules/minifySvg.js1665430050574510171 0
-70/home/zachacious/src/magnolia-fabrics-api/browser-lib/package.json.bak1665762197261909911 0
+70/home/zachacious/src/magnolia-fabrics-api/browser-lib/package.json.bak1665762412231855684 0
 132/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/packages/source/source.js1665430051174510148 0
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/CO.js1665430050914510159 0
 112/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/msgpackr-extract/src/.vs/ProjectSettings.json1665430050554510170 0
@@ -2083,15 +2084,6 @@
 120/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/fixtures/config/subfolder/.parcelrc1665430051494510140 0
 90/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/browserslist/index.d.ts1665430050584510171 0
 91/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/node-addon-api/README.md1665430050604510169 0
-87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/terser/lib/minify.js1665430050884510163 0
-83/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/stable/README.md1665430050114510188 0
-101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlparser2/lib/Tokenizer.d.ts.map1665430050224510182 0
-83/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/src1665430051634510135 1
-113/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@babel/highlight/node_modules/has-flag/license1665430051344510144 0
-127/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/docs/versioned_docs/version-2.0.0/060-contribute.md1665430050964510157 0
-84/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/entities/lib/maps1665430050304510181 1
-101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/ExplorerBase.d.ts1665430050584510171 0
-98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/runtime-js/package.json1665430051094510152 0
 105/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/jpeg2000.js1665430051554510135 0
 111/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/dom-serializer/lib/esm/foreignNames.d.ts.map1665430050204510184 0
 88/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/posthtml/node_modules1665430049794510202 1
@@ -2108,7 +2100,7 @@
 111/home/zachacious/src/magnolia-fabrics-api/browser-lib/src/grpc/doc/symbols/proto.magnoliafabrics.Inventory.html1665414137902653701 0
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/type-fest/source/promisable.d.ts1665430050434510176 0
 101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/InternalConfig.js1665430051564510135 0
-69/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/index.html1665762200921907734 0
+69/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/index.html1665762943741721508 0
 113/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/addeventlistener.js1665430050404510179 0
 78/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig1665430050544510174 1
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/nth-check/lib/compile.d.ts.map1665430050194510184 0
@@ -2123,6 +2115,10 @@
 115/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/package-manager/test/fixtures/packages/a1665430051474510138 1
 109/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/lib/modules/collapseWhitespace.js1665430050484510174 0
 93/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/markdown-ansi/test1665430050394510178 1
+101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/css-what/lib/es/stringify.d.ts.map1665430050364510181 0
+105/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/packager-js/lib/dev-prelude.js1665430051114510154 0
+112/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_interop_require_default.mjs1665430050984510155 0
+92/home/zachacious/src/magnolia-fabrics-api/browser-lib/versions/magnoliafabrics-1.1.20.min.js1665762416221854686 0
 87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/lib/modules1665430050634510169 1
 89/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/domutils/lib/legacy.js1665430050144510186 0
 64/home/zachacious/src/magnolia-fabrics-api/browser-lib/.gitignore1665429951304513772 0
@@ -2139,10 +2135,6 @@
 113/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/css-supports-api.js1665430051234510147 0
 145/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/aliased-file/package.json1665430051214510151 0
 101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/PackagerRunner.js1665430051574510135 0
-91/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/timsort/build/timsort.js1665430050334510179 0
-110/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/watcher/src/linux/InotifyBackend.hh1665430050694510169 0
-111/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/css-exclusions.js1665430051064510154 0
-95/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/properties.json1665430050524510172 0
 111/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/variable-fonts.js1665430051704510130 0
 100/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/domelementtype/lib/esm/index.d.ts1665430050204510184 0
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/CA.js1665430050844510160 0
@@ -2169,8 +2161,6 @@
 156/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/package-browser-exclude/package.json1665430051244510147 0
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/msgpackr-extract/src/extract.cpp1665430050314510183 0
 87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/node-addon-api/tools1665430050604510169 1
-94/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/loaders.js1665430050354510179 0
-69/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/robots.txt1665612343643688989 0
 113/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_class_private_field_init.mjs1665430050894510159 0
 104/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/utils/test/objectHash.test.js1665430051524510137 0
 95/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/svgo/plugins/minifyStyles.js1665430050694510169 0
@@ -2192,7 +2182,7 @@
 152/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/package-browser-alias/subfolder11665430051184510149 1
 94/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/events/lib/index.js1665430051374510142 0
 78/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/.bin/parcel1665430055794509991 0
-58/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo1665762216121901890 1
+58/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo1665762430411851276 1
 123/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/watcher/prebuilds/win32-x64/node.napi.glibc.node1665430051094510152 0
 91/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/lib/htmlnano.js1665430050524510172 0
 84/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/lines-and-columns1665430050194510184 1
@@ -2223,10 +2213,6 @@
 85/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/tslib/package.json1665430050184510184 0
 107/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/node-gyp-build-optional-packages/LICENSE1665430050204510184 0
 101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/selectors.schema.json1665430050554510170 0
-101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/lmdb/dependencies/lz4/lib/xxhash.c1665430051024510157 0
-98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/AI.js1665430050494510174 0
-87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/packager-css1665430051094510152 1
-123/home/zachacious/src/magnolia-fabrics-api/browser-lib/src/grpc/doc/symbols/proto.magnoliafabrics.GetFabricByIDResponse.html1665414137902653701 0
 105/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/utils/src/isDirectoryInside.js1665430051514510137 0
 85/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/msgpackr/README.md1665430050844510160 0
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@jridgewell/source-map/LICENSE1665430050124510190 0
@@ -2264,7 +2250,7 @@
 92/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/codeframe/LICENSE1665430050554510170 0
 113/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/requests/ValidationRequest.js1665430051634510135 0
 85/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/boolbase/README.md1665430050114510188 0
-73/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/index.html.bak1665761685222037819 0
+73/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/index.html.bak1665762200921907734 0
 108/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/css-lch-lab.js1665430051144510150 0
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/escape-string-regexp/readme.md1665430050114510188 0
 103/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/css-what/lib/commonjs/stringify.d.ts1665430050444510176 0
@@ -2409,6 +2395,16 @@
 103/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/getDirectory.js.map1665430050474510174 0
 87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/packager-raw1665430051044510154 1
 85/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/css-tree/lib/lexer1665430051074510156 1
+91/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/timsort/build/timsort.js1665430050334510179 0
+69/home/zachacious/src/magnolia-fabrics-api/browser-lib/demo/robots.txt1665612343643688989 0
+94/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/loaders.js1665430050354510179 0
+110/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/watcher/src/linux/InotifyBackend.hh1665430050694510169 0
+111/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/css-exclusions.js1665430051064510154 0
+95/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/properties.json1665430050524510172 0
+101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/lmdb/dependencies/lz4/lib/xxhash.c1665430051024510157 0
+98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/regions/AI.js1665430050494510174 0
+123/home/zachacious/src/magnolia-fabrics-api/browser-lib/src/grpc/doc/symbols/proto.magnoliafabrics.GetFabricByIDResponse.html1665414137902653701 0
+87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/packager-css1665430051094510152 1
 95/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/transformer-html/lib1665430051044510154 1
 107/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/public/PluginOptions.js1665430051594510137 0
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/lib/public/Asset.js1665430051504510137 0
@@ -2454,6 +2450,8 @@
 102/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlparser2/lib/WritableStream.d.ts1665430050344510179 0
 87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/electron-to-chromium1665430050474510174 1
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/postcss-value-parser/lib/walk.js1665430050404510179 0
+87/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/terser/lib/minify.js1665430050884510163 0
+83/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/stable/README.md1665430050114510188 0
 75/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/get-port1665430051174510148 1
 73/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/parcel1665430051324510143 1
 95/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/msgpackr-extract/binding.gyp1665430050504510176 0
@@ -2537,6 +2535,13 @@
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/update-browserslist-db/LICENSE1665430050264510185 0
 134/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/package-module1665430051264510149 1
 100/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/docs/docs/040-presets.md1665430050914510159 0
+113/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@babel/highlight/node_modules/has-flag/license1665430051344510144 0
+127/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlnano/docs/versioned_docs/version-2.0.0/060-contribute.md1665430050964510157 0
+84/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/entities/lib/maps1665430050304510181 1
+101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/cosmiconfig/dist/ExplorerBase.d.ts1665430050584510171 0
+98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/runtime-js/package.json1665430051094510152 0
+101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlparser2/lib/Tokenizer.d.ts.map1665430050224510182 0
+83/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/src1665430051634510135 1
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/htmlparser2/lib/FeedHandler.d.ts1665430050284510181 0
 104/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/csso/lib/replace/AttributeSelector.js1665430050324510179 0
 106/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/css-fixed.js1665430051094510152 0
@@ -2611,7 +2616,6 @@
 98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/domelementtype/lib/esm/index.js1665430050114510188 0
 153/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/source-not-symlinked/package.json1665430051364510142 0
 106/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/electron-to-chromium/full-versions.json1665430050444510176 0
-100/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/at-rules.schema.json1665430050194510184 0
 115/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/electron-to-chromium/full-chromium-versions.json1665430050414510176 0
 101/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_ts_generator.mjs1665430051064510154 0
 109/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/packager-js/lib/ESMOutputFormat.js1665430051134510150 0
@@ -2807,8 +2811,6 @@
 94/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/terser/lib/equivalent-to.js1665430050824510162 0
 78/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/css1665430050644510171 1
 106/home/zachacious/src/magnolia-fabrics-api/browser-lib/src/grpc/doc/symbols/src/js_cleaning_code_pb.js.html1665414137902653701 0
-98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/test-utils.js1665430051624510133 0
-97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/fs-search/package.json1665430050544510174 0
 90/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/parse-json/package.json1665430050274510181 0
 128/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/package-manager/test/fixtures/packages/a/package.json1665430051474510138 0
 119/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/dom-serializer/node_modules/entities/lib/decode.d.ts1665430050334510179 0
@@ -2993,6 +2995,8 @@
 137/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/foo/nested/baz.js1665430050644510171 0
 85/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/source-map1665430051404510144 1
 93/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/css/at-rules.json1665430050184510184 0
+97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/fs-search/package.json1665430050544510174 0
+98/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/test-utils.js1665430051624510133 0
 89/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/mdn-data/l10n/css.json1665430050294510181 0
 99/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/Parcel.test.js1665430051574510135 0
 97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/src/serializer.js1665430051604510133 0
@@ -3233,9 +3237,6 @@
 118/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/caniuse-lite/data/features/background-attachment.js1665430050694510169 0
 178/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/.pnpm/source-pnpm@1.0.0/node_modules/source-pnpm/source.js1665430051164510152 0
 119/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/runtime-js/lib/helpers/browser/css-loader.js1665430050944510157 0
-97/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@jridgewell/trace-mapping/dist1665430050394510178 1
-109/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/core/test/fixtures/invalid-targets1665430051654510132 1
-106/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@swc/helpers/src/_non_iterable_rest.mjs1665430051004510155 0
 176/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/.pnpm/source-pnpm@1.0.0/node_modules/source-pnpm/dist.js1665430050704510165 0
 95/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/source-map/README.md1665430050714510166 0
 181/home/zachacious/src/magnolia-fabrics-api/browser-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/.pnpm/source-pnpm@1.0.0/node_modules/source-pnpm/package.json1665430051214510151 0
