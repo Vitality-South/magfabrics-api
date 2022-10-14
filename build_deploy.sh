@@ -319,3 +319,8 @@ else
     echo "#################################################"
     exit
 fi
+
+
+# update the spa's version of the npm lib
+cd SPA-Example
+npm update @vitality-south/magnolia-fabrics
