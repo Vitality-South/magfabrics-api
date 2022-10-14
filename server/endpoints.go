@@ -157,3 +157,26 @@ func (s *server) GetAllFabricTaxonomy(ctx context.Context, request *service.GetA
 		Taxonomy: l,
 	}, nil
 }
+
+// GetCleaningCodes
+func (s *server) GetCleaningCodes(ctx context.Context, request *service.GetCleaningCodesRequest) (*service.GetCleaningCodesResponse, error) {
+	md, _ := metadata.FromIncomingContext(ctx)
+
+	if !isAuthenticated(md.Get(APIKEY)) {
+		return nil, status.Error(codes.Unauthenticated, "invalid api key")
+	}
+
+	l, lerr := storage.GetCleaningCodes(ctx)
+
+	if lerr == storage.NotFound {
+		return nil, status.Error(codes.NotFound, lerr.Error())
+	}
+
+	if lerr != nil {
+		return nil, status.Error(codes.Unavailable, lerr.Error())
+	}
+
+	return &service.GetCleaningCodesResponse{
+		CleaningCodes: l,
+	}, nil
+}

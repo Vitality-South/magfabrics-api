@@ -11,11 +11,13 @@ import (
 	"encoding/gob"
 	"errors"
 	"os"
+	"strings"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/guregu/dynamo"
 
+	"github.com/Vitality-South/magnolia-fabrics-api/pkg/cleaningcode"
 	"github.com/Vitality-South/magnolia-fabrics-api/pkg/fabric"
 	"github.com/Vitality-South/magnolia-fabrics-api/pkg/inventory"
 	"github.com/Vitality-South/magnolia-fabrics-api/pkg/taxonomy"
@@ -23,11 +25,12 @@ import (
 
 const (
 	// dynamodb config.
-	PK             = "PK"
-	SK             = "SK"
-	TaxonomyAllPK  = "Taxonomy"
-	TaxonomyAllSK  = "All"
-	FabricByNameSK = "FabricByName"
+	PK              = "PK"
+	SK              = "SK"
+	TaxonomyAllPK   = "Taxonomy"
+	TaxonomyAllSK   = "All"
+	FabricByNameSK  = "FabricByName"
+	CleaningCodesPK = "CleaningCodes"
 
 	// s3 config.
 	CMSBucket       = "cms.magnoliaco.com"
@@ -209,4 +212,33 @@ func GetFabricByName(ctx context.Context, name string) (*fabric.Fabric, error) {
 	f.Inventory = i
 
 	return f, nil
+}
+
+func GetCleaningCodes(ctx context.Context) (map[string]*cleaningcode.CleaningCode, error) {
+	m := make(map[string]*cleaningcode.CleaningCode)
+
+	_, table, dberr := database()
+
+	if dberr != nil {
+		return m, dberr
+	}
+
+	var codes []*cleaningcode.CleaningCode
+
+	gerr := table.Get(PK, CleaningCodesPK).AllWithContext(ctx, &codes)
+
+	if gerr == dynamo.ErrNotFound {
+		return m, NotFound
+	}
+
+	if gerr != nil {
+		return m, gerr
+	}
+
+	for _, c := range codes {
+		m[strings.ToLower(c.Id)] = c
+		m[strings.ToUpper(c.Id)] = c
+	}
+
+	return m, nil
 }
