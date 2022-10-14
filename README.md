@@ -31,7 +31,7 @@ Or:
 
 **CDN**
 ```html
-<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.2.1.min.js"
+<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.2.2.min.js"
 integrity="sha384-9bzJtgQEvOjrzUbuahRL1G49PjYG/S17fXtiJ0IQPvByFOfz+NDNr4E+13cvjyCn"
 crossorigin="anonymous"
 ></script>
@@ -98,6 +98,13 @@ magnolia.getFabricById('<productCode>').then((data) => {...});
 // data returned as data.value.fabric
 magnolia.getFabricByName('<patternColorCombo>').then((data) => {...});
 ```
+
+---
+
+## Advanced Users
+Although we recommend using either the CDN or NPM method of installing, you can run the gRPC Web version directly.
+
+To start, copy the `/js` or `/ts` folders respectively. Inside you'll find a docs folder containing the gRPC Web documentation. For examples look at browser-lib/ or npm-lib/.
 
 ---
 
