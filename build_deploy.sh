@@ -67,9 +67,10 @@ fi
 checksum=$(cat browser-lib/dist/magnoliafabrics.min.js | openssl dgst -sha384 -binary | openssl base64 -A
 )
 sriRegex="src=\"(.*)magnoliafabrics-(.*).min.js\"[\n\r\s]+integrity=\"(.*)\""
-checksumNew="src=\"magnoliafabrics-$version.min.js\"\nintegrity=\"sha384-$checksum\""
-sed -i.bak -e "s#$sriRegex#$checksumNew#" ./README.md
-sed -i.bak -e "s#$sriRegex#$checksumNew#" ./browser-lib/demo/index.html
+checksumNewIndex="src=\"magnoliafabrics-$version.min.js\"\nintegrity=\"sha384-$checksum\""
+checksumNewReadme="src=\"https://magnolia.vitalitysouth.com/magnoliafabrics-$version.min.js\"\nintegrity=\"sha384-$checksum\""
+sed -i.bak -e "s\001$sriRegex\001$checksumNewReadme\001" ./README.md
+sed -i.bak -e "s\001$sriRegex\001$checksumNewIndex\001" ./browser-lib/demo/index.html
 
 # create a copy of browser lib build and add version number - save in versions folder
 cp ./browser-lib/dist/magnoliafabrics.min.js ./browser-lib/versions/magnoliafabrics-$version.min.js
