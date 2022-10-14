@@ -1430,10 +1430,10 @@
   dependencies:
     "@types/node" "*"
 
-"@vitality-south/magnolia-fabrics@^1.1.25":
-  "integrity" "sha512-gYv1IWybMXgYHsT7WbDf5WGHCplwmv9YdZfQdGYhcxmll2xAlcCTenCLw6X0RWblVmRNchmfvG+BM8Lx0GKuLw=="
-  "resolved" "https://npm.pkg.github.com/download/@vitality-south/magnolia-fabrics/1.1.25/4cd5d4db27741b847c44e9f84adaae769d5b9075"
-  "version" "1.1.25"
+"@vitality-south/magnolia-fabrics@^1.1.26":
+  "integrity" "sha512-RjsCmrIxEzXUt5z6LA6fdxmfbR/3maHDtLeSI/5OTc+ocrjIijp67ObZN7lzTTMsnJ2HGZ/XMnzgWqBjGDt0tw=="
+  "resolved" "https://npm.pkg.github.com/download/@vitality-south/magnolia-fabrics/1.1.26/1cdbce32b795220fa036754c7ef820bd4a40ecdc"
+  "version" "1.1.26"
   dependencies:
     "google-protobuf" "^3.21.2"
     "grpc-web" "^1.4.1"
