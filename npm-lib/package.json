@@ -1,6 +1,6 @@
 {
   "name": "@vitality-south/magnolia-fabrics",
-  "version": "1.1.24",
+  "version": "1.1.25",
   "description": "Access fabrics data from Magnolia Fabrics",
   "source": "src/index.js",
   "main": "dist/magnolia-fabrics.js",
