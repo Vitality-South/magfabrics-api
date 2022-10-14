@@ -66,10 +66,10 @@ fi
 # get checksum and add to script tag and README
 checksum=$(cat browser-lib/dist/magnoliafabrics.min.js | openssl dgst -sha384 -binary | openssl base64 -A
 )
-sriRegex="src=\"magnoliafabrics-(.*).min.js\"[\n\r\s]+integrity=\"(.*)\""
+sriRegex="src=\"(.*)magnoliafabrics-(.*).min.js\"[\n\r\s]+integrity=\"(.*)\""
 checksumNew="src=\"magnoliafabrics-$version.min.js\"\nintegrity=\"sha384-$checksum\""
-sed -i.bak -e "s%$sriRegex%$checksumNew%" ./README.md
-sed -i.bak -e "s%$sriRegex%$checksumNew%" ./browser-lib/demo/index.html
+sed -i.bak -e "s#$sriRegex#$checksumNew#" ./README.md
+sed -i.bak -e "s#$sriRegex#$checksumNew#" ./browser-lib/demo/index.html
 
 # create a copy of browser lib build and add version number - save in versions folder
 cp ./browser-lib/dist/magnoliafabrics.min.js ./browser-lib/versions/magnoliafabrics-$version.min.js
@@ -77,8 +77,8 @@ cp ./browser-lib/dist/magnoliafabrics.min.js ./browser-lib/versions/magnoliafabr
 # replace brower-lib filename in README and in demo/index.html
 cdnVersionRegex="magnoliafabrics-(.*).min.js"
 cdnVersionNew="magnoliafabrics-$version.min.js"
-sed -i.bak -E "s%$cdnVersionRegex%$cdnVersionNew%" ./README.md
-sed -i.bak -E "s%$cdnVersionRegex%$cdnVersionNew%" ./browser-lib/demo/index.html
+sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./README.md
+sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./browser-lib/demo/index.html
 
 # build the npm lib
 cd npm-lib
