@@ -301,6 +301,7 @@ aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION} 
 # create commit and tag(and update latest tag)
 git add .
 git commit -m "Updated builds, create tags, bump version to $version"
+git pull
 git tag $version
 git tag latest -f
 git push origin :latest
