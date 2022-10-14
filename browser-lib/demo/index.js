@@ -81,6 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   magnolia
-    .getFabricByName("EVERLY BALL FRINGE GRAPE")
+    .getCleaningCodes()
+    .then((result) => console.log(result));
+
+    magnolia
+    .getAllFabricTaxonomies()
     .then((result) => console.log(result));
 });
