@@ -1,11 +1,14 @@
 # Magnolia Fabrics API
 
+## Demo
+See the demo site at [https://magnolia.vitalitysouth.com/](https://magnolia.vitalitysouth.com/). (browser-lib/demo)
+
 ## Install
 **NPM**
 
 First add the following to your .npmrc file:
 
-```
+```ini
 @vitality-south:registry=https://npm.pkg.github.com
 ```
 If you don't have a .npmrc file in your root directory, create one.
@@ -28,7 +31,7 @@ Or:
 
 **CDN**
 ```html
-<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.1.4.min.js"
+<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.1.5.min.js"
 integrity="sha384-g35rrf1gy3FuNzFw4NGgEXVuxKO3ShXyxVmazQe5LN2+UbitSoErmK0K0jibvcIU"
 crossorigin="anonymous"
 ></script>
@@ -72,21 +75,26 @@ magnolia.getAllFabrics().then((data) => {
 // Following the example above
 
 // Returns the full array of fabrics data excluding inventory data
+// data returned as data.value.fabricsList
 magnolia.getAllFabricsWithoutInventory().then((data) => {...});
 
 // Returns Taxonomies data for the full array of fabrics
+// data returned as data.value.taxonomy
 magnolia.getAllFabricTaxonomies().then((data) => {...});
 
 // Returns Inventory data for the full array of fabrics
+// data returned as data.value.inventoryList
 magnolia.getAllInventory().then((data) => {...});
 
 // Returns cleaning codes
 magnolia.getCleaningCodes().then((data) => {...});
 
 // Retrieves any fabric by its id(aka productCode)
+// data returned as data.value.fabric
 magnolia.getFabricById('<productCode>').then((data) => {...});
 
 // Retrieves any fabric by its name(aka patternColorCombo)
+// data returned as data.value.fabric
 magnolia.getFabricByName('<patternColorCombo>').then((data) => {...});
 ```
 
