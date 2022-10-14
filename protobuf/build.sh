@@ -38,9 +38,12 @@ protoc -I. --go_out=../pkg/fabric --go_opt=paths=source_relative \
 	api_fabric.proto
 protoc-go-inject-tag -input=../pkg/fabric/api_fabric.pb.go
 
+# currently unable to generate the client files as .ts?
+# that feature is experimental in grpcweb
 protoc -I. --go_out=../service --go_opt=paths=source_relative \
 	--go-grpc_out=../service --go-grpc_opt=paths=source_relative \
 	--js_out=import_style=commonjs:../js \
+	--js_out=import_style=commonjs:../ts \
 	--ts_out ../ts \
 	--ts_opt eslint_disable \
 	--ts_opt add_pb_suffix \
