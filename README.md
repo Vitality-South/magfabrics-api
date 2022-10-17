@@ -1,3 +1,4 @@
+![magnolia fabrics logo](logo_dark.png)
 # Magnolia Fabrics API
 
 ## Demo
