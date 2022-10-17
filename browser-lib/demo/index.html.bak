@@ -18,9 +18,34 @@
       class="container-fluid p-5 d-flex justify-content-between align-items-center"
     >
       <h1>
-        <img src="logo_dark.png" alt="Magnolia Fabrics API" class="logo" style="max-width:300px" />
+        <img
+          src="logo_dark.png"
+          alt="Magnolia Fabrics API"
+          class="logo"
+          style="max-width: 300px"
+        />
       </h1>
       <h1>Magnolia Fabrics API</h1>
+    </section>
+
+    <section class="w-full d-flex justify-content-center align-items-center">
+      <button
+        id="cleaning-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        class="btn-secondary btn mx-2"
+      >
+        Cleaning Codes
+      </button>
+
+      <button
+        id="taxonomies-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        class="btn-secondary btn mx-2"
+      >
+        Taxonomies
+      </button>
     </section>
 
     <section
@@ -65,8 +90,8 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="magnoliafabrics-1.2.4.min.js"
-integrity="sha384-vC9INuxEid+ZN4Gh5hNnnbu0bxCvll0ceMGbmSMMPma/zFnAYUQWc1lE1YhBFoZT"
+      src="magnoliafabrics-1.2.5.min.js"
+integrity="sha384-dXGupe+FC2e4w99dVNbMAJp83IW71D+7rspKyWxKC9FGM1/Z67y4t8F7rChH/KAp"
     ></script>
     <script src="index.js"></script>
   </body>
