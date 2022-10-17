@@ -32,8 +32,8 @@ Or:
 
 **CDN**
 ```html
-<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.2.3.min.js"
-integrity="sha384-9bzJtgQEvOjrzUbuahRL1G49PjYG/S17fXtiJ0IQPvByFOfz+NDNr4E+13cvjyCn"
+<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.2.4.min.js"
+integrity="sha384-vC9INuxEid+ZN4Gh5hNnnbu0bxCvll0ceMGbmSMMPma/zFnAYUQWc1lE1YhBFoZT"
 crossorigin="anonymous"
 ></script>
 ```
