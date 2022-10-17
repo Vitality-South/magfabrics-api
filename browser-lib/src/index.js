@@ -75,7 +75,6 @@ magnolia.getAllFabricsWithoutInventory = async () => {
       request,
       magnolia.metadata
     );
-    console.log(`Fabrics: `, fabrics);
   } catch (err) {
     return createReturnObj(
       null,
@@ -142,7 +141,6 @@ magnolia.getCleaningCodes = async () => {
       request,
       magnolia.metadata
     );
-    console.log(`Cleaning Codes: ${cleaningCodes}`);
   } catch (err) {
     return createReturnObj(null, `Failed to request cleaning codes\n ${err}`);
   }

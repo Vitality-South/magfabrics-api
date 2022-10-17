@@ -54,6 +54,79 @@ function openCard(data) {
   }
 }
 
+function openCleaningCard() {
+  magnolia.getCleaningCodes().then((result) => {
+    if (result.error) {
+      console.error(result.error);
+      return;
+    }
+
+    const data = result.value.cleaningCodesMap;
+
+    const modalTitle = document.getElementById("modal-title");
+    modalTitle.innerText = "Cleaning Codes";
+
+    const modalBody = document.getElementById("modal-body");
+    modalBody.innerHTML = ``;
+
+    for (const ccode of data) {
+      const row = document.createElement("div");
+      row.classList.add("row", "mb-2");
+
+      const keyCol = document.createElement("div");
+      keyCol.classList.add("col-5");
+      keyCol.innerText = ccode[0];
+
+      const valueCol = document.createElement("div");
+      valueCol.classList.add("col-7");
+      valueCol.style.maxWidth = "250px";
+      valueCol.innerText = ccode[1]?.description;
+
+      row.appendChild(keyCol);
+      row.appendChild(valueCol);
+
+      modalBody.appendChild(row);
+    }
+  });
+}
+
+function openTaxonomiesCard() {
+  magnolia.getAllFabricTaxonomies().then((result) => {
+    if (result.error) {
+      console.error(result.error);
+      return;
+    }
+
+    const data = result.value.taxonomy;
+
+    const modalTitle = document.getElementById("modal-title");
+    modalTitle.innerText = "Taxonomies";
+
+    const modalBody = document.getElementById("modal-body");
+    modalBody.innerHTML = ``;
+
+    for (const [key, value] of Object.entries(data)) {
+      const row = document.createElement("div");
+      row.classList.add("row", "mb-2");
+
+      const keyCol = document.createElement("div");
+      keyCol.classList.add("col-5");
+      keyCol.innerText = key;
+
+      const valueCol = document.createElement("div");
+      valueCol.classList.add("col-7");
+      valueCol.style.maxWidth = "300px";
+      valueCol.style.wordBreak = "break-word";
+      valueCol.innerText = JSON.stringify(value);
+
+      row.appendChild(keyCol);
+      row.appendChild(valueCol);
+
+      modalBody.appendChild(row);
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const fabSection = document.getElementById("fab-section");
   // fabSection.appendChild(createFabricsCard());
@@ -80,11 +153,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  magnolia
-    .getCleaningCodes()
-    .then((result) => console.log(result));
+  const cleaningBtn = document.getElementById("cleaning-btn");
+  cleaningBtn.addEventListener("click", () => openCleaningCard());
 
-    magnolia
-    .getAllFabricTaxonomies()
-    .then((result) => console.log(result));
+  const taxonomiesBtn = document.getElementById("taxonomies-btn");
+  taxonomiesBtn.addEventListener("click", () => openTaxonomiesCard());
 });
