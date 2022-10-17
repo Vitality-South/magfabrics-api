@@ -32,7 +32,7 @@ Or:
 
 **CDN**
 ```html
-<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.2.2.min.js"
+<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.2.3.min.js"
 integrity="sha384-9bzJtgQEvOjrzUbuahRL1G49PjYG/S17fXtiJ0IQPvByFOfz+NDNr4E+13cvjyCn"
 crossorigin="anonymous"
 ></script>
