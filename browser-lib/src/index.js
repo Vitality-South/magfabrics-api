@@ -34,7 +34,7 @@ magnolia.initialize = (apiKey) => {
 
   try {
     magnolia.client = new MagnoliaFabricsServicePromiseClient(
-      "https://api.magnoliaco.com"
+      "https://api.magfabrics.com"
     );
   } catch (err) {
     return createReturnObj(
