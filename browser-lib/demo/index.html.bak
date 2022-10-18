@@ -90,7 +90,7 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="magnoliafabrics-1.2.6.min.js"
+      src="magnoliafabrics-1.2.7.min.js"
 integrity="sha384-dXGupe+FC2e4w99dVNbMAJp83IW71D+7rspKyWxKC9FGM1/Z67y4t8F7rChH/KAp"
     ></script>
     <script src="index.js"></script>
