@@ -1,5 +1,5 @@
-![magnolia fabrics logo](logo_dark.png)
-# Magnolia Fabrics API
+![MagFabrics logo](logo_dark.png)
+# MagFabrics API
 
 ## Demo
 See the demo site at [https://magnolia.vitalitysouth.com/](https://magnolia.vitalitysouth.com/). (browser-lib/demo)
@@ -61,7 +61,7 @@ Supported API Methods:
 // Initializes the API client. Required before making any of the below API calls.
 magnolia.initialize('<Your API Key>');
 
-// Returns the full array of fabrics data including images
+// Returns the full array of fabrics data including all inventory data
 magnolia.getAllFabrics().then((data) => {
   if(data.error) {
     console.error(data.error);
@@ -133,6 +133,12 @@ To run:
 # add your api key to src/pages/IndexPage.vue
 # yarn quasar dev
 ```
+
+---
+
+## Support
+
+Contact magfabricsapi@vitalitysouth.com to acquire an API key or for any questions or issues.
 
 ---
 
