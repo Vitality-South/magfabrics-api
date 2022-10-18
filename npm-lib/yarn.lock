@@ -1148,13 +1148,6 @@
   dependencies:
     "p-locate" "^4.1.0"
 
-"magnolia-fabrics@github:Vitality-South/magnolia-fabrics-api#1.0.0":
-  "resolved" "git+ssh://git@github.com/Vitality-South/magnolia-fabrics-api.git#de8379e53ed8781af7fed91339203919924ffdbe"
-  "version" "1.0.0"
-  dependencies:
-    "google-protobuf" "^3.21.2"
-    "grpc-web" "^1.4.1"
-
 "mdn-data@2.0.14":
   "integrity" "sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow=="
   "resolved" "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.14.tgz"
