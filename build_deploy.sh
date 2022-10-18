@@ -302,6 +302,7 @@ aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION} 
 # update the spa's version of the npm lib
 cd SPA-Example
 npm install @vitality-south/magnolia-fabrics@latest
+cd ..
 
 # create commit and tag(and update latest tag)
 git add .
