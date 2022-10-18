@@ -49,6 +49,7 @@ fi
 
 # build the browser lib
 cd browser-lib
+npm i
 yarn build
 cd ..
 
@@ -65,6 +66,7 @@ fi
 
 # get checksum and update in demo html script tag and README
 cd updateSRI
+npm i
 node index.js
 cd ..
 
@@ -79,6 +81,7 @@ sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./browser-lib/demo/index.html
 
 # build the npm lib
 cd npm-lib
+npm i
 yarn build
 cd ..
 
