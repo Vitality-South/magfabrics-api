@@ -299,15 +299,19 @@ rm ./browser-lib/demo/magnoliafabrics-*.min.js
 # Because PWAs caching will prevent seeing the latest changes, we need to invalidate the cache
 aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION} --paths '/*'
 
+# update the spa's version of the npm lib
+cd SPA-Example
+npm install @vitality-south/magnolia-fabrics@latest
+
 # create commit and tag(and update latest tag)
 git add .
 git commit -m "Updated builds, create tags, bump version to $version"
 git pull
 git tag $version
 git tag latest -f
-git push origin :latest
-git push origin latest
-git push origin $version
+git push origin main :latest
+git push origin main latest
+git push origin main $version
 git push
 
 if [ $? -eq 0 ]; then
@@ -322,6 +326,4 @@ else
 fi
 
 
-# update the spa's version of the npm lib
-cd SPA-Example
-npm install @vitality-south/magnolia-fabrics@latest
+
