@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Magnolia Fabrics API</title>
+    <title>MagFabrics API</title>
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -25,7 +25,7 @@
           style="max-width: 300px"
         />
       </h1>
-      <h1>Magnolia Fabrics API</h1>
+      <h1>MagFabrics API</h1>
     </section>
 
     <section class="w-full d-flex justify-content-center align-items-center">
@@ -90,7 +90,7 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="magnoliafabrics-1.2.5.min.js"
+      src="magnoliafabrics-1.3.1.min.js"
 integrity="sha384-dXGupe+FC2e4w99dVNbMAJp83IW71D+7rspKyWxKC9FGM1/Z67y4t8F7rChH/KAp"
     ></script>
     <script src="index.js"></script>

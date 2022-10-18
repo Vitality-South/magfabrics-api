@@ -1,7 +1,7 @@
 {
   "name": "@vitality-south/magnolia-fabrics",
-  "version": "1.2.4",
-  "description": "Access fabrics data from Magnolia Fabrics",
+  "version": "1.3.0",
+  "description": "Access fabrics data from MagFabrics",
   "source": "src/index.js",
   "main": "dist/magnolia-fabrics.js",
   "targets": {
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Vitality-South/magnolia-fabrics-api.git#main"
   },
-  "author": "VitalitySouth LLC",
+  "author": "Vitality South, LLC",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/Vitality-South/magnolia-fabrics-api/issues"
