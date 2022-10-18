@@ -34,7 +34,6 @@ $(tput sgr0)"
 # build grpc web files from protobuf
 cd protobuf
 ./build.sh
-cd ..
 
 if [ $? -eq 0 ]; then
     echo "#################################################"
@@ -47,10 +46,11 @@ else
     exit
 fi
 
+cd ..
+
 # build the browser lib
 cd browser-lib
 yarn build
-cd ..
 
 if [ $? -eq 0 ]; then
     echo "#################################################"
@@ -62,6 +62,8 @@ else
     echo "#################################################"
     exit
 fi
+
+cd ..
 
 # get checksum and update in demo html script tag and README
 cd updateSRI
@@ -80,7 +82,6 @@ sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./browser-lib/demo/index.html
 # build the npm lib
 cd npm-lib
 yarn build
-cd ..
 
 if [ $? -eq 0 ]; then
     echo "#################################################"
@@ -93,10 +94,11 @@ else
     exit
 fi
 
+cd ..
+
 # publish to github registry
 cd npm-lib
 npm publish
-cd ..
 
 if [ $? -eq 0 ]; then
     echo "#################################################"
@@ -108,6 +110,8 @@ else
     echo "#################################################"
     exit
 fi
+
+cd ..
 
 ################################
 # publish demo site

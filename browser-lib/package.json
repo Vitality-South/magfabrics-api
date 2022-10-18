@@ -1,7 +1,7 @@
 {
   "name": "magnolia-api",
   "version": "1.2.5",
-  "description": "Access Fabrics Data From Magnolia Fabrics",
+  "description": "Access Fabrics Data From MagFabrics",
   "source": "src/index.js",
   "global": "dist/magnoliafabrics.min.js",
   "targets": {
@@ -14,7 +14,7 @@
     "watch": "parcel watch",
     "build": "parcel build"
   },
-  "author": "VitalitySouth LLC.",
+  "author": "Vitality South, LLC",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "parcel": "^2.7.0"

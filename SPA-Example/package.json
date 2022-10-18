@@ -1,9 +1,9 @@
 {
   "name": "spa-example",
   "version": "0.0.1",
-  "description": "An example of using the Magnolia Fabrics API in a SPA",
+  "description": "An example of using the MagFabrics API in a SPA",
   "productName": "magnolia-api",
-  "author": "Vitality South",
+  "author": "Vitality South, LLC",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
