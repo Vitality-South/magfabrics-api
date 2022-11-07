@@ -32,7 +32,7 @@ Or:
 
 **CDN**
 ```html
-<script src="https://demo.magfabrics.com/magfabrics-1.3.2.min.js"
+<script src="https://demo.magfabrics.com/magfabrics-1.3.3.min.js"
 integrity="sha384-dXGupe+FC2e4w99dVNbMAJp83IW71D+7rspKyWxKC9FGM1/Z67y4t8F7rChH/KAp"
 crossorigin="anonymous"
 ></script>
