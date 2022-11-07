@@ -24,7 +24,7 @@ npm install @vitality-south/magfabrics
 ```
 Then
 ```javascript
-import magfabrics from 'magfabrics';
+import magfabrics from '@vitality-south/magfabrics';
 ```
 
 Or:

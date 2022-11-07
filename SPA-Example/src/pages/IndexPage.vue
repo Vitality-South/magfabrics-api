@@ -52,7 +52,7 @@
 
 <script>
 import { defineComponent, onMounted, ref } from "vue";
-import magfabrics from "magfabrics";
+import magfabrics from "@vitality-south/magfabrics";
 
 export default defineComponent({
   name: "IndexPage",
