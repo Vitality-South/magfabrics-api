@@ -32,8 +32,8 @@ Or:
 
 **CDN**
 ```html
-<script src="https://demo.magfabrics.com/magfabrics-1.3.4.min.js"
-integrity="sha384-dXGupe+FC2e4w99dVNbMAJp83IW71D+7rspKyWxKC9FGM1/Z67y4t8F7rChH/KAp"
+<script src="https://demo.magfabrics.com/magfabrics-1.3.5.min.js"
+integrity="sha384-MbOT8aqH2sg23FwdSzaKTDn1G6rlvqkyEX+50NrimJ5oeBrK3H3Udd3rgN9BHx3s"
 crossorigin="anonymous"
 ></script>
 ```
