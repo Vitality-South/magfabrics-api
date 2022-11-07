@@ -55,7 +55,7 @@ function openCard(data) {
 }
 
 function openCleaningCard() {
-  magnolia.getCleaningCodes().then((result) => {
+  magfabrics.getCleaningCodes().then((result) => {
     if (result.error) {
       console.error(result.error);
       return;
@@ -91,7 +91,7 @@ function openCleaningCard() {
 }
 
 function openTaxonomiesCard() {
-  magnolia.getAllFabricTaxonomies().then((result) => {
+  magfabrics.getAllFabricTaxonomies().then((result) => {
     if (result.error) {
       console.error(result.error);
       return;
@@ -133,9 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const apiKey = "Zah3QYGl471fdlhw";
 
-  const magnoliaAPIClient = magnolia.initialize(apiKey);
+  const magfabricsAPIClient = magfabrics.initialize(apiKey);
 
-  magnolia.getAllFabrics().then((result) => {
+  magfabrics.getAllFabrics().then((result) => {
     if (result.error) {
       console.error(result.error);
       return;

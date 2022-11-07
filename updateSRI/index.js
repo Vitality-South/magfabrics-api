@@ -14,7 +14,7 @@ const checksum = getSRI(browserDistFileData, getSRI.SHA384).toString();
 const sriRegex =
   /src=\"(.*)magnoliafabrics(-?)(.*).min.js\"[\n\r\s]+integrity=\"(.*)\"/;
 const checksumNewIndex = `src="magnoliafabrics-${version}.min.js"\nintegrity="sha384-${checksum}"`;
-const checksumNewReadme = `src="https://magnolia.vitalitysouth.com/magnoliafabrics-${version}.min.js"\nintegrity="sha384-${checksum}"`;
+const checksumNewReadme = `src="https://demo.magfabrics.com/magnoliafabrics-${version}.min.js"\nintegrity="sha384-${checksum}"`;
 
 const currentDemoIndexFile = fs.readFileSync(demoIndexFile).toString();
 const currentReadmeFile = fs.readFileSync(readmeFile).toString();

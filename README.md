@@ -2,7 +2,7 @@
 # MagFabrics API
 
 ## Demo
-See the demo site at [https://magnolia.vitalitysouth.com/](https://magnolia.vitalitysouth.com/). (browser-lib/demo)
+See the demo site at [https://demo.magfabrics.com/](https://demo.magfabrics.com/). (browser-lib/demo)
 
 ## Install
 **NPM**
@@ -16,15 +16,15 @@ If you don't have a **.npmrc** file in your root directory, create one.
 
 
 ```bash
-yarn add @vitality-south/magnolia-fabrics
+yarn add @vitality-south/magfabrics
 ```
 or
  ```bash
-npm install @vitality-south/magnolia-fabrics
+npm install @vitality-south/magfabrics
 ```
 Then
 ```javascript
-import magnolia from 'magnolia-fabrics';
+import magfabrics from 'magfabrics';
 ```
 
 Or:
@@ -32,7 +32,7 @@ Or:
 
 **CDN**
 ```html
-<script src="https://magnolia.vitalitysouth.com/magnoliafabrics-1.3.2.min.js"
+<script src="https://demo.magfabrics.com/magfabrics-1.3.2.min.js"
 integrity="sha384-dXGupe+FC2e4w99dVNbMAJp83IW71D+7rspKyWxKC9FGM1/Z67y4t8F7rChH/KAp"
 crossorigin="anonymous"
 ></script>
@@ -44,12 +44,12 @@ crossorigin="anonymous"
 
 **Important**: You must call 
 ```javascript
-magnolia.initialize('<Your API Key>');
+magfabrics.initialize('<Your API Key>');
 ``` 
 first before making any more calls to the API.
 
 
-All methods(except for magnolia.initialize) are asyncronous and return an object in the shape of:
+All methods(except for magfabrics.initialize) are asyncronous and return an object in the shape of:
 ```javascript
 {
   value: {}, // either Object or null
@@ -59,10 +59,10 @@ All methods(except for magnolia.initialize) are asyncronous and return an object
 Supported API Methods:
 ```javascript
 // Initializes the API client. Required before making any of the below API calls.
-magnolia.initialize('<Your API Key>');
+magfabrics.initialize('<Your API Key>');
 
 // Returns the full array of fabrics data including all inventory data
-magnolia.getAllFabrics().then((data) => {
+magfabrics.getAllFabrics().then((data) => {
   if(data.error) {
     console.error(data.error);
     return;
@@ -77,27 +77,27 @@ magnolia.getAllFabrics().then((data) => {
 
 // Returns the full array of fabrics data excluding inventory data
 // data returned as data.value.fabricsList
-magnolia.getAllFabricsWithoutInventory().then((data) => {...});
+magfabrics.getAllFabricsWithoutInventory().then((data) => {...});
 
 // Returns Taxonomies data for the full array of fabrics
 // data returned as data.value.taxonomy
-magnolia.getAllFabricTaxonomies().then((data) => {...});
+magfabrics.getAllFabricTaxonomies().then((data) => {...});
 
 // Returns Inventory data for the full array of fabrics
 // data returned as data.value.inventoryList
-magnolia.getAllInventory().then((data) => {...});
+magfabrics.getAllInventory().then((data) => {...});
 
 // Returns cleaning codes
 // data returned as data.value.cleaningCodesMap
-magnolia.getCleaningCodes().then((data) => {...});
+magfabrics.getCleaningCodes().then((data) => {...});
 
 // Retrieves any fabric by its id(aka productCode)
 // data returned as data.value.fabric
-magnolia.getFabricById('<productCode>').then((data) => {...});
+magfabrics.getFabricById('<productCode>').then((data) => {...});
 
 // Retrieves any fabric by its name(aka patternColorCombo)
 // data returned as data.value.fabric
-magnolia.getFabricByName('<patternColorCombo>').then((data) => {...});
+magfabrics.getFabricByName('<patternColorCombo>').then((data) => {...});
 ```
 
 ---

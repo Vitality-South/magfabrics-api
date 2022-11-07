@@ -3,13 +3,13 @@
     <div class="flex justify-between items-center q-px-xl">
       <h1>
         <img
-          alt="Magnolia Fabrics logo"
+          alt="MagFabrics logo"
           src="~assets/logo_dark.png"
           style="width: 300px"
         />
       </h1>
 
-      <div class="text-h4">Magnolia Fabrics API</div>
+      <div class="text-h4">MagFabrics API</div>
     </div>
 
     <div class="q-pa-xl flex justify-center items-center">
@@ -52,7 +52,7 @@
 
 <script>
 import { defineComponent, onMounted, ref } from "vue";
-import magnolia from "magnolia-fabrics";
+import magfabrics from "magfabrics";
 
 export default defineComponent({
   name: "IndexPage",
@@ -64,8 +64,8 @@ export default defineComponent({
     const infoPopup = ref(false);
 
     onMounted(async () => {
-      magnolia.initialize("Zah3QYGl471fdlhw");
-      const fabricResults = await magnolia.getAllFabrics();
+      magfabrics.initialize("Zah3QYGl471fdlhw");
+      const fabricResults = await magfabrics.getAllFabrics();
       if (fabricResults.value) {
         fabrics.value = fabricResults?.value?.fabricsList;
       }
@@ -75,7 +75,6 @@ export default defineComponent({
     const onFabCardClicked = (fabricInfo) => {
       activeData.value = fabricInfo;
       infoPopup.value = true;
-
     };
 
     return {

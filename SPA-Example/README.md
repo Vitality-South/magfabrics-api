@@ -1,6 +1,6 @@
-# magnolia-api (spa-example)
+# magfabrics-api (spa-example)
 
-An example of using the Magnolia Fabrics API in a SPA
+An example of using the magfabrics API in a SPA
 
 ## Install the dependencies
 ```bash

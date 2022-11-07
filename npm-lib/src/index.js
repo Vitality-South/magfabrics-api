@@ -15,9 +15,9 @@ import {
 ///////////////////////////////////////
 // The object that will be exposed to
 // consumers of this library as the
-// Magnolia API interface.
+// magfabrics API interface.
 ///////////////////////////////////////
-const magnolia = {
+const magfabrics = {
   client: null,
   metadata: null,
 };
@@ -25,36 +25,39 @@ const magnolia = {
 ///////////////////////////////////////
 // Creates the gRPC Web Client
 ///////////////////////////////////////
-magnolia.initialize = (apiKey) => {
+magfabrics.initialize = (apiKey) => {
   if (!apiKey || typeof apiKey !== "string") {
     throw "Argument must be of type string. Please supply an API key for authentication.";
   }
 
-  magnolia.metadata = { "x-api-key": apiKey };
+  magfabrics.metadata = { "x-api-key": apiKey };
 
   try {
-    magnolia.client = new MagnoliaFabricsServicePromiseClient(
+    magfabrics.client = new MagnoliaFabricsServicePromiseClient(
       "https://api.magfabrics.com"
     );
   } catch (err) {
     return createReturnObj(
       null,
-      `Failed to initialize grpc client for Magnolia Fabrics API.\n ${err}`
+      `Failed to initialize grpc client for magfabrics API.\n ${err}`
     );
   }
 
-  return createReturnObj(magnolia.client, null);
+  return createReturnObj(magfabrics.client, null);
 };
 
 ///////////////////////////////////////
 // Returns the full catalog of fabrics
 ///////////////////////////////////////
-magnolia.getAllFabrics = async () => {
+magfabrics.getAllFabrics = async () => {
   let fabrics;
 
   try {
     const request = new GetAllFabricsRequest();
-    fabrics = await magnolia.client.getAllFabrics(request, magnolia.metadata);
+    fabrics = await magfabrics.client.getAllFabrics(
+      request,
+      magfabrics.metadata
+    );
   } catch (err) {
     return createReturnObj(null, `Failed to request full catalog\n ${err}`);
   }
@@ -66,14 +69,14 @@ magnolia.getAllFabrics = async () => {
 // Returns the full catalog of fabrics
 // without inventory data included.
 ///////////////////////////////////////
-magnolia.getAllFabricsWithoutInventory = async () => {
+magfabrics.getAllFabricsWithoutInventory = async () => {
   let fabrics;
 
   try {
     const request = new GetAllFabricsWithoutInventoryRequest();
-    fabrics = await magnolia.client.getAllFabricsWithoutInventory(
+    fabrics = await magfabrics.client.getAllFabricsWithoutInventory(
       request,
-      magnolia.metadata
+      magfabrics.metadata
     );
     console.log(`Fabrics: `, fabrics);
   } catch (err) {
@@ -90,14 +93,14 @@ magnolia.getAllFabricsWithoutInventory = async () => {
 // Returns taxonomies for the full
 // catalog of fabrics
 ///////////////////////////////////////
-magnolia.getAllFabricTaxonomies = async () => {
+magfabrics.getAllFabricTaxonomies = async () => {
   let taxonomies;
 
   try {
     const request = new GetAllFabricTaxonomyRequest();
-    taxonomies = await magnolia.client.getAllFabricTaxonomy(
+    taxonomies = await magfabrics.client.getAllFabricTaxonomy(
       request,
-      magnolia.metadata
+      magfabrics.metadata
     );
   } catch (err) {
     return createReturnObj(
@@ -113,14 +116,14 @@ magnolia.getAllFabricTaxonomies = async () => {
 // Returns the inventory data for the
 // full catalog of fabrics.
 ///////////////////////////////////////
-magnolia.getAllInventory = async () => {
+magfabrics.getAllInventory = async () => {
   let inventory;
 
   try {
     const request = new GetAllInventoryRequest();
-    inventory = await magnolia.client.getAllInventory(
+    inventory = await magfabrics.client.getAllInventory(
       request,
-      magnolia.metadata
+      magfabrics.metadata
     );
   } catch (err) {
     return createReturnObj(null, `Failed to request all Inventory\n ${err}`);
@@ -131,16 +134,16 @@ magnolia.getAllInventory = async () => {
 
 ///////////////////////////////////////
 // Returns the cleaning codes used
-// by Magnolia Fabrics.
+// by magfabrics.
 ///////////////////////////////////////
-magnolia.getCleaningCodes = async () => {
+magfabrics.getCleaningCodes = async () => {
   let cleaningCodes;
 
   try {
     const request = new GetCleaningCodesRequest();
-    cleaningCodes = await magnolia.client.getCleaningCodes(
+    cleaningCodes = await magfabrics.client.getCleaningCodes(
       request,
-      magnolia.metadata
+      magfabrics.metadata
     );
     console.log(`Cleaning Codes: ${cleaningCodes}`);
   } catch (err) {
@@ -154,13 +157,16 @@ magnolia.getCleaningCodes = async () => {
 // Returns a fabric if one exists with
 // the specified id.
 ///////////////////////////////////////
-magnolia.getFabricById = async (id) => {
+magfabrics.getFabricById = async (id) => {
   let fabric;
 
   try {
     const request = new GetFabricByIDRequest();
     request.setFabricId(id);
-    fabric = await magnolia.client.getFabricByID(request, magnolia.metadata);
+    fabric = await magfabrics.client.getFabricByID(
+      request,
+      magfabrics.metadata
+    );
   } catch (err) {
     return createReturnObj(null, `Failed to request fabric by id\n ${err}`);
   }
@@ -172,13 +178,16 @@ magnolia.getFabricById = async (id) => {
 // Returns fabrics if any exists with
 // the specified name.
 ///////////////////////////////////////
-magnolia.getFabricByName = async (name) => {
+magfabrics.getFabricByName = async (name) => {
   let fabric;
 
   try {
     const request = new GetFabricByNameRequest();
     request.setFabricName(name);
-    fabric = await magnolia.client.getFabricByName(request, magnolia.metadata);
+    fabric = await magfabrics.client.getFabricByName(
+      request,
+      magfabrics.metadata
+    );
   } catch (err) {
     return createReturnObj(null, `Failed to request fabric by name\n ${err}`);
   }
@@ -186,4 +195,4 @@ magnolia.getFabricByName = async (name) => {
   return createReturnObj(fabric.toObject(), null);
 };
 
-export default magnolia;
+export default magfabrics;
