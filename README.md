@@ -136,6 +136,65 @@ To run:
 
 ---
 
+# Dart/Flutter API
+
+## Install
+ 
+ Inside your `pubspec.yaml` file add the following:
+ 
+```yaml
+dependencies:
+  mag_fabrics:
+    git: 
+      url: https://github.com/Vitality-South/magfabrics-api.git
+      path: dart/mag_fabrics
+      ref: latest # You should peg a specific version(1.x.x) - see tags
+```
+
+call `flutter pub get` to install the package.
+
+## Usage
+
+Import the package:
+```dart
+import 'package:mag_fabrics/mag_fabrics.dart';
+```
+
+Example:
+```dart
+import 'package:mag_fabrics/mag_fabrics.dart';
+
+void main() async {
+  // Initialize the API client
+  // MUST BE CALLED FIRST !!!
+  await MagFabrics.instance.initialize('<YOUR_API_KEY>');
+
+  // Get all fabrics
+  final fabrics = await MagFabrics.instance.getAllFabrics();
+
+  // Get all fabrics without inventory
+  final fabrics = await MagFabrics.instance.getAllFabricsWithoutInventory();
+
+  // Get all inventory
+  final inventory = await MagFabrics.instance.getAllInventory();
+
+  // Get all fabric taxonomies
+  final taxonomies = await MagFabrics.instance.getAllTaxonomies();
+
+  // Get cleaning codes
+  final cleaningCodes = await MagFabrics.instance.getCleaningCodes();
+
+  // Get a fabric by id
+  final fabric = await MagFabrics.instance.getFabricById('<productCode>');
+
+  // Get a fabric by name
+  final fabric = await MagFabrics.instance.getFabricByName('<patternColorCombo>');
+
+  // Shutdown the API client
+  await MagFabrics.instance.dispose();
+}
+```
+
 ## Support
 
 Contact magfabricsapi@vitalitysouth.com to acquire an API key or for any questions or issues.
