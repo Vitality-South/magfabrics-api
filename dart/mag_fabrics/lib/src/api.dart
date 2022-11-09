@@ -21,7 +21,7 @@ class MagFabrics {
 
   ClientChannel? client;
   MagnoliaFabricsServiceClient? service;
-  String grpcHost = "grpc.magfabrics.com";
+  String grpcHost = "https://grpc.vitalitysouthosting.net";
   int grpcPort = 443;
 
   // creates the client channel with tls enabled
