@@ -3,8 +3,10 @@
 versionFile="./VERSION"
 packageFile="./browser-lib/package.json"
 packageFile2="./npm-lib/package.json"
+dartFile="./dart/mag_fabrics/pubspec.yaml"
 versionRegex="([0-9]+).([0-9]+).([0-9]+)"
 packageRegex="\"version\": \"([0-9]+).([0-9]+).([0-9]+)\""
+dartRegex="version: ([0-9]+).([0-9]+).([0-9]+)"
 version=""
 major=""
 minor=""
@@ -44,18 +46,22 @@ while getopts ":hvpmM" option; do
         patch=$((patch+1))
         replacement="$major.$minor.$patch"
         packageReplacement="\"version\": \"$replacement\""
+        dartReplacement="version: $replacement"
         sed -i.bak -E "s/$versionRegex/$replacement/" $versionFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile2
+        sed -i.bak -E "s/$dartRegex/$dartReplacement/" $dartFile
         exit;;
     m) # bump minor
         minor=$((minor+1))
         patch=0
         replacement="$major.$minor.$patch"
         packageReplacement="\"version\": \"$replacement\""
+        dartReplacement="version: $replacement"
         sed -i.bak -E "s/$versionRegex/$replacement/" $versionFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile2
+        sed -i.bak -E "s/$dartRegex/$dartReplacement/" $dartFile
         exit;;
     M) # bump major
         major=$((major+1))
@@ -63,9 +69,11 @@ while getopts ":hvpmM" option; do
         patch=0
         replacement="$major.$minor.$patch"
         packageReplacement="\"version\": \"$replacement\""
+        dartReplacement="version: $replacement"
         sed -i.bak -E "s/$versionRegex/$replacement/" $versionFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile
         sed -i.bak -E "s/$packageRegex/$packageReplacement/" $packageFile2
+        sed -i.bak -E "s/$dartRegex/$dartReplacement/" $dartFile
         exit;;
     \?) # invalid option
         echo "Invalid option"
