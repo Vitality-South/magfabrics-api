@@ -53,7 +53,7 @@ class MagFabrics {
     try {
       final request = GetAllFabricsRequest();
       final fabrics = await service!.getAllFabrics(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<List<Fabric>>(data: fabrics.fabrics);
     } on GrpcError catch (e) {
@@ -67,7 +67,7 @@ class MagFabrics {
     try {
       final request = GetAllFabricsWithoutInventoryRequest();
       final fabrics = await service!.getAllFabricsWithoutInventory(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<List<Fabric>>(data: fabrics.fabrics);
     } on GrpcError catch (e) {
@@ -81,7 +81,7 @@ class MagFabrics {
     try {
       final request = GetAllFabricTaxonomyRequest();
       final taxonomies = await service!.getAllFabricTaxonomy(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<Taxonomy>(data: taxonomies.taxonomy);
     } on GrpcError catch (e) {
@@ -96,7 +96,7 @@ class MagFabrics {
     try {
       final request = GetAllInventoryRequest();
       final inventory = await service!.getAllInventory(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<List<Inventory>>(data: inventory.inventory);
     } on GrpcError catch (e) {
@@ -111,7 +111,7 @@ class MagFabrics {
     try {
       final request = GetCleaningCodesRequest();
       final codes = await service!.getCleaningCodes(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<Map<String, CleaningCode>>(data: codes.cleaningCodes);
     } on GrpcError catch (e) {
@@ -126,7 +126,7 @@ class MagFabrics {
     try {
       final request = GetFabricByIDRequest(fabricId: id);
       final fabric = await service!.getFabricByID(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<Fabric>(data: fabric.fabric);
     } on GrpcError catch (e) {
@@ -140,7 +140,7 @@ class MagFabrics {
     try {
       final request = GetFabricByNameRequest(fabricName: id);
       final fabric = await service!.getFabricByName(request,
-          options: CallOptions(metadata: {'api-key': apiKey}));
+          options: CallOptions(metadata: {'x-api-key': apiKey}));
 
       return APIResponse<Fabric>(data: fabric.fabric);
     } on GrpcError catch (e) {
