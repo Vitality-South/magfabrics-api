@@ -17,7 +17,7 @@ class MagFabrics {
     }
   }
   static final MagFabrics instance = MagFabrics._privateConstructor();
-  static String apiKey = '';
+  String apiKey = '';
 
   ClientChannel? client;
   MagnoliaFabricsServiceClient? service;
