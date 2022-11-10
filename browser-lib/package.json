@@ -1,6 +1,6 @@
 {
   "name": "magfabrics-api",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Access Fabrics Data From MagFabrics",
   "source": "src/index.js",
   "global": "dist/magfabrics.min.js",
