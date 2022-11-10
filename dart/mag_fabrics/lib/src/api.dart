@@ -17,6 +17,7 @@ class MagFabrics {
     }
   }
   static final MagFabrics instance = MagFabrics._privateConstructor();
+
   String _apiKey = '';
 
   ClientChannel? client;
@@ -50,6 +51,8 @@ class MagFabrics {
   }
 
   Future<APIResponse<List<Fabric>>> getAllFabrics() async {
+    print('getAllFabrics');
+    print('apiKey: $_apiKey');
     try {
       final request = GetAllFabricsRequest();
       final fabrics = await service!.getAllFabrics(request,

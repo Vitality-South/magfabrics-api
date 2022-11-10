@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "@vitality-south/magfabrics": "^1.4.11",
+    "@vitality-south/magfabrics": "^1.4.12",
     "core-js": "^3.6.5",
     "google-protobuf": "^3.21.2",
     "grpc-web": "^1.4.1",
