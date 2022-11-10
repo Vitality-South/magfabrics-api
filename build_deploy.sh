@@ -306,18 +306,20 @@ cd ..
 
 # create commit and tag(and update latest tag)
 git add .
+sleep .5
 git commit -m "Updated builds, create tags, bump version to $version"
 sleep .5
 git pull
 sleep .5
 git tag $version
+sleep .5
 git tag latest -f
 git push origin main :latest
-sleep .5
+sleep 1
 git push origin main latest
-sleep .5
+sleep 1
 git push origin main $version
-sleep .5
+sleep 1
 git push
 
 if [ $? -eq 0 ]; then
