@@ -1,22 +1,22 @@
 4902
-118/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricTaxonomyResponse.html1668094516468226674 0
-125/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.html1668094516468226674 0
-126/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsWithoutInventoryRequest.html1668094516468226674 0
-89/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_taxonomy_pb.js.html1668094516478226671 0
-94/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_api_inventory_pb.js.html1668094516468226674 0
-106/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_magnolia_service_grpc_web_pb.js.html1668094516478226671 0
-87/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_fabric_pb.js.html1668094516468226674 0
-76/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/_global_.html1668094516468226674 0
-113/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllInventoryResponse.html1668094516468226674 0
-102/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Inventory.PO.html1668094516468226674 0
-111/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsResponse.html1668094516468226674 0
-98/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Taxonomy.html1668094516468226674 0
-112/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllInventoryRequest.html1668094516468226674 0
-65/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/index.html1668094516468226674 0
-65/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/files.html1668094516468226674 0
-70/home/zachacious/src/magfabrics-api/npm-lib/api/js/api_inventory_pb.js1668094516468226674 0
-84/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_grpc_web_pb.d.ts1668094516478226671 0
-67/home/zachacious/src/magfabrics-api/npm-lib/api/js/api_fabric_pb.js1668094516468226674 0
+118/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricTaxonomyResponse.html1668095276558111024 0
+125/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.html1668095276568111026 0
+126/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsWithoutInventoryRequest.html1668095276558111024 0
+89/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_taxonomy_pb.js.html1668095276568111026 0
+94/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_api_inventory_pb.js.html1668095276568111026 0
+106/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_magnolia_service_grpc_web_pb.js.html1668095276568111026 0
+87/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_fabric_pb.js.html1668095276568111026 0
+76/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/_global_.html1668095276558111024 0
+113/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllInventoryResponse.html1668095276558111024 0
+102/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Inventory.PO.html1668095276558111024 0
+111/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsResponse.html1668095276558111024 0
+98/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Taxonomy.html1668095276568111026 0
+112/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllInventoryRequest.html1668095276558111024 0
+65/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/index.html1668095276558111024 0
+65/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/files.html1668095276558111024 0
+70/home/zachacious/src/magfabrics-api/npm-lib/api/js/api_inventory_pb.js1668095276558111024 0
+84/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_grpc_web_pb.d.ts1668095276568111026 0
+67/home/zachacious/src/magfabrics-api/npm-lib/api/js/api_fabric_pb.js1668095276558111024 0
 50/home/zachacious/src/magfabrics-api/npm-lib/api/js1668090835038828504 1
 66/home/zachacious/src/magfabrics-api/npm-lib/src/createReturnObj.js1668090835038828504 0
 66/home/zachacious/src/magfabrics-api/npm-lib/dist/magfabrics.js.map1668092313788589580 0
@@ -168,10 +168,10 @@
 112/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_class_check_private_static_access.mjs1668092243868600649 0
 90/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_ts_decorate.mjs1668092244038600622 0
 106/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_possible_constructor_return.mjs1668092244008600627 0
-73/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_pb.js1668094516478226671 0
+73/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_pb.js1668095276568111026 0
 91/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_to_primitive.mjs1668092244038600622 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_to_property_key.mjs1668092244038600622 0
-99/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Inventory.html1668094516468226674 0
+99/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Inventory.html1668095276568111026 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_new_arrow_check.mjs1668092243988600628 0
 108/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_tagged_template_literal_loose.mjs1668092244028600621 0
 92/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/src/_object_spread.mjs1668092243988600628 0
@@ -855,7 +855,7 @@
 100/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/lib/requests/PackageRequest.js1668092244008600627 0
 91/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/src/InternalConfig.js1668092243978600631 0
 104/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/lib/requests/WriteBundleRequest.js1668092244188600598 0
-96/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Fabric.html1668094516468226674 0
+96/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Fabric.html1668095276558111024 0
 104/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/lib/requests/BundleGraphRequest.js1668092243778600661 0
 90/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/lib/_to_primitive.js1668092243768600665 0
 105/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/lib/requests/ParcelConfigRequest.js1668092244058600616 0
@@ -1229,7 +1229,7 @@
 84/home/zachacious/src/magfabrics-api/npm-lib/node_modules/bluebird/js/release/util.js1668092243768600665 0
 124/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/package-manager/test/fixtures/packages/foo-2.0/package.json1668092243818600658 0
 122/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/package-manager/test/fixtures/packages/peers/package.json1668092243828600656 0
-69/home/zachacious/src/magfabrics-api/npm-lib/api/js/api_taxonomy_pb.js1668094516468226674 0
+69/home/zachacious/src/magfabrics-api/npm-lib/api/js/api_taxonomy_pb.js1668095276558111024 0
 118/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/package-manager/test/fixtures/packages/peers/index.js1668092243608600692 0
 109/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/package-manager/test/fixtures/packages/peers1668092243818600658 1
 113/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/package-manager/test/fixtures/packages/peers-2.01668092243818600658 1
@@ -1582,7 +1582,7 @@
 105/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/lib/_check_private_redeclaration.js1668092242908600803 0
 95/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/jpeg2000.js1668092244328600575 0
 99/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/imagecapture.js1668092244298600580 0
-110/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByIDRequest.html1668094516468226674 0
+110/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByIDRequest.html1668095276558111024 0
 90/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/ogv.js1668092244428600560 0
 93/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/stream.js1668092244508600546 0
 98/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/user-timing.js1668092244548600540 0
@@ -1627,7 +1627,7 @@
 63/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@types1668092240688601157 1
 102/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/lib/_class_private_field_init.js1668092243258600747 0
 78/home/zachacious/src/magfabrics-api/npm-lib/node_modules/ansi-styles/readme.md1668092242488600870 0
-97/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_magnolia_service_pb.js.html1668094516478226671 0
+97/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_magnolia_service_pb.js.html1668095276568111026 0
 89/home/zachacious/src/magfabrics-api/npm-lib/node_modules/yargs/build/lib/apply-extends.js1668092242428600878 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@swc/helpers/lib/_get_prototype_of.js1668092243558600699 0
 113/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/package-manager/test/fixtures/empty/package.json1668092243768600665 0
@@ -1692,7 +1692,7 @@
 133/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/package-browser/main.js1668092244008600627 0
 91/home/zachacious/src/magfabrics-api/npm-lib/node_modules/utility-types/dist/mapped-types.js1668092242568600855 0
 77/home/zachacious/src/magfabrics-api/npm-lib/node_modules/picocolors/README.md1668092242518600866 0
-102/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.CleaningCode.html1668094516468226674 0
+102/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.CleaningCode.html1668095276558111024 0
 89/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-what/lib/commonjs/types.d.ts1668092243448600716 0
 92/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/woff2.js1668092244578600535 0
 66/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@trysound1668092240698601153 1
@@ -1729,7 +1729,7 @@
 82/home/zachacious/src/magfabrics-api/npm-lib/node_modules/is-arrayish/.istanbul.yml1668092242588600855 0
 101/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/TRK/TypeScriptDebugEngine1668092245818600336 1
 115/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/TRK/Targets/ProjectItemsSchema.xaml.lcl1668092245738600350 0
-118/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.MagnoliaFabricsServiceClient.html1668094516468226674 0
+118/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.MagnoliaFabricsServiceClient.html1668095276568111026 0
 87/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/src/Validation.js1668092244178600600 0
 87/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/TRK/Targets1668092245838600334 1
 84/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/lexer/error.js1668092243838600654 0
@@ -1814,7 +1814,7 @@
 77/home/zachacious/src/magfabrics-api/npm-lib/node_modules/buffer-from/index.js1668092242348600893 0
 70/home/zachacious/src/magfabrics-api/npm-lib/node_modules/msgpackr/dist1668092243678600680 1
 105/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/ITA/TypeScriptLanguageService1668092245638600365 1
-90/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_inventory_pb.js.html1668094516468226674 0
+90/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_inventory_pb.js.html1668095276568111026 0
 131/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/PLK/TypeScriptDebugEngine/TypeScriptDebugEngine.dll.lcl1668092245818600336 0
 82/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/watcher/prebuilds1668092243838600654 1
 124/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/PLK/Targets/TypeScriptProjectProperties.xaml.lcl1668092245828600333 0
@@ -1986,11 +1986,11 @@
 104/home/zachacious/src/magfabrics-api/npm-lib/node_modules/lmdb/dependencies/lz4/lib/dll/example/README.md1668092244178600600 0
 104/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts1668092245878600327 0
 96/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts1668092245858600330 0
-93/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_api_taxonomy_pb.js.html1668094516468226674 0
+93/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_api_taxonomy_pb.js.html1668095276568111026 0
 111/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/lib/pt-br/diagnosticMessages.generated.json1668092245568600377 0
 162/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/JPN/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl1668092245638600365 0
 115/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/CHS/Targets/ProjectItemsSchema.xaml.lcl1668092245698600356 0
-75/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_pb.d.ts1668094516478226671 0
+75/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_pb.d.ts1668095276568111026 0
 86/home/zachacious/src/magfabrics-api/npm-lib/node_modules/escape-string-regexp/index.js1668092242348600893 0
 75/home/zachacious/src/magfabrics-api/npm-lib/node_modules/p-limit/index.d.ts1668092242538600860 0
 127/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/test/fixtures/invalid-target-source-not-file/src/index.js1668092243928600640 0
@@ -2039,7 +2039,7 @@
 73/home/zachacious/src/magfabrics-api/npm-lib/node_modules/find-up/index.js1668092242398600882 0
 104/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/src/requests/BundleGraphRequest.js1668092243788600663 0
 72/home/zachacious/src/magfabrics-api/npm-lib/node_modules/find-up/license1668092242478600872 0
-70/home/zachacious/src/magfabrics-api/npm-lib/api/js/cleaning_code_pb.js1668094516468226674 0
+70/home/zachacious/src/magfabrics-api/npm-lib/api/js/cleaning_code_pb.js1668095276558111024 0
 71/home/zachacious/src/magfabrics-api/npm-lib/node_modules/tslib/tslib.js1668092242698600837 0
 82/home/zachacious/src/magfabrics-api/npm-lib/node_modules/tslib/CopyrightNotice.txt1668092243058600779 0
 77/home/zachacious/src/magfabrics-api/npm-lib/node_modules/tslib/tslib.es6.html1668092242298600901 0
@@ -2256,7 +2256,7 @@
 73/home/zachacious/src/magfabrics-api/npm-lib/node_modules/semver/README.md1668092242788600820 0
 102/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/source-map/dist/wasm-bindings.js.flow1668092242738600830 0
 77/home/zachacious/src/magfabrics-api/npm-lib/node_modules/p-limit/package.json1668092242388600886 0
-82/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_grpc_web_pb.js1668094516478226671 0
+82/home/zachacious/src/magfabrics-api/npm-lib/api/js/magnolia_service_grpc_web_pb.js1668095276568111026 0
 87/home/zachacious/src/magfabrics-api/npm-lib/node_modules/type-fest/ts41/kebab-case.d.ts1668092243228600752 0
 79/home/zachacious/src/magfabrics-api/npm-lib/node_modules/lightningcss/README.md1668092242668600841 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/parser/sequence.js1668092244078600616 0
@@ -2288,7 +2288,7 @@
 85/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/resolver-default/src1668092242498600867 1
 75/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-select/LICENSE1668092242338600895 0
 71/home/zachacious/src/magfabrics-api/npm-lib/node_modules/yargs/index.js1668092242918600801 0
-114/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetCleaningCodesResponse.html1668094516468226674 0
+114/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetCleaningCodesResponse.html1668095276558111024 0
 102/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/canvas-blending.js1668092243868600649 0
 87/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/PLK/Targets1668092245828600333 1
 70/home/zachacious/src/magfabrics-api/npm-lib/node_modules/yaml/util.mjs1668092243768600665 0
@@ -2601,7 +2601,7 @@
 86/home/zachacious/src/magfabrics-api/npm-lib/node_modules/lmdb/dependencies/lz4/LICENSE1668092243358600731 0
 91/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/src/Transformation.js1668092244168600599 0
 65/home/zachacious/src/magfabrics-api/npm-lib/node_modules/lmdb/src1668092244078600616 1
-111/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByIDResponse.html1668094516468226674 0
+111/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByIDResponse.html1668095276558111024 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/ME.js1668092244358600571 0
 95/home/zachacious/src/magfabrics-api/npm-lib/node_modules/svgo/plugins/convertEllipseToCircle.js1668092243398600725 0
 61/home/zachacious/src/magfabrics-api/npm-lib/package-lock.json1668092246748600185 0
@@ -2650,7 +2650,7 @@
 80/home/zachacious/src/magfabrics-api/npm-lib/node_modules/browserslist/error.d.ts1668092242978600792 0
 70/home/zachacious/src/magfabrics-api/npm-lib/node_modules/yargs/LICENSE1668092242298600901 0
 96/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/src/dumpGraphToGraphViz.js1668092243858600651 0
-60/home/zachacious/src/magfabrics-api/npm-lib/package.json.bak1668094148858294123 0
+60/home/zachacious/src/magfabrics-api/npm-lib/package.json.bak1668094498678229994 0
 101/home/zachacious/src/magfabrics-api/npm-lib/node_modules/entities/lib/generated/decode-data-html.d.ts1668092243358600731 0
 108/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/optimizer-htmlnano/src/HTMLNanoOptimizer.js1668092242548600861 0
 68/home/zachacious/src/magfabrics-api/npm-lib/node_modules/safe-buffer1668092242568600855 1
@@ -2712,7 +2712,7 @@
 83/home/zachacious/src/magfabrics-api/npm-lib/node_modules/htmlnano/docs/package.json1668092243808600657 0
 84/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/utils/clone.js1668092243358600731 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/AZ.js1668092243648600685 0
-127/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.html1668094516468226674 0
+127/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.html1668095276558111024 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/bluebird/js/release/nodeback.js1668092243638600684 0
 69/home/zachacious/src/magfabrics-api/npm-lib/node_modules/htmlnano/lib1668092243108600768 1
 100/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/lib/TargetDescriptor.schema.js1668092244138600607 0
@@ -2980,7 +2980,7 @@
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/ET.js1668092244258600587 0
 114/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/workers/test/integration/workerfarm/master-sum.js1668092243318600735 0
 74/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/lib/it1668092245538600381 1
-91/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_api_fabric_pb.js.html1668094516468226674 0
+91/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_api_fabric_pb.js.html1668095276568111026 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/domutils/lib/stringify.d.ts.map1668092243178600757 0
 74/home/zachacious/src/magfabrics-api/npm-lib/node_modules/parcel/lib/cli.js1668092242618600850 0
 101/home/zachacious/src/magfabrics-api/npm-lib/node_modules/typescript/loc/lcl/CHS/TypeScriptDebugEngine1668092245788600341 1
@@ -3129,7 +3129,7 @@
 103/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/css-revert-value.js1668092244168600599 0
 83/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/syntax/pseudo1668092244078600616 1
 106/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/css-scroll-behavior.js1668092244168600599 0
-112/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByNameRequest.html1668094516468226674 0
+112/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByNameRequest.html1668095276558111024 0
 103/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/css-color-adjust.js1668092244038600622 0
 77/home/zachacious/src/magfabrics-api/npm-lib/node_modules/term-size/index.d.ts1668092243098600772 0
 83/home/zachacious/src/magfabrics-api/npm-lib/node_modules/lightningcss-linux-x64-gnu1668092242348600893 1
@@ -3277,7 +3277,7 @@
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/posthtml-render/dist/index.d.ts1668092242788600820 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@jridgewell/gen-mapping/LICENSE1668092242338600895 0
 90/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@jridgewell/resolve-uri/README.md1668092242788600820 0
-110/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsRequest.html1668094516468226674 0
+110/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricsRequest.html1668095276558111024 0
 82/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@jridgewell/trace-mapping1668092243058600779 1
 78/home/zachacious/src/magfabrics-api/npm-lib/node_modules/yargs/locales/nb.json1668092243528600702 0
 76/home/zachacious/src/magfabrics-api/npm-lib/node_modules/grpc-web/index.d.ts1668092242578600857 0
@@ -3539,7 +3539,7 @@
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/ZM.js1668092244588600531 0
 84/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/events/src/index.js1668092242838600814 0
 73/home/zachacious/src/magfabrics-api/npm-lib/node_modules/entities/LICENSE1668092242338600895 0
-94/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_cleaning_code_pb.js.html1668094516468226674 0
+94/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/src/js_cleaning_code_pb.js.html1668095276568111026 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/utils/test/collection.test.js1668092243048600781 0
 65/home/zachacious/src/magfabrics-api/npm-lib/node_modules/minizlib1668092242998600786 1
 74/home/zachacious/src/magfabrics-api/npm-lib/node_modules/minizlib/index.js1668092242928600797 0
@@ -3576,7 +3576,7 @@
 70/home/zachacious/src/magfabrics-api/npm-lib/node_modules/nth-check/lib1668092243298600740 1
 79/home/zachacious/src/magfabrics-api/npm-lib/node_modules/callsites/package.json1668092242338600895 0
 74/home/zachacious/src/magfabrics-api/npm-lib/node_modules/nth-check/lib/esm1668092243288600743 1
-117/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricTaxonomyRequest.html1668094516468226674 0
+117/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetAllFabricTaxonomyRequest.html1668095276558111024 0
 83/home/zachacious/src/magfabrics-api/npm-lib/node_modules/nth-check/lib/esm/parse.js1668092242668600841 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/svgo/lib/svgo/css-select-adapter.d.ts1668092243968600633 0
 89/home/zachacious/src/magfabrics-api/npm-lib/node_modules/nth-check/lib/esm/parse.d.ts.map1668092243178600757 0
@@ -3657,7 +3657,7 @@
 69/home/zachacious/src/magfabrics-api/npm-lib/node_modules/chalk/source1668092242488600870 1
 75/home/zachacious/src/magfabrics-api/npm-lib/node_modules/minimist/.eslintrc1668092242298600901 0
 103/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/publickeypinning.js1668092244448600554 0
-104/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Inventory.Roll.html1668094516468226674 0
+104/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.Inventory.Roll.html1668095276568111026 0
 86/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@babel/highlight/package.json1668092242558600859 0
 105/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.mjs1668092243168600761 0
 79/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/convertor1668092243908600643 1
@@ -3742,7 +3742,7 @@
 79/home/zachacious/src/magfabrics-api/npm-lib/node_modules/term-size/package.json1668092243038600783 0
 96/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/syntax/pseudo/nth-child.js1668092244028600621 0
 99/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/utils/test/input/config/config.cjs1668092242598600852 0
-43/home/zachacious/src/magfabrics-api/npm-lib1668094498678229994 1
+43/home/zachacious/src/magfabrics-api/npm-lib1668095261998113412 1
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/IN.js1668092244308600576 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/features/rellist.js1668092244458600555 0
 94/home/zachacious/src/magfabrics-api/npm-lib/node_modules/css-tree/lib/syntax/pseudo/matches.js1668092243998600629 0
@@ -4340,7 +4340,7 @@
 84/home/zachacious/src/magfabrics-api/npm-lib/node_modules/type-fest/source/entry.d.ts1668092243088600774 0
 103/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/test/fixtures/application-targets1668092244198600594 1
 97/home/zachacious/src/magfabrics-api/npm-lib/node_modules/type-fest/source/fixed-length-array.d.ts1668092243148600765 0
-113/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByNameResponse.html1668094516468226674 0
+113/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetFabricByNameResponse.html1668095276558111024 0
 93/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/transformer-css/package.json1668092242688600839 0
 82/home/zachacious/src/magfabrics-api/npm-lib/node_modules/which-module/CHANGELOG.md1668092243208600753 0
 87/home/zachacious/src/magfabrics-api/npm-lib/node_modules/type-fest/source/value-of.d.ts1668092243558600699 0
@@ -4377,7 +4377,7 @@
 95/home/zachacious/src/magfabrics-api/npm-lib/node_modules/chrome-trace-event/dist/trace-event.js1668092242348600893 0
 80/home/zachacious/src/magfabrics-api/npm-lib/node_modules/picocolors/package.json1668092242438600879 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/chrome-trace-event/package.json1668092242408600884 0
-56/home/zachacious/src/magfabrics-api/npm-lib/package.json1668094498678229994 0
+56/home/zachacious/src/magfabrics-api/npm-lib/package.json1668095261998113412 0
 68/home/zachacious/src/magfabrics-api/npm-lib/node_modules/fs-minipass1668092242798600821 1
 77/home/zachacious/src/magfabrics-api/npm-lib/node_modules/fs-minipass/index.js1668092242748600826 0
 76/home/zachacious/src/magfabrics-api/npm-lib/node_modules/fs-minipass/LICENSE1668092242618600850 0
@@ -4483,7 +4483,7 @@
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/JP.js1668092244328600575 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/GE.js1668092244278600584 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/EC.js1668092244238600587 0
-113/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetCleaningCodesRequest.html1668094516468226674 0
+113/home/zachacious/src/magfabrics-api/npm-lib/api/js/doc/symbols/proto.magnoliafabrics.GetCleaningCodesRequest.html1668095276558111024 0
 87/home/zachacious/src/magfabrics-api/npm-lib/node_modules/@parcel/core/src/serializer.js1668092244108600611 0
 88/home/zachacious/src/magfabrics-api/npm-lib/node_modules/caniuse-lite/data/regions/NP.js1668092244418600558 0
 80/home/zachacious/src/magfabrics-api/npm-lib/node_modules/terser/lib/transform.js1668092243968600633 0
