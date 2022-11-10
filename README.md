@@ -194,6 +194,18 @@ void main() async {
   await MagFabrics.instance.dispose();
 }
 ```
+
+API request return an APIResponse object containing data and error fields. A succesful request will return an empty string for the error field. An error will return a string containing the error message.
+
+```dart
+class APIResponse<T> {
+  final String error;
+  final T data;
+
+  APIResponse({this.error = '', required this.data});
+}
+```
+
 ---
 
 ## Support
