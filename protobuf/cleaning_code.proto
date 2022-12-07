@@ -6,7 +6,7 @@
 syntax = "proto3";
 package magnoliafabrics;
 
-option go_package = "github.com/Vitality-South/magnolia-fabrics-api/pkg/cleaningcode";
+option go_package = "github.com/Vitality-South/magfabrics-api/pkg/cleaningcode";
 
 message CleaningCode {
     // @gotags: dynamo:"CleaningCodeID"

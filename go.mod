@@ -1,4 +1,4 @@
-module github.com/Vitality-South/magnolia-fabrics-api
+module github.com/Vitality-South/magfabrics-api
 
 go 1.19
 

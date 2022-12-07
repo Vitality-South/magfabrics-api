@@ -17,10 +17,10 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/guregu/dynamo"
 
-	"github.com/Vitality-South/magnolia-fabrics-api/pkg/cleaningcode"
-	"github.com/Vitality-South/magnolia-fabrics-api/pkg/fabric"
-	"github.com/Vitality-South/magnolia-fabrics-api/pkg/inventory"
-	"github.com/Vitality-South/magnolia-fabrics-api/pkg/taxonomy"
+	"github.com/Vitality-South/magfabrics-api/pkg/cleaningcode"
+	"github.com/Vitality-South/magfabrics-api/pkg/fabric"
+	"github.com/Vitality-South/magfabrics-api/pkg/inventory"
+	"github.com/Vitality-South/magfabrics-api/pkg/taxonomy"
 )
 
 const (

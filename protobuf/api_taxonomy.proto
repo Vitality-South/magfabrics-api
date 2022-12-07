@@ -6,7 +6,7 @@
 syntax = "proto3";
 package magnoliafabrics;
 
-option go_package = "github.com/Vitality-South/magnolia-fabrics-api/pkg/taxonomy";
+option go_package = "github.com/Vitality-South/magfabrics-api/pkg/taxonomy";
 
 message Taxonomy {
     // @gotags: dynamo:"TaxonomyBrands"

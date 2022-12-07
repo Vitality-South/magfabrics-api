@@ -14,7 +14,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/Vitality-South/magnolia-fabrics-api/service"
+	"github.com/Vitality-South/magfabrics-api/service"
 )
 
 const (

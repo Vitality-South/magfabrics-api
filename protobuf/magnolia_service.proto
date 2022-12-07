@@ -6,7 +6,7 @@
 syntax = "proto3";
 package magnoliafabrics;
 
-option go_package = "github.com/Vitality-South/magnolia-fabrics-api/service";
+option go_package = "github.com/Vitality-South/magfabrics-api/service";
 
 import "api_inventory.proto";
 import "api_fabric.proto";

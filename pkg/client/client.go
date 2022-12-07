@@ -8,8 +8,8 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/Vitality-South/magnolia-fabrics-api/pkg/fabric"
-	"github.com/Vitality-South/magnolia-fabrics-api/service"
+	"github.com/Vitality-South/magfabrics-api/pkg/fabric"
+	"github.com/Vitality-South/magfabrics-api/service"
 )
 
 const (
