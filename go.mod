@@ -12,6 +12,7 @@ require (
 
 require (
 	github.com/cenkalti/backoff/v4 v4.1.3 // indirect
+	github.com/gocarina/gocsv v0.0.0-20221105105431-c8ef78125b99 // indirect
 	github.com/gofrs/uuid v4.3.0+incompatible // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	golang.org/x/net v0.0.0-20221017152216-f25eb7ecb193 // indirect

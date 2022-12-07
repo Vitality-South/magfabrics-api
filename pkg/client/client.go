@@ -8,7 +8,10 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
 
+	"github.com/Vitality-South/magfabrics-api/pkg/cleaningcode"
 	"github.com/Vitality-South/magfabrics-api/pkg/fabric"
+	"github.com/Vitality-South/magfabrics-api/pkg/inventory"
+	"github.com/Vitality-South/magfabrics-api/pkg/taxonomy"
 	"github.com/Vitality-South/magfabrics-api/service"
 )
 
@@ -37,11 +40,9 @@ func NewClient(apiKey string) (*Client, error) {
 		return nil, cerr
 	}
 
-	client := service.MagnoliaFabricsServiceClient(conn)
-
 	c := Client{
 		conn:   conn,
-		client: client,
+		client: service.NewMagnoliaFabricsServiceClient(conn),
 		apiKey: apiKey,
 	}
 
@@ -66,4 +67,100 @@ func (c *Client) GetAllFabrics(ctx context.Context) ([]*fabric.Fabric, error) {
 	}
 
 	return resp.Fabrics, nil
+}
+
+func (c *Client) GetAllFabricsWithoutInventory(ctx context.Context) ([]*fabric.Fabric, error) {
+	req := &service.GetAllFabricsWithoutInventoryRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetAllFabricsWithoutInventory(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.Fabrics, nil
+}
+
+func (c *Client) GetAllInventory(ctx context.Context) ([]*inventory.Inventory, error) {
+	req := &service.GetAllInventoryRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetAllInventory(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.Inventory, nil
+}
+
+func (c *Client) GetFabricByID(ctx context.Context) (*fabric.Fabric, error) {
+	req := &service.GetFabricByIDRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetFabricByID(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.Fabric, nil
+}
+
+func (c *Client) GetFabricByName(ctx context.Context) (*fabric.Fabric, error) {
+	req := &service.GetFabricByNameRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetFabricByName(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.Fabric, nil
+}
+
+func (c *Client) GetAllFabricTaxonomy(ctx context.Context) (*taxonomy.Taxonomy, error) {
+	req := &service.GetAllFabricTaxonomyRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetAllFabricTaxonomy(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.Taxonomy, nil
+}
+
+func (c *Client) GetCleaningCodes(ctx context.Context) (map[string]*cleaningcode.CleaningCode, error) {
+	req := &service.GetCleaningCodesRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetCleaningCodes(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.CleaningCodes, nil
 }
