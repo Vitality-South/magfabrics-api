@@ -1,40 +1,40 @@
 ![MagFabrics logo](logo_dark.png)
+
 # MagFabrics API
 
 ## Demo
+
 See the demo site at [https://demo.magfabrics.com/](https://demo.magfabrics.com/). (browser-lib/demo)
 
 ## Install
-**NPM**
 
-First add the following to your **.npmrc** file:
-
-```ini
-@vitality-south:registry=https://npm.pkg.github.com
-```
-If you don't have a **.npmrc** file in your root directory, create one.
-
+### NPM
 
 ```bash
 yarn add @vitality-south/magfabrics
 ```
+
 or
- ```bash
+
+```bash
 npm install @vitality-south/magfabrics
 ```
+
 Then
+
 ```javascript
-import magfabrics from '@vitality-south/magfabrics';
+import magfabrics from "@vitality-south/magfabrics";
 ```
 
 Or:
 
+### CDN
 
-**CDN**
 ```html
-<script src="https://demo.magfabrics.com/magfabrics-1.4.15.min.js"
+<script
+  src="https://demo.magfabrics.com/magfabrics-1.5.1.min.js"
 integrity="sha384-MbOT8aqH2sg23FwdSzaKTDn1G6rlvqkyEX+50NrimJ5oeBrK3H3Udd3rgN9BHx3s"
-crossorigin="anonymous"
+  crossorigin="anonymous"
 ></script>
 ```
 
@@ -42,21 +42,25 @@ crossorigin="anonymous"
 
 ## Usage
 
-**Important**: You must call 
+**Important**: You must call
+
 ```javascript
-magfabrics.initialize('<Your API Key>');
-``` 
+magfabrics.initialize("<Your API Key>");
+```
+
 first before making any more calls to the API.
 
-
 All methods(except for magfabrics.initialize) are asyncronous and return an object in the shape of:
+
 ```javascript
 {
   value: {}, // either Object or null
   error: '', // either string or null
 }
 ```
+
 Supported API Methods:
+
 ```javascript
 // Initializes the API client. Required before making any of the below API calls.
 magfabrics.initialize('<Your API Key>');
@@ -103,6 +107,7 @@ magfabrics.getFabricByName('<patternColorCombo>').then((data) => {...});
 ---
 
 ## Advanced Users
+
 Although we recommend using either the CDN or NPM method of installing, you can run the gRPC Web version directly.
 
 To start, copy the `/js` or `/ts` folders respectively. Inside you'll find a docs folder containing the gRPC Web documentation. For examples look at browser-lib/ or npm-lib/.
@@ -114,7 +119,8 @@ To start, copy the `/js` or `/ts` folders respectively. Inside you'll find a doc
 **CDN**
 
 The browser-lib/demo folder contains a working example using a script tag loaded from the CDN to demonstrate how to consume the API.
-To run: 
+To run:
+
 ```
 # clone this repo
 # cd into browser-lib/demo
@@ -125,7 +131,8 @@ To run:
 **SPA's etc.**
 
 The SPA-Example folder contains an example of how to consume the API in Vue based SPA. The same example is valid for any bundled js/ts project.
-To run: 
+To run:
+
 ```
 # clone this repo
 # cd into SPA-Example
@@ -139,13 +146,13 @@ To run:
 # Dart/Flutter API
 
 ## Install
- 
- Inside your `pubspec.yaml` file add the following:
- 
+
+Inside your `pubspec.yaml` file add the following:
+
 ```yaml
 dependencies:
   mag_fabrics:
-    git: 
+    git:
       url: https://github.com/Vitality-South/magfabrics-api.git
       path: dart/mag_fabrics
       ref: latest # You should peg a specific version(1.x.x) - see tags
@@ -156,11 +163,13 @@ call `flutter pub get` to install the package.
 ## Usage
 
 Import the package:
+
 ```dart
 import 'package:mag_fabrics/mag_fabrics.dart';
 ```
 
 Example:
+
 ```dart
 import 'package:mag_fabrics/mag_fabrics.dart';
 

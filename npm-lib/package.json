@@ -1,6 +1,6 @@
 {
   "name": "@vitality-south/magfabrics",
-  "version": "1.4.15",
+  "version": "1.5.1",
   "description": "Access fabrics data from MagFabrics",
   "source": "src/index.js",
   "main": "dist/magfabrics.js",
@@ -37,6 +37,7 @@
   "files": [
     "dist/magfabrics.js",
     "dist/magfabrics.js.map",
+    "README.md",
     "LICENSE"
   ]
 }
