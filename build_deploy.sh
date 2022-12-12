@@ -98,7 +98,7 @@ cd ..
 
 # publish to github registry
 cd npm-lib
-npm publish
+npm publish --access public
 
 if [ $? -eq 0 ]; then
     echo "#################################################"
