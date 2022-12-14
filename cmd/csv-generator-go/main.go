@@ -22,6 +22,9 @@ import (
 )
 
 const (
+	// version number
+	version = 2
+
 	// default delimiter in CSV output
 	defaultCSVDelimiter = ','
 
@@ -69,7 +72,16 @@ func main() {
 
 	ignoreDiscontinued := flag.Bool("ignorediscontinued", false, "ignore discontinued fabrics (default is false)")
 
+	printVersion := flag.Bool("version", false, "print version number and exit")
+
 	flag.Parse()
+
+	// print version and exit if version flag was supplied
+	if *printVersion {
+		fmt.Fprintf(os.Stderr, "%d\n", version)
+
+		os.Exit(1)
+	}
 
 	// setup API client
 	if *apiKey == "" {
