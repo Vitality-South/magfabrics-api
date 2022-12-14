@@ -2,9 +2,15 @@
 
 # MagFabrics API
 
+The MagFabrics API provides all fabrics, inventory, and taxonomy data available on [magfabrics.com](https://magfabrics.com/). See the [demo site](https://demo.magfabrics.com/) as an example of all data that is available. Client libraries are available in this repo for both front-end and back-end apps in various programming languages. We currently support JavaScript, [Go](https://go.dev/), and [Dart/Flutter](https://flutter.dev/) but are willing to add more upon request. There are also tools available in [cmd](cmd) folder for exporting all API data to CSV. Email magfabricsapi@vitalitysouth.com to request an API key.  
+  
+If you need a custom / bespoke integration, assistance with building an app or website, or any other software development work, contact devteam@vitalitysouth.com.
+
 ## Demo
 
-See the demo site at [https://demo.magfabrics.com/](https://demo.magfabrics.com/). (browser-lib/demo)
+See the demo site at [https://demo.magfabrics.com/](https://demo.magfabrics.com/). The code for the demo site is available in [browser-lib/demo](browser-lib/demo) folder.
+
+# JavaScript Client
 
 ## Install
 
@@ -143,7 +149,58 @@ To run:
 
 ---
 
-# Dart/Flutter API
+# Go Client
+
+## Install
+
+```bash
+go get github.com/Vitality-South/magfabrics-api
+```
+
+## Usage
+
+```go
+import (
+	"github.com/Vitality-South/magfabrics-api/pkg/client"
+)
+```
+
+## Example in Go
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/Vitality-South/magfabrics-api/pkg/client"
+)
+
+func main() {
+	c, cerr := client.NewClient("your api key")
+
+	if cerr != nil {
+		panic(fmt.Sprintf("error creating API client: %v", cerr))
+	}
+
+	defer c.Close()
+
+	ctx := context.Background()
+
+	fabrics, ferr := c.GetAllFabrics(ctx)
+
+	if ferr != nil {
+		panic(fmt.Sprintf("error getting all fabrics: %v", ferr))
+	}
+
+	fmt.Print(fabrics)
+}
+```
+
+---
+
+# Dart/Flutter Client
 
 ## Install
 
@@ -220,6 +277,12 @@ class APIResponse<T> {
 ## Support
 
 Contact magfabricsapi@vitalitysouth.com to acquire an API key or for any questions or issues.
+
+---
+
+## Custom Integration
+
+If you need a custom / bespoke integration, assistance with building an app or website, or any other software development work, contact devteam@vitalitysouth.com.
 
 ---
 
