@@ -2,9 +2,9 @@
 
 # Usage
 
-The -apikey flag is required.  
+The -apikey flag is required.
 
-Run the app with the -h flag on the command line to see all options.  
+Run the app with the -h flag on the command line to see all options.
 
 ```
 Usage:
@@ -24,6 +24,20 @@ Usage:
 [Windows x64](https://images.magfabrics.com/apps/magfabrics-csv-amd64-v2.exe)
 
 [Windows x32](https://images.magfabrics.com/apps/magfabrics-csv-386-v2.exe)
+
+# Shopify Mode
+
+```
+Usage:
+  -shopify
+      Turns the output into a Shopify-ready CSV Product Import format
+
+  -shopifyHandlePrefix=""
+      Set a prefix for the Handle on all shopify products, in the case that your Shopify store sells multiple products from different brands (requires -shopify to be enabled)
+
+  -shopifyToggleArchived=true/false
+      Set products as Archived/Unpublished if they are discontinued (default is true, also requires -shopify to be enabled)
+```
 
 # Build your own version for any OS and architecture that Go supports
 
