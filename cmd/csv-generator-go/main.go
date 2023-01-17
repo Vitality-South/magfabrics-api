@@ -85,6 +85,7 @@ type shopifyProduct struct {
 	PriceInternational          string `csv:"Price / International"`
 	CompareAtPriceInternational string `csv:"Compare At Price / International"`
 	Status                      string `csv:"Status"`
+	Dimensions                  string `csv:"Dimensions"`
 }
 
 // filter returns a slice that contains only the elements of the provided slice
@@ -110,24 +111,130 @@ func nospace(s string) string {
 	return strings.ReplaceAll(s, " ", "-")
 }
 
-func shopifyProducts(fabrics []*fabric.Fabric) []shopifyProduct {
+func nospaceButComma(s string) string {
+	return strings.ReplaceAll(s, " ", ",")
+}
+
+func buildHtmlDescription(body strings.Builder, f *fabric.Fabric) string {
+	body.WriteString(`<div class="magfabrics-body">`)
+
+	if f.Disclaimer != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-description">Description: %s</p>`, f.Disclaimer))
+	}
+
+	body.WriteString(fmt.Sprintf(`<p class="magfabrics-sku">MagFabrics SKU #: %s</p>`, f.Sku))
+
+	if f.HRepeat != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-hrepeated">Horizontal Repeat: %s</p>`, f.HRepeat))
+	}
+
+	if f.VRepeat != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-vrepeated">Vertical Repeat: %s</p>`, f.VRepeat))
+	}
+
+	if f.Color != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-color">Color: %s</p>`, f.Color))
+	}
+
+	if len(f.Uses) != 0 {
+		var Uses strings.Builder
+
+		for _, u := range f.Uses {
+			Uses.WriteString(fmt.Sprintf("%s ", u))
+		}
+
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-uses">Uses: %s</p>`, nospaceButComma(Uses.String())))
+	}
+
+	if f.Contents != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-contents">Contents: %s</p>`, f.Contents))
+	}
+
+	if f.DoubleRubs != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-double-rubs">Double Rubs: %s</p>`, f.DoubleRubs))
+	}
+
+	if len(f.Designs) != 0 {
+		var Designs strings.Builder
+
+		for _, d := range f.Designs {
+			Designs.WriteString(fmt.Sprintf("%s ", d))
+		}
+
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-designs">Design: %s</p>`, nospaceButComma(Designs.String())))
+	}
+
+	if len(f.Categories) != 0 {
+		var Categories strings.Builder
+
+		for _, c := range f.Categories {
+			Categories.WriteString(fmt.Sprintf("%s ", c))
+		}
+
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-categories">Categories: %s</p>`, nospaceButComma(Categories.String())))
+	}
+
+	if f.Width != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-width">Width: %s</p>`, f.Width))
+	}
+
+	if f.CleaningCode != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-cleaning-code">Cleaning Code: %s</p>`, f.CleaningCode))
+	}
+
+	if f.Origin != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-origin">Origin: %s</p>`, f.Origin))
+	}
+
+	if f.Brand != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-brand">Brand: %s</p>`, f.Brand))
+	}
+
+	if f.FireCode != "" {
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-fire-code">Fire Code: %s</p>`, f.FireCode))
+	}
+
+	body.WriteString(`</div>`)
+
+	return body.String()
+}
+
+func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix *string) []shopifyProduct {
 	products := []shopifyProduct{}
 
 	for _, f := range fabrics {
 		var Uses strings.Builder
 
 		for _, u := range f.Uses {
-			Uses.Write([]byte(fmt.Sprintf("%v,", u)))
+			Uses.WriteString(fmt.Sprintf("%s ", u))
 		}
 
+		handleFunc := func() string {
+			if *handlePrefix == "" {
+				return nospace(f.ProductCode)
+			}
+
+			return nospace(fmt.Sprintf("%v %s", handlePrefix, f.ProductCode))
+		}
+
+		var body strings.Builder
+
+		bodyString := buildHtmlDescription(body, f)
+
 		products = append(products, shopifyProduct{
-			Handle:   nospace(f.ProductCode),
+			Handle:   handleFunc(),
 			Title:    f.PatternColorCombo,
-			BodyHTML: f.Disclaimer,
-			Vendor:   "MagFabric",
+			BodyHTML: bodyString,
+			Vendor:   "MagFabrics",
 			// ProductCategory:
-			Tags: Uses.String(),
-			// Published:
+			Tags: nospaceButComma(Uses.String()),
+			Published: func() string {
+				if f.Status == fabricDiscontinuedStatus {
+					return "FALSE"
+				}
+
+				return "TRUE"
+			}(),
 			// Option1Name:
 			// Option1Value:
 			// Option2Name:
@@ -144,9 +251,9 @@ func shopifyProducts(fabrics []*fabric.Fabric) []shopifyProduct {
 
 				return ""
 			}(),
-			// VariantInventoryPolicy:
-			// VariantFulfillmentService:
-			VariantPrice: f.DisplayPrice,
+			VariantInventoryPolicy:    "deny",
+			VariantFulfillmentService: "manual",
+			VariantPrice:              f.DisplayPrice,
 			// VariantCompareAtPrice:
 			// VariantRequiresShipping:
 			// VariantTaxable:
@@ -170,6 +277,13 @@ func shopifyProducts(fabrics []*fabric.Fabric) []shopifyProduct {
 				return "active"
 			}(),
 		})
+
+		for _, v := range f.SupplementalImages {
+			products = append(products, shopifyProduct{
+				Handle:   handleFunc(),
+				ImageSrc: v,
+			})
+		}
 	}
 
 	return products
@@ -197,6 +311,7 @@ func main() {
 	ignoreDiscontinued := flag.Bool("ignorediscontinued", false, "ignore discontinued fabrics (default is false)")
 
 	shopify := flag.Bool("shopify", false, "Shopify csv output format (default is false)")
+	shopifyHandlePrefix := flag.String("shopifyHandlePrefix", "", "Set a shopify handle prefix for clarity if you sell multiple brands")
 
 	printVersion := flag.Bool("version", false, "print version number and exit")
 
@@ -257,7 +372,7 @@ func main() {
 
 	csvOutput, serr := func() (string, error) {
 		if *shopify {
-			data := shopifyProducts(fabrics)
+			data := shopifyProducts(fabrics, shopifyHandlePrefix)
 			return gocsv.MarshalString(&data)
 		}
 
