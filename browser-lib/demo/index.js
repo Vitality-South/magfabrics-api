@@ -127,6 +127,9 @@ function openTaxonomiesCard() {
   });
 }
 
+let fabs = [];
+let fabricsMaster = [];
+
 document.addEventListener("DOMContentLoaded", function () {
   const fabSection = document.getElementById("fab-section");
   // fabSection.appendChild(createFabricsCard());
@@ -144,7 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(result.value);
 
     // grab a subset of the fabrics
-    const fabrics = result.value.fabricsList.slice(150, 200);
+     const fabrics = result.value.fabricsList.slice(150, 200);
+     fabricsMaster = result.value.fabricsList;
+    fabs = result.value.fabricsList;
 
     // create a card for each fabric
     fabrics.forEach((fabric) => {
@@ -158,4 +163,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const taxonomiesBtn = document.getElementById("taxonomies-btn");
   taxonomiesBtn.addEventListener("click", () => openTaxonomiesCard());
+
+  const searchBar = document.getElementById("search-bar");
+  const searchResults = document.getElementById("search-results");
+  const searchResultsBody = document.getElementById("search-results__body");
+  searchBar.addEventListener("focus", ()=>{
+    searchResults.style.display = "block";
+  });
+  searchBar.addEventListener("blur", ()=>{
+    setTimeout(()=>{
+      searchResults.style.display = "none";
+    }, 200);
+  }
+  );
+
+  searchBar.addEventListener("input", (e) => {
+    const query = e.target.value;
+    searchResultsBody.innerHTML = "";
+    fabs = fabricsMaster;
+    if (query.length > 0) {
+      const results = fabs.filter((f) => {
+        return f.patternColorCombo.toLowerCase().includes(query.toLowerCase());
+      });
+
+      results.forEach((r) => {
+        const result = document.createElement("div");
+        result.classList.add("row", "mb-2");
+        result.style.cursor = "pointer";
+        result.setAttribute("data-bs-toggle", "modal");
+        result.setAttribute("data-bs-target", "#exampleModal");
+        result.innerText = r.patternColorCombo;
+        result.addEventListener("click", () => {
+          openCard(r);
+        });
+        searchResultsBody.appendChild(result);
+      });
+    }
+  });
+
+  
 });

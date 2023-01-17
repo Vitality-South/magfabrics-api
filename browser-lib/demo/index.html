@@ -28,7 +28,45 @@
       <h1>MagFabrics API</h1>
     </section>
 
+    <!-- <section class="w-full d-flex justify-content-center align-items-center">
+
+      <div class="input-group mb-3" style="max-width:400px">
+        <input
+          id="search-bar"
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="button-addon2"
+        />
+        <button
+          id="search-btn"
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+    </section> -->
+
     <section class="w-full d-flex justify-content-center align-items-center">
+      <div class="input-group mx-2" style="max-width:400px">
+        <input
+          id="search-bar"
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="button-addon2"
+        />
+        <div id="search-results" class="card " style="position: absolute; top: 40px; left: 0px; width: 400px; z-index: 99; overflow-y:auto; max-height: 600px; display: none;">
+          <div id="search-results__body" class="card-body">
+            
+          </div>
+        </div>
+      </div>
+
       <button
         id="cleaning-btn"
         data-bs-toggle="modal"
@@ -89,10 +127,12 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    
     <script
       src="magfabrics-1.5.1.min.js"
 integrity="sha384-MbOT8aqH2sg23FwdSzaKTDn1G6rlvqkyEX+50NrimJ5oeBrK3H3Udd3rgN9BHx3s"
     ></script>
     <script src="index.js"></script>
+    
   </body>
 </html>
