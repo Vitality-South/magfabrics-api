@@ -114,8 +114,61 @@ func shopifyProducts(fabrics []*fabric.Fabric) []shopifyProduct {
 	products := []shopifyProduct{}
 
 	for _, f := range fabrics {
+		var Uses strings.Builder
+
+		for _, u := range f.Uses {
+			Uses.Write([]byte(fmt.Sprintf("%v,", u)))
+		}
+
 		products = append(products, shopifyProduct{
-			Handle: nospace(f.ProductCode),
+			Handle:   nospace(f.ProductCode),
+			Title:    f.PatternColorCombo,
+			BodyHTML: f.Disclaimer,
+			Vendor:   "MagFabric",
+			// ProductCategory:
+			Tags: Uses.String(),
+			// Published:
+			// Option1Name:
+			// Option1Value:
+			// Option2Name:
+			// Option2Value:
+			// Option3Name:
+			// Option3Value:
+			VariantSKU: f.Sku,
+			// VariantGrams:
+			// VariantInventoryTracker:
+			VariantInventoryQty: func() string {
+				if f.Inventory != nil {
+					return f.Inventory.Total
+				}
+
+				return ""
+			}(),
+			// VariantInventoryPolicy:
+			// VariantFulfillmentService:
+			VariantPrice: f.DisplayPrice,
+			// VariantCompareAtPrice:
+			// VariantRequiresShipping:
+			// VariantTaxable:
+			// VariantBarcode:
+			ImageSrc: f.Image,
+			// ImagePosition:
+			// ImageAltText:
+			// GiftCard:
+			// SEOTitle:
+			// SEODescription:
+			// GoogleProductCategory:
+			// VariantImage:
+			// VariantWeightUnit:
+			// VariantTaxCode:
+			// CostPerItem:
+			Status: func() string {
+				if f.Status == fabricDiscontinuedStatus {
+					return "archived"
+				}
+
+				return "active"
+			}(),
 		})
 	}
 
@@ -195,14 +248,6 @@ func main() {
 		return filtered
 	}()
 
-	data := func() interface{} {
-		if *shopify {
-			return shopifyProducts(fabrics)
-		}
-
-		return fabrics
-	}
-
 	// convert fabrics data structure to CSV string
 	gocsv.SetCSVWriter(func(out io.Writer) *gocsv.SafeCSVWriter {
 		writer := csv.NewWriter(out)
@@ -210,7 +255,14 @@ func main() {
 		return gocsv.NewSafeCSVWriter(writer)
 	})
 
-	csvOutput, serr := gocsv.MarshalString(&data)
+	csvOutput, serr := func() (string, error) {
+		if *shopify {
+			data := shopifyProducts(fabrics)
+			return gocsv.MarshalString(&data)
+		}
+
+		return gocsv.MarshalString(&fabrics)
+	}()
 
 	if serr != nil {
 		log.Fatalf("error converting to csv: %v", serr)
