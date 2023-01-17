@@ -175,18 +175,9 @@ func buildHtmlDescription(body strings.Builder, f *fabric.Fabric) string {
 	}
 
 	if len(f.Categories) != 0 {
-		var Categories strings.Builder
+		categories := strings.Join(f.Categories, ", ")
 
-		for i, c := range f.Categories {
-			if i == len(f.Categories)-1 {
-				Categories.WriteString(c)
-				break
-			}
-
-			Categories.WriteString(fmt.Sprintf("%s ", c))
-		}
-
-		body.WriteString(fmt.Sprintf(`<p class="magfabrics-categories">Categories: %s</p>`, nospaceButComma(Categories.String())))
+		body.WriteString(fmt.Sprintf(`<p class="magfabrics-categories">Categories: %s</p>`, nospaceButComma(categories)))
 	}
 
 	if f.Width != "" {
@@ -343,8 +334,8 @@ func main() {
 	ignoreDiscontinued := flag.Bool("ignorediscontinued", false, "ignore discontinued fabrics (default is false)")
 
 	shopify := flag.Bool("shopify", false, "Shopify csv output format (default is false)")
-	shopifyHandlePrefix := flag.String("shopifyHandlePrefix", "", "Set a shopify handle prefix for clarity if you sell multiple brands")
-	shopifyToggleArchived := flag.Bool("shopifyToggleArchive", true, "Set shopify published & status to archived if fabric is discontinued (default is true)")
+	shopifyHandlePrefix := flag.String("shopifyHandlePrefix", "", "Add a custom prefix to the Shopify Handle for each fabric. This can be useful if you sell multiple brands want MagFabrics fabrics handles to not conflict with other Shopify product handles.")
+	shopifyToggleArchived := flag.Bool("shopifyArchiveDiscontinued", true, "Set shopify published to false & status to archived if fabric is discontinued (default is true)")
 
 	printVersion := flag.Bool("version", false, "print version number and exit")
 
