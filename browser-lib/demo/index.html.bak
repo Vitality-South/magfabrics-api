@@ -129,7 +129,7 @@
     ></script>
     
     <script
-      src="magfabrics-1.5.2.min.js"
+      src="magfabrics-1.5.3.min.js"
 integrity="sha384-MbOT8aqH2sg23FwdSzaKTDn1G6rlvqkyEX+50NrimJ5oeBrK3H3Udd3rgN9BHx3s"
     ></script>
     <script src="index.js"></script>
