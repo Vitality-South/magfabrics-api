@@ -183,7 +183,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fabs = fabricsMaster;
     if (query.length > 0) {
       const results = fabs.filter((f) => {
-        return f.patternColorCombo.toLowerCase().includes(query.toLowerCase());
+        // any word of fab patternColorCombo starts with any word of query
+        const queryWords = query.toLowerCase().split(" ");
+        const fabWords = f.patternColorCombo.toLowerCase().split(" ");
+        return queryWords.every((qw) => fabWords.some((fw) => fw.startsWith(qw)));
       });
 
       results.forEach((r) => {
@@ -194,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
         result.setAttribute("data-bs-target", "#exampleModal");
         result.innerText = r.patternColorCombo;
         result.addEventListener("click", () => {
-          openCard(r);
+           openCard(r);
         });
         searchResultsBody.appendChild(result);
       });
