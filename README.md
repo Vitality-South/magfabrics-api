@@ -38,7 +38,7 @@ Or:
 
 ```html
 <script
-  src="https://demo.magfabrics.com/magfabrics-1.5.16.min.js"
+  src="https://demo.magfabrics.com/magfabrics-1.5.17.min.js"
 integrity="sha384-h5fKyF1jgDsxx9QoKHcZ+H/wjahlyl+EyYdHWPU+7CwNkNNOsufRg70rRps368OH"
   crossorigin="anonymous"
 ></script>
