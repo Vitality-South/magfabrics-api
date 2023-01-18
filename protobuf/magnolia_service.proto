@@ -19,6 +19,7 @@ service MagnoliaFabricsService {
 	rpc GetAllInventory(GetAllInventoryRequest) returns (GetAllInventoryResponse) {}
 	rpc GetFabricByID(GetFabricByIDRequest) returns (GetFabricByIDResponse) {}
 	rpc GetFabricByName(GetFabricByNameRequest) returns (GetFabricByNameResponse) {}
+	rpc GetFabricBySKU(GetFabricBySKURequest) returns (GetFabricBySKUResponse) {}
 	rpc GetAllFabricTaxonomy(GetAllFabricTaxonomyRequest) returns (GetAllFabricTaxonomyResponse) {}
 	rpc GetCleaningCodes(GetCleaningCodesRequest) returns (GetCleaningCodesResponse) {}
 }
@@ -67,4 +68,12 @@ message GetCleaningCodesRequest {}
 
 message GetCleaningCodesResponse {
 	map<string, CleaningCode> cleaning_codes = 1;
+}
+
+message GetFabricBySKURequest {
+	string fabric_sku = 1;
+}
+
+message GetFabricBySKUResponse {
+	Fabric fabric = 1;
 }

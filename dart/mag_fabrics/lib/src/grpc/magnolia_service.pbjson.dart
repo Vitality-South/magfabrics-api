@@ -144,3 +144,23 @@ const GetCleaningCodesResponse_CleaningCodesEntry$json = const {
 
 /// Descriptor for `GetCleaningCodesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getCleaningCodesResponseDescriptor = $convert.base64Decode('ChhHZXRDbGVhbmluZ0NvZGVzUmVzcG9uc2USYwoOY2xlYW5pbmdfY29kZXMYASADKAsyPC5tYWdub2xpYWZhYnJpY3MuR2V0Q2xlYW5pbmdDb2Rlc1Jlc3BvbnNlLkNsZWFuaW5nQ29kZXNFbnRyeVINY2xlYW5pbmdDb2RlcxpfChJDbGVhbmluZ0NvZGVzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSMwoFdmFsdWUYAiABKAsyHS5tYWdub2xpYWZhYnJpY3MuQ2xlYW5pbmdDb2RlUgV2YWx1ZToCOAE=');
+@$core.Deprecated('Use getFabricBySKURequestDescriptor instead')
+const GetFabricBySKURequest$json = const {
+  '1': 'GetFabricBySKURequest',
+  '2': const [
+    const {'1': 'fabric_sku', '3': 1, '4': 1, '5': 9, '10': 'fabricSku'},
+  ],
+};
+
+/// Descriptor for `GetFabricBySKURequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getFabricBySKURequestDescriptor = $convert.base64Decode('ChVHZXRGYWJyaWNCeVNLVVJlcXVlc3QSHQoKZmFicmljX3NrdRgBIAEoCVIJZmFicmljU2t1');
+@$core.Deprecated('Use getFabricBySKUResponseDescriptor instead')
+const GetFabricBySKUResponse$json = const {
+  '1': 'GetFabricBySKUResponse',
+  '2': const [
+    const {'1': 'fabric', '3': 1, '4': 1, '5': 11, '6': '.magnoliafabrics.Fabric', '10': 'fabric'},
+  ],
+};
+
+/// Descriptor for `GetFabricBySKUResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getFabricBySKUResponseDescriptor = $convert.base64Decode('ChZHZXRGYWJyaWNCeVNLVVJlc3BvbnNlEi8KBmZhYnJpYxgBIAEoCzIXLm1hZ25vbGlhZmFicmljcy5GYWJyaWNSBmZhYnJpYw==');

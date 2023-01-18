@@ -45,6 +45,12 @@ class MagnoliaFabricsServiceClient extends $grpc.Client {
           ($0.GetFabricByNameRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $0.GetFabricByNameResponse.fromBuffer(value));
+  static final _$getFabricBySKU =
+      $grpc.ClientMethod<$0.GetFabricBySKURequest, $0.GetFabricBySKUResponse>(
+          '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+          ($0.GetFabricBySKURequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $0.GetFabricBySKUResponse.fromBuffer(value));
   static final _$getAllFabricTaxonomy = $grpc.ClientMethod<
           $0.GetAllFabricTaxonomyRequest, $0.GetAllFabricTaxonomyResponse>(
       '/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy',
@@ -93,6 +99,12 @@ class MagnoliaFabricsServiceClient extends $grpc.Client {
       $0.GetFabricByNameRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getFabricByName, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetFabricBySKUResponse> getFabricBySKU(
+      $0.GetFabricBySKURequest request,
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getFabricBySKU, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GetAllFabricTaxonomyResponse> getAllFabricTaxonomy(
@@ -158,6 +170,15 @@ abstract class MagnoliaFabricsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetFabricByNameRequest.fromBuffer(value),
         ($0.GetFabricByNameResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetFabricBySKURequest,
+            $0.GetFabricBySKUResponse>(
+        'GetFabricBySKU',
+        getFabricBySKU_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetFabricBySKURequest.fromBuffer(value),
+        ($0.GetFabricBySKUResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetAllFabricTaxonomyRequest,
             $0.GetAllFabricTaxonomyResponse>(
         'GetAllFabricTaxonomy',
@@ -210,6 +231,12 @@ abstract class MagnoliaFabricsServiceBase extends $grpc.Service {
     return getFabricByName(call, await request);
   }
 
+  $async.Future<$0.GetFabricBySKUResponse> getFabricBySKU_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetFabricBySKURequest> request) async {
+    return getFabricBySKU(call, await request);
+  }
+
   $async.Future<$0.GetAllFabricTaxonomyResponse> getAllFabricTaxonomy_Pre(
       $grpc.ServiceCall call,
       $async.Future<$0.GetAllFabricTaxonomyRequest> request) async {
@@ -233,6 +260,8 @@ abstract class MagnoliaFabricsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetFabricByIDRequest request);
   $async.Future<$0.GetFabricByNameResponse> getFabricByName(
       $grpc.ServiceCall call, $0.GetFabricByNameRequest request);
+  $async.Future<$0.GetFabricBySKUResponse> getFabricBySKU(
+      $grpc.ServiceCall call, $0.GetFabricBySKURequest request);
   $async.Future<$0.GetAllFabricTaxonomyResponse> getAllFabricTaxonomy(
       $grpc.ServiceCall call, $0.GetAllFabricTaxonomyRequest request);
   $async.Future<$0.GetCleaningCodesResponse> getCleaningCodes(

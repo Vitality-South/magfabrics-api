@@ -31,6 +31,7 @@ const (
 	TaxonomyAllSK   = "All"
 	FabricByNameSK  = "FabricByName"
 	CleaningCodesPK = "CleaningCodes"
+	FabricBySKUSK   = "FabricBySKU"
 
 	// s3 config.
 	CMSBucket       = "cms.magnoliaco.com"
@@ -241,4 +242,41 @@ func GetCleaningCodes(ctx context.Context) (map[string]*cleaningcode.CleaningCod
 	}
 
 	return m, nil
+}
+
+func GetFabricBySKU(ctx context.Context, sku string) (*fabric.Fabric, error) {
+	_, table, dberr := database()
+
+	if dberr != nil {
+		return nil, dberr
+	}
+
+	var f *fabric.Fabric
+
+	gerr := table.Get(PK, sku).Range(SK, dynamo.Equal, FabricBySKUSK).OneWithContext(ctx, &f)
+
+	if gerr == dynamo.ErrNotFound {
+		return f, NotFound
+	}
+
+	if gerr != nil {
+		return f, gerr
+	}
+
+	var i *inventory.Inventory
+
+	ierr := table.Get(PK, f.ProductCode).Range(SK, dynamo.Equal, "Inventory").OneWithContext(ctx, &i)
+
+	// inventory may not exist so just return an empty inventory in this case
+	if ierr == dynamo.ErrNotFound {
+		return f, nil
+	}
+
+	if ierr != nil {
+		return f, ierr
+	}
+
+	f.Inventory = i
+
+	return f, nil
 }

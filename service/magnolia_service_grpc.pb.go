@@ -27,6 +27,7 @@ type MagnoliaFabricsServiceClient interface {
 	GetAllInventory(ctx context.Context, in *GetAllInventoryRequest, opts ...grpc.CallOption) (*GetAllInventoryResponse, error)
 	GetFabricByID(ctx context.Context, in *GetFabricByIDRequest, opts ...grpc.CallOption) (*GetFabricByIDResponse, error)
 	GetFabricByName(ctx context.Context, in *GetFabricByNameRequest, opts ...grpc.CallOption) (*GetFabricByNameResponse, error)
+	GetFabricBySKU(ctx context.Context, in *GetFabricBySKURequest, opts ...grpc.CallOption) (*GetFabricBySKUResponse, error)
 	GetAllFabricTaxonomy(ctx context.Context, in *GetAllFabricTaxonomyRequest, opts ...grpc.CallOption) (*GetAllFabricTaxonomyResponse, error)
 	GetCleaningCodes(ctx context.Context, in *GetCleaningCodesRequest, opts ...grpc.CallOption) (*GetCleaningCodesResponse, error)
 }
@@ -84,6 +85,15 @@ func (c *magnoliaFabricsServiceClient) GetFabricByName(ctx context.Context, in *
 	return out, nil
 }
 
+func (c *magnoliaFabricsServiceClient) GetFabricBySKU(ctx context.Context, in *GetFabricBySKURequest, opts ...grpc.CallOption) (*GetFabricBySKUResponse, error) {
+	out := new(GetFabricBySKUResponse)
+	err := c.cc.Invoke(ctx, "/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *magnoliaFabricsServiceClient) GetAllFabricTaxonomy(ctx context.Context, in *GetAllFabricTaxonomyRequest, opts ...grpc.CallOption) (*GetAllFabricTaxonomyResponse, error) {
 	out := new(GetAllFabricTaxonomyResponse)
 	err := c.cc.Invoke(ctx, "/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy", in, out, opts...)
@@ -111,6 +121,7 @@ type MagnoliaFabricsServiceServer interface {
 	GetAllInventory(context.Context, *GetAllInventoryRequest) (*GetAllInventoryResponse, error)
 	GetFabricByID(context.Context, *GetFabricByIDRequest) (*GetFabricByIDResponse, error)
 	GetFabricByName(context.Context, *GetFabricByNameRequest) (*GetFabricByNameResponse, error)
+	GetFabricBySKU(context.Context, *GetFabricBySKURequest) (*GetFabricBySKUResponse, error)
 	GetAllFabricTaxonomy(context.Context, *GetAllFabricTaxonomyRequest) (*GetAllFabricTaxonomyResponse, error)
 	GetCleaningCodes(context.Context, *GetCleaningCodesRequest) (*GetCleaningCodesResponse, error)
 	mustEmbedUnimplementedMagnoliaFabricsServiceServer()
@@ -134,6 +145,9 @@ func (UnimplementedMagnoliaFabricsServiceServer) GetFabricByID(context.Context, 
 }
 func (UnimplementedMagnoliaFabricsServiceServer) GetFabricByName(context.Context, *GetFabricByNameRequest) (*GetFabricByNameResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFabricByName not implemented")
+}
+func (UnimplementedMagnoliaFabricsServiceServer) GetFabricBySKU(context.Context, *GetFabricBySKURequest) (*GetFabricBySKUResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetFabricBySKU not implemented")
 }
 func (UnimplementedMagnoliaFabricsServiceServer) GetAllFabricTaxonomy(context.Context, *GetAllFabricTaxonomyRequest) (*GetAllFabricTaxonomyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAllFabricTaxonomy not implemented")
@@ -245,6 +259,24 @@ func _MagnoliaFabricsService_GetFabricByName_Handler(srv interface{}, ctx contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MagnoliaFabricsService_GetFabricBySKU_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetFabricBySKURequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MagnoliaFabricsServiceServer).GetFabricBySKU(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MagnoliaFabricsServiceServer).GetFabricBySKU(ctx, req.(*GetFabricBySKURequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _MagnoliaFabricsService_GetAllFabricTaxonomy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetAllFabricTaxonomyRequest)
 	if err := dec(in); err != nil {
@@ -307,6 +339,10 @@ var MagnoliaFabricsService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetFabricByName",
 			Handler:    _MagnoliaFabricsService_GetFabricByName_Handler,
+		},
+		{
+			MethodName: "GetFabricBySKU",
+			Handler:    _MagnoliaFabricsService_GetFabricBySKU_Handler,
 		},
 		{
 			MethodName: "GetAllFabricTaxonomy",

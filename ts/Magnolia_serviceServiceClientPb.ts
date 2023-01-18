@@ -254,6 +254,49 @@ export class MagnoliaFabricsServiceClient {
     this.methodDescriptorGetFabricByName);
   }
 
+  methodDescriptorGetFabricBySKU = new grpcWeb.MethodDescriptor(
+    '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+    grpcWeb.MethodType.UNARY,
+    magnolia_service_pb.GetFabricBySKURequest,
+    magnolia_service_pb.GetFabricBySKUResponse,
+    (request: magnolia_service_pb.GetFabricBySKURequest) => {
+      return request.serializeBinary();
+    },
+    magnolia_service_pb.GetFabricBySKUResponse.deserializeBinary
+  );
+
+  getFabricBySKU(
+    request: magnolia_service_pb.GetFabricBySKURequest,
+    metadata: grpcWeb.Metadata | null): Promise<magnolia_service_pb.GetFabricBySKUResponse>;
+
+  getFabricBySKU(
+    request: magnolia_service_pb.GetFabricBySKURequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.RpcError,
+               response: magnolia_service_pb.GetFabricBySKUResponse) => void): grpcWeb.ClientReadableStream<magnolia_service_pb.GetFabricBySKUResponse>;
+
+  getFabricBySKU(
+    request: magnolia_service_pb.GetFabricBySKURequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.RpcError,
+               response: magnolia_service_pb.GetFabricBySKUResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+        request,
+        metadata || {},
+        this.methodDescriptorGetFabricBySKU,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+    request,
+    metadata || {},
+    this.methodDescriptorGetFabricBySKU);
+  }
+
   methodDescriptorGetAllFabricTaxonomy = new grpcWeb.MethodDescriptor(
     '/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy',
     grpcWeb.MethodType.UNARY,

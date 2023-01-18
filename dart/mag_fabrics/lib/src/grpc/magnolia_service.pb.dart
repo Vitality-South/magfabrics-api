@@ -564,3 +564,99 @@ class GetCleaningCodesResponse extends $pb.GeneratedMessage {
   $core.Map<$core.String, $4.CleaningCode> get cleaningCodes => $_getMap(0);
 }
 
+class GetFabricBySKURequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetFabricBySKURequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fabricSku')
+    ..hasRequiredFields = false
+  ;
+
+  GetFabricBySKURequest._() : super();
+  factory GetFabricBySKURequest({
+    $core.String? fabricSku,
+  }) {
+    final _result = create();
+    if (fabricSku != null) {
+      _result.fabricSku = fabricSku;
+    }
+    return _result;
+  }
+  factory GetFabricBySKURequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetFabricBySKURequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetFabricBySKURequest clone() => GetFabricBySKURequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetFabricBySKURequest copyWith(void Function(GetFabricBySKURequest) updates) => super.copyWith((message) => updates(message as GetFabricBySKURequest)) as GetFabricBySKURequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetFabricBySKURequest create() => GetFabricBySKURequest._();
+  GetFabricBySKURequest createEmptyInstance() => create();
+  static $pb.PbList<GetFabricBySKURequest> createRepeated() => $pb.PbList<GetFabricBySKURequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetFabricBySKURequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetFabricBySKURequest>(create);
+  static GetFabricBySKURequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get fabricSku => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set fabricSku($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFabricSku() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFabricSku() => clearField(1);
+}
+
+class GetFabricBySKUResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetFabricBySKUResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
+    ..aOM<$1.Fabric>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fabric', subBuilder: $1.Fabric.create)
+    ..hasRequiredFields = false
+  ;
+
+  GetFabricBySKUResponse._() : super();
+  factory GetFabricBySKUResponse({
+    $1.Fabric? fabric,
+  }) {
+    final _result = create();
+    if (fabric != null) {
+      _result.fabric = fabric;
+    }
+    return _result;
+  }
+  factory GetFabricBySKUResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetFabricBySKUResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetFabricBySKUResponse clone() => GetFabricBySKUResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetFabricBySKUResponse copyWith(void Function(GetFabricBySKUResponse) updates) => super.copyWith((message) => updates(message as GetFabricBySKUResponse)) as GetFabricBySKUResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetFabricBySKUResponse create() => GetFabricBySKUResponse._();
+  GetFabricBySKUResponse createEmptyInstance() => create();
+  static $pb.PbList<GetFabricBySKUResponse> createRepeated() => $pb.PbList<GetFabricBySKUResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetFabricBySKUResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetFabricBySKUResponse>(create);
+  static GetFabricBySKUResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.Fabric get fabric => $_getN(0);
+  @$pb.TagNumber(1)
+  set fabric($1.Fabric v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFabric() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFabric() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Fabric ensureFabric() => $_ensure(0);
+}
+

@@ -390,6 +390,67 @@ proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getFabricByN
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.magnoliafabrics.GetFabricBySKURequest,
+ *   !proto.magnoliafabrics.GetFabricBySKUResponse>}
+ */
+const methodDescriptor_MagnoliaFabricsService_GetFabricBySKU = new grpc.web.MethodDescriptor(
+  '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+  grpc.web.MethodType.UNARY,
+  proto.magnoliafabrics.GetFabricBySKURequest,
+  proto.magnoliafabrics.GetFabricBySKUResponse,
+  /**
+   * @param {!proto.magnoliafabrics.GetFabricBySKURequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.magnoliafabrics.GetFabricBySKUResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.magnoliafabrics.GetFabricBySKURequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetFabricBySKUResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.magnoliafabrics.GetFabricBySKUResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getFabricBySKU =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+      request,
+      metadata || {},
+      methodDescriptor_MagnoliaFabricsService_GetFabricBySKU,
+      callback);
+};
+
+
+/**
+ * @param {!proto.magnoliafabrics.GetFabricBySKURequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.magnoliafabrics.GetFabricBySKUResponse>}
+ *     Promise that resolves to the response
+ */
+proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getFabricBySKU =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU',
+      request,
+      metadata || {},
+      methodDescriptor_MagnoliaFabricsService_GetFabricBySKU);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.magnoliafabrics.GetAllFabricTaxonomyRequest,
  *   !proto.magnoliafabrics.GetAllFabricTaxonomyResponse>}
  */

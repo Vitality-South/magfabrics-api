@@ -397,125 +397,186 @@
 <span class='line'>390</span> </span><span class="COMM">/**
 <span class='line'>391</span>  * @const
 <span class='line'>392</span>  * @type {!grpc.web.MethodDescriptor&lt;
-<span class='line'>393</span>  *   !proto.magnoliafabrics.GetAllFabricTaxonomyRequest,
-<span class='line'>394</span>  *   !proto.magnoliafabrics.GetAllFabricTaxonomyResponse>}
+<span class='line'>393</span>  *   !proto.magnoliafabrics.GetFabricBySKURequest,
+<span class='line'>394</span>  *   !proto.magnoliafabrics.GetFabricBySKUResponse>}
 <span class='line'>395</span>  */</span><span class="WHIT">
-<span class='line'>396</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetAllFabricTaxonomy</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">grpc.web.MethodDescriptor</span><span class="PUNC">(</span><span class="WHIT">
-<span class='line'>397</span> </span><span class="WHIT">  </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>396</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetFabricBySKU</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">grpc.web.MethodDescriptor</span><span class="PUNC">(</span><span class="WHIT">
+<span class='line'>397</span> </span><span class="WHIT">  </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU'</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>398</span> </span><span class="WHIT">  </span><span class="NAME">grpc.web.MethodType.UNARY</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>399</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetAllFabricTaxonomyRequest</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>400</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetAllFabricTaxonomyResponse</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>399</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetFabricBySKURequest</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>400</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetFabricBySKUResponse</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>401</span> </span><span class="WHIT">  </span><span class="COMM">/**
-<span class='line'>402</span>    * @param {!proto.magnoliafabrics.GetAllFabricTaxonomyRequest} request
+<span class='line'>402</span>    * @param {!proto.magnoliafabrics.GetFabricBySKURequest} request
 <span class='line'>403</span>    * @return {!Uint8Array}
 <span class='line'>404</span>    */</span><span class="WHIT">
 <span class='line'>405</span> </span><span class="WHIT">  </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
 <span class='line'>406</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">request.serializeBinary</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>407</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>408</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetAllFabricTaxonomyResponse.deserializeBinary</span><span class="WHIT">
+<span class='line'>408</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetFabricBySKUResponse.deserializeBinary</span><span class="WHIT">
 <span class='line'>409</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>410</span> 
 <span class='line'>411</span> 
 <span class='line'>412</span> </span><span class="COMM">/**
-<span class='line'>413</span>  * @param {!proto.magnoliafabrics.GetAllFabricTaxonomyRequest} request The
+<span class='line'>413</span>  * @param {!proto.magnoliafabrics.GetFabricBySKURequest} request The
 <span class='line'>414</span>  *     request proto
 <span class='line'>415</span>  * @param {?Object&lt;string, string>} metadata User defined
 <span class='line'>416</span>  *     call metadata
-<span class='line'>417</span>  * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetAllFabricTaxonomyResponse)}
+<span class='line'>417</span>  * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetFabricBySKUResponse)}
 <span class='line'>418</span>  *     callback The callback function(error, response)
-<span class='line'>419</span>  * @return {!grpc.web.ClientReadableStream&lt;!proto.magnoliafabrics.GetAllFabricTaxonomyResponse>|undefined}
+<span class='line'>419</span>  * @return {!grpc.web.ClientReadableStream&lt;!proto.magnoliafabrics.GetFabricBySKUResponse>|undefined}
 <span class='line'>420</span>  *     The XHR Node Readable Stream
 <span class='line'>421</span>  */</span><span class="WHIT">
-<span class='line'>422</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getAllFabricTaxonomy</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>422</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getFabricBySKU</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
 <span class='line'>423</span> </span><span class="WHIT">    </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">metadata</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
 <span class='line'>424</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.client_.rpcCall</span><span class="PUNC">(</span><span class="NAME">this.hostname_</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>425</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>425</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU'</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>426</span> </span><span class="WHIT">      </span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>427</span> </span><span class="WHIT">      </span><span class="NAME">metadata</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>428</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetAllFabricTaxonomy</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>428</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetFabricBySKU</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>429</span> </span><span class="WHIT">      </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>430</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>431</span> 
 <span class='line'>432</span> 
 <span class='line'>433</span> </span><span class="COMM">/**
-<span class='line'>434</span>  * @param {!proto.magnoliafabrics.GetAllFabricTaxonomyRequest} request The
+<span class='line'>434</span>  * @param {!proto.magnoliafabrics.GetFabricBySKURequest} request The
 <span class='line'>435</span>  *     request proto
 <span class='line'>436</span>  * @param {?Object&lt;string, string>=} metadata User defined
 <span class='line'>437</span>  *     call metadata
-<span class='line'>438</span>  * @return {!Promise&lt;!proto.magnoliafabrics.GetAllFabricTaxonomyResponse>}
+<span class='line'>438</span>  * @return {!Promise&lt;!proto.magnoliafabrics.GetFabricBySKUResponse>}
 <span class='line'>439</span>  *     Promise that resolves to the response
 <span class='line'>440</span>  */</span><span class="WHIT">
-<span class='line'>441</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getAllFabricTaxonomy</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>441</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getFabricBySKU</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
 <span class='line'>442</span> </span><span class="WHIT">    </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">metadata</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
 <span class='line'>443</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.client_.unaryCall</span><span class="PUNC">(</span><span class="NAME">this.hostname_</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>444</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>444</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetFabricBySKU'</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>445</span> </span><span class="WHIT">      </span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>446</span> </span><span class="WHIT">      </span><span class="NAME">metadata</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>447</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetAllFabricTaxonomy</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>447</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetFabricBySKU</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>448</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>449</span> 
 <span class='line'>450</span> 
 <span class='line'>451</span> </span><span class="COMM">/**
 <span class='line'>452</span>  * @const
 <span class='line'>453</span>  * @type {!grpc.web.MethodDescriptor&lt;
-<span class='line'>454</span>  *   !proto.magnoliafabrics.GetCleaningCodesRequest,
-<span class='line'>455</span>  *   !proto.magnoliafabrics.GetCleaningCodesResponse>}
+<span class='line'>454</span>  *   !proto.magnoliafabrics.GetAllFabricTaxonomyRequest,
+<span class='line'>455</span>  *   !proto.magnoliafabrics.GetAllFabricTaxonomyResponse>}
 <span class='line'>456</span>  */</span><span class="WHIT">
-<span class='line'>457</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetCleaningCodes</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">grpc.web.MethodDescriptor</span><span class="PUNC">(</span><span class="WHIT">
-<span class='line'>458</span> </span><span class="WHIT">  </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetCleaningCodes'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>457</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetAllFabricTaxonomy</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">grpc.web.MethodDescriptor</span><span class="PUNC">(</span><span class="WHIT">
+<span class='line'>458</span> </span><span class="WHIT">  </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy'</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>459</span> </span><span class="WHIT">  </span><span class="NAME">grpc.web.MethodType.UNARY</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>460</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetCleaningCodesRequest</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>461</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetCleaningCodesResponse</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>460</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetAllFabricTaxonomyRequest</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>461</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetAllFabricTaxonomyResponse</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>462</span> </span><span class="WHIT">  </span><span class="COMM">/**
-<span class='line'>463</span>    * @param {!proto.magnoliafabrics.GetCleaningCodesRequest} request
+<span class='line'>463</span>    * @param {!proto.magnoliafabrics.GetAllFabricTaxonomyRequest} request
 <span class='line'>464</span>    * @return {!Uint8Array}
 <span class='line'>465</span>    */</span><span class="WHIT">
 <span class='line'>466</span> </span><span class="WHIT">  </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
 <span class='line'>467</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">request.serializeBinary</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>468</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>469</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetCleaningCodesResponse.deserializeBinary</span><span class="WHIT">
+<span class='line'>469</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetAllFabricTaxonomyResponse.deserializeBinary</span><span class="WHIT">
 <span class='line'>470</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>471</span> 
 <span class='line'>472</span> 
 <span class='line'>473</span> </span><span class="COMM">/**
-<span class='line'>474</span>  * @param {!proto.magnoliafabrics.GetCleaningCodesRequest} request The
+<span class='line'>474</span>  * @param {!proto.magnoliafabrics.GetAllFabricTaxonomyRequest} request The
 <span class='line'>475</span>  *     request proto
 <span class='line'>476</span>  * @param {?Object&lt;string, string>} metadata User defined
 <span class='line'>477</span>  *     call metadata
-<span class='line'>478</span>  * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetCleaningCodesResponse)}
+<span class='line'>478</span>  * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetAllFabricTaxonomyResponse)}
 <span class='line'>479</span>  *     callback The callback function(error, response)
-<span class='line'>480</span>  * @return {!grpc.web.ClientReadableStream&lt;!proto.magnoliafabrics.GetCleaningCodesResponse>|undefined}
+<span class='line'>480</span>  * @return {!grpc.web.ClientReadableStream&lt;!proto.magnoliafabrics.GetAllFabricTaxonomyResponse>|undefined}
 <span class='line'>481</span>  *     The XHR Node Readable Stream
 <span class='line'>482</span>  */</span><span class="WHIT">
-<span class='line'>483</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getCleaningCodes</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>483</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getAllFabricTaxonomy</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
 <span class='line'>484</span> </span><span class="WHIT">    </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">metadata</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
 <span class='line'>485</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.client_.rpcCall</span><span class="PUNC">(</span><span class="NAME">this.hostname_</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>486</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetCleaningCodes'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>486</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy'</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>487</span> </span><span class="WHIT">      </span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>488</span> </span><span class="WHIT">      </span><span class="NAME">metadata</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>489</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetCleaningCodes</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>489</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetAllFabricTaxonomy</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>490</span> </span><span class="WHIT">      </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>491</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>492</span> 
 <span class='line'>493</span> 
 <span class='line'>494</span> </span><span class="COMM">/**
-<span class='line'>495</span>  * @param {!proto.magnoliafabrics.GetCleaningCodesRequest} request The
+<span class='line'>495</span>  * @param {!proto.magnoliafabrics.GetAllFabricTaxonomyRequest} request The
 <span class='line'>496</span>  *     request proto
 <span class='line'>497</span>  * @param {?Object&lt;string, string>=} metadata User defined
 <span class='line'>498</span>  *     call metadata
-<span class='line'>499</span>  * @return {!Promise&lt;!proto.magnoliafabrics.GetCleaningCodesResponse>}
+<span class='line'>499</span>  * @return {!Promise&lt;!proto.magnoliafabrics.GetAllFabricTaxonomyResponse>}
 <span class='line'>500</span>  *     Promise that resolves to the response
 <span class='line'>501</span>  */</span><span class="WHIT">
-<span class='line'>502</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getCleaningCodes</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>502</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getAllFabricTaxonomy</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
 <span class='line'>503</span> </span><span class="WHIT">    </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">metadata</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
 <span class='line'>504</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.client_.unaryCall</span><span class="PUNC">(</span><span class="NAME">this.hostname_</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>505</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetCleaningCodes'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>505</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetAllFabricTaxonomy'</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>506</span> </span><span class="WHIT">      </span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>507</span> </span><span class="WHIT">      </span><span class="NAME">metadata</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>508</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetCleaningCodes</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>508</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetAllFabricTaxonomy</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>509</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>510</span> 
 <span class='line'>511</span> 
-<span class='line'>512</span> </span><span class="NAME">module.exports</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">proto.magnoliafabrics</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>513</span> 
-<span class='line'>514</span> </span></pre></body></html>
+<span class='line'>512</span> </span><span class="COMM">/**
+<span class='line'>513</span>  * @const
+<span class='line'>514</span>  * @type {!grpc.web.MethodDescriptor&lt;
+<span class='line'>515</span>  *   !proto.magnoliafabrics.GetCleaningCodesRequest,
+<span class='line'>516</span>  *   !proto.magnoliafabrics.GetCleaningCodesResponse>}
+<span class='line'>517</span>  */</span><span class="WHIT">
+<span class='line'>518</span> </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetCleaningCodes</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">grpc.web.MethodDescriptor</span><span class="PUNC">(</span><span class="WHIT">
+<span class='line'>519</span> </span><span class="WHIT">  </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetCleaningCodes'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>520</span> </span><span class="WHIT">  </span><span class="NAME">grpc.web.MethodType.UNARY</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>521</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetCleaningCodesRequest</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>522</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetCleaningCodesResponse</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>523</span> </span><span class="WHIT">  </span><span class="COMM">/**
+<span class='line'>524</span>    * @param {!proto.magnoliafabrics.GetCleaningCodesRequest} request
+<span class='line'>525</span>    * @return {!Uint8Array}
+<span class='line'>526</span>    */</span><span class="WHIT">
+<span class='line'>527</span> </span><span class="WHIT">  </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>528</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">request.serializeBinary</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>529</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>530</span> </span><span class="WHIT">  </span><span class="NAME">proto.magnoliafabrics.GetCleaningCodesResponse.deserializeBinary</span><span class="WHIT">
+<span class='line'>531</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>532</span> 
+<span class='line'>533</span> 
+<span class='line'>534</span> </span><span class="COMM">/**
+<span class='line'>535</span>  * @param {!proto.magnoliafabrics.GetCleaningCodesRequest} request The
+<span class='line'>536</span>  *     request proto
+<span class='line'>537</span>  * @param {?Object&lt;string, string>} metadata User defined
+<span class='line'>538</span>  *     call metadata
+<span class='line'>539</span>  * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetCleaningCodesResponse)}
+<span class='line'>540</span>  *     callback The callback function(error, response)
+<span class='line'>541</span>  * @return {!grpc.web.ClientReadableStream&lt;!proto.magnoliafabrics.GetCleaningCodesResponse>|undefined}
+<span class='line'>542</span>  *     The XHR Node Readable Stream
+<span class='line'>543</span>  */</span><span class="WHIT">
+<span class='line'>544</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getCleaningCodes</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>545</span> </span><span class="WHIT">    </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">metadata</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>546</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.client_.rpcCall</span><span class="PUNC">(</span><span class="NAME">this.hostname_</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'>547</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetCleaningCodes'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>548</span> </span><span class="WHIT">      </span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>549</span> </span><span class="WHIT">      </span><span class="NAME">metadata</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>550</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetCleaningCodes</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>551</span> </span><span class="WHIT">      </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>552</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>553</span> 
+<span class='line'>554</span> 
+<span class='line'>555</span> </span><span class="COMM">/**
+<span class='line'>556</span>  * @param {!proto.magnoliafabrics.GetCleaningCodesRequest} request The
+<span class='line'>557</span>  *     request proto
+<span class='line'>558</span>  * @param {?Object&lt;string, string>=} metadata User defined
+<span class='line'>559</span>  *     call metadata
+<span class='line'>560</span>  * @return {!Promise&lt;!proto.magnoliafabrics.GetCleaningCodesResponse>}
+<span class='line'>561</span>  *     Promise that resolves to the response
+<span class='line'>562</span>  */</span><span class="WHIT">
+<span class='line'>563</span> </span><span class="NAME">proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getCleaningCodes</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">
+<span class='line'>564</span> </span><span class="WHIT">    </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">metadata</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>565</span> </span><span class="WHIT">  </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.client_.unaryCall</span><span class="PUNC">(</span><span class="NAME">this.hostname_</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'>566</span> </span><span class="WHIT">      </span><span class="STRN">'/magnoliafabrics.MagnoliaFabricsService/GetCleaningCodes'</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>567</span> </span><span class="WHIT">      </span><span class="NAME">request</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>568</span> </span><span class="WHIT">      </span><span class="NAME">metadata</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>569</span> </span><span class="WHIT">      </span><span class="NAME">methodDescriptor_MagnoliaFabricsService_GetCleaningCodes</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>570</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>571</span> 
+<span class='line'>572</span> 
+<span class='line'>573</span> </span><span class="NAME">module.exports</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">proto.magnoliafabrics</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>574</span> 
+<span class='line'>575</span> </span></pre></body></html>

@@ -43,6 +43,13 @@ export class MagnoliaFabricsServiceClient {
                response: magnolia_service_pb.GetFabricByNameResponse) => void
   ): grpcWeb.ClientReadableStream<magnolia_service_pb.GetFabricByNameResponse>;
 
+  getFabricBySKU(
+    request: magnolia_service_pb.GetFabricBySKURequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: magnolia_service_pb.GetFabricBySKUResponse) => void
+  ): grpcWeb.ClientReadableStream<magnolia_service_pb.GetFabricBySKUResponse>;
+
   getAllFabricTaxonomy(
     request: magnolia_service_pb.GetAllFabricTaxonomyRequest,
     metadata: grpcWeb.Metadata | undefined,
@@ -88,6 +95,11 @@ export class MagnoliaFabricsServicePromiseClient {
     request: magnolia_service_pb.GetFabricByNameRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<magnolia_service_pb.GetFabricByNameResponse>;
+
+  getFabricBySKU(
+    request: magnolia_service_pb.GetFabricBySKURequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<magnolia_service_pb.GetFabricBySKUResponse>;
 
   getAllFabricTaxonomy(
     request: magnolia_service_pb.GetAllFabricTaxonomyRequest,

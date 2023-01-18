@@ -180,3 +180,26 @@ func (s *server) GetCleaningCodes(ctx context.Context, request *service.GetClean
 		CleaningCodes: l,
 	}, nil
 }
+
+// GetFabricBySKU
+func (s *server) GetFabricBySKU(ctx context.Context, request *service.GetFabricBySKURequest) (*service.GetFabricBySKUResponse, error) {
+	md, _ := metadata.FromIncomingContext(ctx)
+
+	if !isAuthenticated(md.Get(APIKEY)) {
+		return nil, status.Error(codes.Unauthenticated, "invalid api key")
+	}
+
+	l, lerr := storage.GetFabricBySKU(ctx, request.FabricSku)
+
+	if lerr == storage.NotFound {
+		return nil, status.Error(codes.NotFound, lerr.Error())
+	}
+
+	if lerr != nil {
+		return nil, status.Error(codes.Unavailable, lerr.Error())
+	}
+
+	return &service.GetFabricBySKUResponse{
+		Fabric: l,
+	}, nil
+}

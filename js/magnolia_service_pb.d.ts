@@ -250,3 +250,41 @@ export namespace GetCleaningCodesResponse {
   }
 }
 
+export class GetFabricBySKURequest extends jspb.Message {
+  getFabricSku(): string;
+  setFabricSku(value: string): GetFabricBySKURequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetFabricBySKURequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetFabricBySKURequest): GetFabricBySKURequest.AsObject;
+  static serializeBinaryToWriter(message: GetFabricBySKURequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetFabricBySKURequest;
+  static deserializeBinaryFromReader(message: GetFabricBySKURequest, reader: jspb.BinaryReader): GetFabricBySKURequest;
+}
+
+export namespace GetFabricBySKURequest {
+  export type AsObject = {
+    fabricSku: string,
+  }
+}
+
+export class GetFabricBySKUResponse extends jspb.Message {
+  getFabric(): api_fabric_pb.Fabric | undefined;
+  setFabric(value?: api_fabric_pb.Fabric): GetFabricBySKUResponse;
+  hasFabric(): boolean;
+  clearFabric(): GetFabricBySKUResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetFabricBySKUResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetFabricBySKUResponse): GetFabricBySKUResponse.AsObject;
+  static serializeBinaryToWriter(message: GetFabricBySKUResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetFabricBySKUResponse;
+  static deserializeBinaryFromReader(message: GetFabricBySKUResponse, reader: jspb.BinaryReader): GetFabricBySKUResponse;
+}
+
+export namespace GetFabricBySKUResponse {
+  export type AsObject = {
+    fabric?: api_fabric_pb.Fabric.AsObject,
+  }
+}
+
