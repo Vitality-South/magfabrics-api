@@ -2,8 +2,8 @@
 
 # MagFabrics API
 
-The MagFabrics API provides all fabrics, inventory, and taxonomy data available on [magfabrics.com](https://magfabrics.com/). See the [demo site](https://demo.magfabrics.com/) as an example of all data that is available. Client libraries are available in this repo for both front-end and back-end apps in various programming languages. We currently support JavaScript, [Go](https://go.dev/), and [Dart/Flutter](https://flutter.dev/) but are willing to add more upon request. There are also tools available in [cmd](cmd) folder for exporting all API data to CSV. Email magfabricsapi@vitalitysouth.com to request an API key.  
-  
+The MagFabrics API provides all fabrics, inventory, and taxonomy data available on [magfabrics.com](https://magfabrics.com/). See the [demo site](https://demo.magfabrics.com/) as an example of all data that is available. Client libraries are available in this repo for both front-end and back-end apps in various programming languages. We currently support JavaScript, [Go](https://go.dev/), and [Dart/Flutter](https://flutter.dev/) but are willing to add more upon request. There are also tools available in [cmd](cmd) folder for exporting all API data to CSV. Email magfabricsapi@vitalitysouth.com to request an API key.
+
 If you need a custom / bespoke integration, assistance with building an app or website, or any other software development work, contact devteam@vitalitysouth.com.
 
 ## Demo
@@ -39,7 +39,7 @@ Or:
 ```html
 <script
   src="https://demo.magfabrics.com/magfabrics-1.5.7.min.js"
-integrity="sha384-dXQ2i6vL3fGwyKLi2i4fAxKZZQ9tFQZvI1hbkLnbidq+AtWk7gMNhYPJA5sLjLM/"
+  integrity="sha384-dXQ2i6vL3fGwyKLi2i4fAxKZZQ9tFQZvI1hbkLnbidq+AtWk7gMNhYPJA5sLjLM/"
   crossorigin="anonymous"
 ></script>
 ```
@@ -108,6 +108,10 @@ magfabrics.getFabricById('<productCode>').then((data) => {...});
 // Retrieves any fabric by its name(aka patternColorCombo)
 // data returned as data.value.fabric
 magfabrics.getFabricByName('<patternColorCombo>').then((data) => {...});
+
+// Retrieves any fabric by its sku #
+// data returned as data.value.fabric
+magfabrics.getFabricBySku('<sku>').then((data) => {...})
 ```
 
 ---
