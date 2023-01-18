@@ -51,7 +51,7 @@
     </section> -->
 
     <section class="w-full d-flex justify-content-center align-items-center">
-      <div class="input-group mx-2" style="max-width:400px">
+      <div class="input-group mx-2" style="max-width: 300px">
         <input
           id="search-bar"
           type="text"
@@ -60,10 +60,75 @@
           aria-label="Search"
           aria-describedby="button-addon2"
         />
-        <div id="search-results" class="card " style="position: absolute; top: 40px; left: 0px; width: 400px; z-index: 99; overflow-y:auto; max-height: 600px; display: none;">
-          <div id="search-results__body" class="card-body">
-            
-          </div>
+        <div
+          id="search-results"
+          class="card"
+          style="
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            width: 400px;
+            z-index: 99;
+            overflow-y: auto;
+            max-height: 600px;
+            display: none;
+          "
+        >
+          <div id="search-results__body" class="card-body"></div>
+        </div>
+      </div>
+
+      <div class="input-group mx-2" style="max-width: 300px">
+        <input
+          id="search-id-bar"
+          type="text"
+          class="form-control"
+          placeholder="Search ID"
+          aria-label="Search ID"
+          aria-describedby="button-addon2"
+        />
+        <div
+          id="search-results-id"
+          class="card"
+          style="
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            width: 400px;
+            z-index: 99;
+            overflow-y: auto;
+            max-height: 600px;
+            display: none;
+          "
+        >
+          <div id="search-results-id__body" class="card-body"></div>
+        </div>
+      </div>
+
+      <div class="input-group mx-2" style="max-width: 300px">
+        <input
+          id="search-sku-bar"
+          type="text"
+          class="form-control"
+          placeholder="Search SKU"
+          aria-label="Search SKU"
+          aria-describedby="button-addon2"
+        />
+        <div
+          id="search-results-sku"
+          class="card"
+          style="
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            width: 400px;
+            z-index: 99;
+            overflow-y: auto;
+            max-height: 600px;
+            display: none;
+          "
+        >
+          <div id="search-results-sku__body" class="card-body"></div>
         </div>
       </div>
 
@@ -127,12 +192,11 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    
+
     <script
-      src="magfabrics-1.5.7.min.js"
-integrity="sha384-dXQ2i6vL3fGwyKLi2i4fAxKZZQ9tFQZvI1hbkLnbidq+AtWk7gMNhYPJA5sLjLM/"
+      src="magfabrics-1.5.10.min.js"
+integrity="sha384-nwaUac9DjpvtNqsleEW+ZLDI3y/tjpWh/LtD+PJArIKZL7gzz7i9y25+qHTbw7fy"
     ></script>
     <script src="index.js"></script>
-    
   </body>
 </html>

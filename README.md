@@ -38,8 +38,13 @@ Or:
 
 ```html
 <script
+<<<<<<< HEAD
   src="https://demo.magfabrics.com/magfabrics-1.5.7.min.js"
   integrity="sha384-dXQ2i6vL3fGwyKLi2i4fAxKZZQ9tFQZvI1hbkLnbidq+AtWk7gMNhYPJA5sLjLM/"
+=======
+  src="https://demo.magfabrics.com/magfabrics-1.5.10.min.js"
+integrity="sha384-nwaUac9DjpvtNqsleEW+ZLDI3y/tjpWh/LtD+PJArIKZL7gzz7i9y25+qHTbw7fy"
+>>>>>>> 9865635 (Updated builds, create tags, bump version to 1.5.10)
   crossorigin="anonymous"
 ></script>
 ```
@@ -109,9 +114,15 @@ magfabrics.getFabricById('<productCode>').then((data) => {...});
 // data returned as data.value.fabric
 magfabrics.getFabricByName('<patternColorCombo>').then((data) => {...});
 
+<<<<<<< HEAD
 // Retrieves any fabric by its sku #
 // data returned as data.value.fabric
 magfabrics.getFabricBySku('<sku>').then((data) => {...})
+=======
+// Retrieves any fabric by its sku
+// data returned as data.value.fabric
+magfabrics.getFabricBySku('<sku>').then((data) => {...});
+>>>>>>> 9865635 (Updated builds, create tags, bump version to 1.5.10)
 ```
 
 ---
@@ -259,6 +270,9 @@ void main() async {
 
   // Get a fabric by name
   final fabric = await MagFabrics.instance.getFabricByName('<patternColorCombo>');
+
+   // Get a fabric by sku
+  final fabric = await MagFabrics.instance.getFabricBySKU('<sku>');
 
   // Shutdown the API client
   await MagFabrics.instance.dispose();

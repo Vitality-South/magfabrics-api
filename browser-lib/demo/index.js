@@ -294,4 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
+  // test get by sku
+  magfabrics.getFabricBySku("4326").then((result) => console.log(result));
 });
