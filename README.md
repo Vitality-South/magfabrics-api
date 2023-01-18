@@ -114,15 +114,9 @@ magfabrics.getFabricById('<productCode>').then((data) => {...});
 // data returned as data.value.fabric
 magfabrics.getFabricByName('<patternColorCombo>').then((data) => {...});
 
-<<<<<<< HEAD
 // Retrieves any fabric by its sku #
 // data returned as data.value.fabric
 magfabrics.getFabricBySku('<sku>').then((data) => {...})
-=======
-// Retrieves any fabric by its sku
-// data returned as data.value.fabric
-magfabrics.getFabricBySku('<sku>').then((data) => {...});
->>>>>>> 9865635 (Updated builds, create tags, bump version to 1.5.10)
 ```
 
 ---
