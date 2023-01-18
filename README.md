@@ -38,13 +38,8 @@ Or:
 
 ```html
 <script
-<<<<<<< HEAD
   src="https://demo.magfabrics.com/magfabrics-1.5.11.min.js"
-integrity="sha384-mGtduzQg+uqHZ9UnEIiKCq/TcRaJjjdWl7v/NjCfs9mtvyLfuLVFDgzfbrMdqqyt"
-=======
-  src="https://demo.magfabrics.com/magfabrics-1.5.11.min.js"
-integrity="sha384-nwaUac9DjpvtNqsleEW+ZLDI3y/tjpWh/LtD+PJArIKZL7gzz7i9y25+qHTbw7fy"
->>>>>>> 9865635 (Updated builds, create tags, bump version to 1.5.10)
+  integrity="sha384-mGtduzQg+uqHZ9UnEIiKCq/TcRaJjjdWl7v/NjCfs9mtvyLfuLVFDgzfbrMdqqyt"
   crossorigin="anonymous"
 ></script>
 ```
