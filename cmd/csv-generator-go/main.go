@@ -24,7 +24,7 @@ import (
 
 const (
 	// version number
-	version = 2
+	version = 3
 
 	// default delimiter in CSV output
 	defaultCSVDelimiter = ','
@@ -183,12 +183,13 @@ func buildHtmlDescription(body strings.Builder, f *fabric.Fabric) string {
 	return body.String()
 }
 
-func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix, inventoryPolicy, fulfillmentService *string, toggleArchived *bool) []shopifyProduct {
+func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix, inventoryPolicy, fulfillmentService string, toggleArchived bool) []shopifyProduct {
 	products := []shopifyProduct{}
 
 	for _, f := range fabrics {
+		// Shopify does not allow Handle to contain spaces
 		handleFunc := func() string {
-			if *handlePrefix == "" {
+			if handlePrefix == "" {
 				return nospace(f.ProductCode)
 			}
 
@@ -196,7 +197,7 @@ func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix, inventoryPolicy, fu
 		}
 
 		archivedFunc := func() string {
-			if *toggleArchived {
+			if toggleArchived {
 				if f.Status == fabricDiscontinuedStatus {
 					return "archived"
 				}
@@ -208,7 +209,7 @@ func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix, inventoryPolicy, fu
 		}
 
 		publishedFunc := func() string {
-			if *toggleArchived {
+			if toggleArchived {
 				if f.Status == fabricDiscontinuedStatus {
 					return "FALSE"
 				}
@@ -227,7 +228,7 @@ func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix, inventoryPolicy, fu
 			Handle:   handleFunc(),
 			Title:    f.PatternColorCombo,
 			BodyHTML: bodyString,
-			Vendor:   *fulfillmentService,
+			Vendor:   "MagFabrics",
 			// ProductCategory:
 			Tags:      strings.Join(f.Uses, ", "),
 			Published: publishedFunc(),
@@ -247,8 +248,8 @@ func shopifyProducts(fabrics []*fabric.Fabric, handlePrefix, inventoryPolicy, fu
 
 				return ""
 			}(),
-			VariantInventoryPolicy:    *inventoryPolicy,
-			VariantFulfillmentService: *fulfillmentService,
+			VariantInventoryPolicy:    inventoryPolicy,
+			VariantFulfillmentService: fulfillmentService,
 			VariantPrice:              f.DisplayPrice,
 			// VariantCompareAtPrice:
 			// VariantRequiresShipping:
@@ -304,7 +305,7 @@ func main() {
 	shopifyHandlePrefix := flag.String("shopifyHandlePrefix", "", "Add a custom prefix to the Shopify Handle for each fabric. This can be useful if you sell multiple brands want MagFabrics fabrics handles to not conflict with other Shopify product handles.")
 	shopifyToggleArchived := flag.Bool("shopifyArchiveDiscontinued", true, "Set Shopify published to false & status to archived if fabric is discontinued (default is true)")
 	shopifyVariantInventoryPolicy := flag.String("shopifyVariantInventoryPolicy", "continue", "Set Shopify Variant Inventory Policy (default is continue)")
-	shopifyFulfillmentService := flag.String("shopifyFulfillmentService", "magfabrics", "Set Shopify Fulfillment Service (default is MagFabrics")
+	shopifyFulfillmentService := flag.String("shopifyFulfillmentService", "magfabrics", "Set Shopify Fulfillment Service (default is magfabrics")
 
 	printVersion := flag.Bool("version", false, "print version number and exit")
 
@@ -365,7 +366,7 @@ func main() {
 
 	csvOutput, serr := func() (string, error) {
 		if *shopify {
-			data := shopifyProducts(fabrics, shopifyHandlePrefix, shopifyVariantInventoryPolicy, shopifyFulfillmentService, shopifyToggleArchived)
+			data := shopifyProducts(fabrics, *shopifyHandlePrefix, *shopifyVariantInventoryPolicy, *shopifyFulfillmentService, *shopifyToggleArchived)
 			return gocsv.MarshalString(&data)
 		}
 
