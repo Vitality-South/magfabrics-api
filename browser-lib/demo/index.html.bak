@@ -194,7 +194,7 @@
     ></script>
 
     <script
-      src="magfabrics-1.5.17.min.js"
+      src="magfabrics-1.5.18.min.js"
 integrity="sha384-h5fKyF1jgDsxx9QoKHcZ+H/wjahlyl+EyYdHWPU+7CwNkNNOsufRg70rRps368OH"
     ></script>
     <script src="index.js"></script>
