@@ -62,4 +62,4 @@ jsdoc -d=../js/doc ../js/*.js > /dev/null
 # just copy the output into the example projects
 cp ../js ../SPA-Example/src/api -r
 cp ../js ../npm-lib/api -r
-cp ../ts ../browser-lib/src/grpc -r
+cp ../js/. ../browser-lib/src/grpc/ -a

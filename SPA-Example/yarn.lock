@@ -1430,10 +1430,10 @@
   dependencies:
     "@types/node" "*"
 
-"@vitality-south/magfabrics@^1.5.14":
-  version "1.5.14"
-  resolved "https://registry.npmjs.org/@vitality-south/magfabrics/-/magfabrics-1.5.14.tgz"
-  integrity sha512-B+CNHtMk4BzdOFtd26GAo+kAWp5/wyMesIaz0L+olDjplrw5ELEWnPK4tA/cm1fQQjUN6I6cJpOK3YrIWqZkBQ==
+"@vitality-south/magfabrics@^1.5.15":
+  version "1.5.15"
+  resolved "https://registry.npmjs.org/@vitality-south/magfabrics/-/magfabrics-1.5.15.tgz"
+  integrity sha512-150t+rh5QGuN5MmQUJ86BU4ZeivfNPDoDYqHuMF/fp6bdMIfIAUnzXM8mc3Z377orAI2dPoROT9qtw6dk/SUWQ==
   dependencies:
     google-protobuf "^3.21.2"
     grpc-web "^1.4.1"
