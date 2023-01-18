@@ -199,7 +199,10 @@ document.addEventListener("DOMContentLoaded", function () {
         result.setAttribute("data-bs-target", "#exampleModal");
         result.innerText = r.patternColorCombo;
         result.addEventListener("click", () => {
-          openCard(r);
+          magfabrics.getFabricByName(r.patternColorCombo).then((result) => {
+            openCard(result.value.fabric);
+          });
+          // openCard(r);
         });
         searchResultsBody.appendChild(result);
       });
@@ -243,7 +246,10 @@ document.addEventListener("DOMContentLoaded", function () {
         result.setAttribute("data-bs-target", "#exampleModal");
         result.innerText = r.productCode;
         result.addEventListener("click", () => {
-          openCard(r);
+          magfabrics.getFabricById(r.productCode).then((result) => {
+            openCard(result.value.fabric);
+          });
+          // openCard(r);
         });
         searchIdResultsBody.appendChild(result);
       });
@@ -288,7 +294,10 @@ document.addEventListener("DOMContentLoaded", function () {
         result.setAttribute("data-bs-target", "#exampleModal");
         result.innerText = r.sku;
         result.addEventListener("click", () => {
-          openCard(r);
+          magfabrics.getFabricBySku(r.sku).then((result) => {
+            openCard(result.value.fabric);
+          });
+          // openCard(r);
         });
         searchSkuResultsBody.appendChild(result);
       });
@@ -296,5 +305,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // test get by sku
-  magfabrics.getFabricBySku("4326").then((result) => console.log(result));
+  // magfabrics.getFabricBySku("4326").then((result) => console.log(result));
 });
