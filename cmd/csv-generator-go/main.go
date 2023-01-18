@@ -305,7 +305,7 @@ func main() {
 	shopifyHandlePrefix := flag.String("shopifyHandlePrefix", "", "Add a custom prefix to the Shopify Handle for each fabric. This can be useful if you sell multiple brands want MagFabrics fabrics handles to not conflict with other Shopify product handles.")
 	shopifyToggleArchived := flag.Bool("shopifyArchiveDiscontinued", true, "Set Shopify published to false & status to archived if fabric is discontinued (default is true)")
 	shopifyVariantInventoryPolicy := flag.String("shopifyVariantInventoryPolicy", "continue", "Set Shopify Variant Inventory Policy (default is continue)")
-	shopifyFulfillmentService := flag.String("shopifyFulfillmentService", "magfabrics", "Set Shopify Fulfillment Service (default is magfabrics")
+	shopifyFulfillmentService := flag.String("shopifyFulfillmentService", "manual", "Set Shopify Fulfillment Service (default is manual")
 
 	printVersion := flag.Bool("version", false, "print version number and exit")
 

@@ -24,7 +24,7 @@ Usage:
   -shopifyVariantInventoryPolicy=continue/deny
       Sets Shopify Variant Inventory Policy (requires -shopify to be enabled, default is set to continue)
   -shopifyFulfillmentService=example
-      Sets Shopify Fulillment Service (requires -shopify to be enabled, default is set to magfabrics)
+      Sets Shopify Fulillment Service (requires -shopify to be enabled, default is set to manual)
   -version
         print version number and exit
 ```
