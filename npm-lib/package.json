@@ -1,6 +1,6 @@
 {
   "name": "@vitality-south/magfabrics",
-  "version": "1.5.10",
+  "version": "1.5.11",
   "description": "Access fabrics data from MagFabrics",
   "source": "src/index.js",
   "main": "dist/magfabrics.js",
