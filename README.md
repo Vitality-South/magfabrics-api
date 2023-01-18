@@ -38,8 +38,8 @@ Or:
 
 ```html
 <script
-  src="https://demo.magfabrics.com/magfabrics-1.5.11.min.js"
-  integrity="sha384-mGtduzQg+uqHZ9UnEIiKCq/TcRaJjjdWl7v/NjCfs9mtvyLfuLVFDgzfbrMdqqyt"
+  src="https://demo.magfabrics.com/magfabrics-1.5.13.min.js"
+integrity="sha384-Q4Kb7ENtxWIMsB0RChpBHDzAYLyUOfbAJuJAAs9o+xcn+daJotHzHt9S+IdnUcFw"
   crossorigin="anonymous"
 ></script>
 ```
