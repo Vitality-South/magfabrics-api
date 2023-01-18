@@ -39,7 +39,7 @@ Or:
 ```html
 <script
   src="https://demo.magfabrics.com/magfabrics-1.5.15.min.js"
-integrity="sha384-h5fKyF1jgDsxx9QoKHcZ+H/wjahlyl+EyYdHWPU+7CwNkNNOsufRg70rRps368OH"
+  integrity="sha384-h5fKyF1jgDsxx9QoKHcZ+H/wjahlyl+EyYdHWPU+7CwNkNNOsufRg70rRps368OH"
   crossorigin="anonymous"
 ></script>
 ```
@@ -111,7 +111,7 @@ magfabrics.getFabricByName('<patternColorCombo>').then((data) => {...});
 
 // Retrieves any fabric by its sku #
 // data returned as data.value.fabric
-magfabrics.getFabricBySku('<sku>').then((data) => {...})
+magfabrics.getFabricBySKU('<sku>').then((data) => {...})
 ```
 
 ---
