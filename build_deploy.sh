@@ -295,6 +295,7 @@ s3://${BUCKET_NAME}/
 
 # remove all magfabrics-$version.min.js files from demo folder
 rm ./browser-lib/demo/magfabrics-*.min.js
+rm ./browser-lib/demo/magnoliafabrics-*.min.js
 
 # Because PWAs caching will prevent seeing the latest changes, we need to invalidate the cache
 aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION} --paths '/*'
