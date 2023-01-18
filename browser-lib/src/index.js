@@ -193,4 +193,25 @@ magfabrics.getFabricByName = async (name) => {
   return createReturnObj(fabric.toObject(), null);
 };
 
+///////////////////////////////////////
+// Returns fabrics if any exists with
+// the specified sku.
+///////////////////////////////////////
+magfabrics.getFabricBySku = async (sku) => {
+  let fabric;
+
+  try {
+    const request = new GetFabricBySkuRequest();
+    request.setFabricSku(sku);
+    fabric = await magfabrics.client.getFabricBySKU(
+      request,
+      magfabrics.metadata
+    );
+  } catch (err) {
+    return createReturnObj(null, `Failed to request fabric by sku\n ${err}`);
+  }
+
+  return createReturnObj(fabric.toObject(), null);
+};
+
 window.magfabrics = magfabrics;

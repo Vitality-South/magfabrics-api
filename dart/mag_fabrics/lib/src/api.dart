@@ -152,4 +152,19 @@ class MagFabrics {
       return APIResponse<Fabric>(error: e.message.toString(), data: Fabric());
     }
   }
+
+  // get by SKU
+  Future<APIResponse<Fabric>> getFabricBySku(String id) async {
+    try {
+      final request = GetFabricBySKURequest(fabricSku: id);
+      final fabric = await service!.getFabricBySKU(request,
+          options: CallOptions(metadata: {'x-api-key': _apiKey}));
+
+      return APIResponse<Fabric>(data: fabric.fabric);
+    } on GrpcError catch (e) {
+      print('ERROR: $e');
+      print('failed to get fabric by sku');
+      return APIResponse<Fabric>(error: e.message.toString(), data: Fabric());
+    }
+  }
 }
