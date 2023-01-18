@@ -1,8 +1,10 @@
 .phony: test build
 
 appname = magnoliafabrics
-version = 6
+version = 7
 
+getauth:
+	aws s3 cp s3://vs-git-private-files/auth.go auth.go
 test:
 	@echo "Running go test -v..."
 	go test -v
@@ -25,7 +27,7 @@ upload-container: test build build-container
 	#docker image rm 608943053856.dkr.ecr.us-east-1.amazonaws.com/fenrir:$(appname)-service-$(version)
 	#docker image rm fenrir:$(appname)-service-$(version)
 
-deploy: test build build-container upload-container
+deploy: getauth test build build-container upload-container
 	@echo "Deploying image to kubernetes..."
 	@sed -i.bak 's/{{VERSION_NUMBER}}/$(version)/g' deployment.yml
 	kubectl apply -f deployment.yml
