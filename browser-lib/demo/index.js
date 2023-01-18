@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(result.value);
 
     // grab a subset of the fabrics
-     const fabrics = result.value.fabricsList.slice(150, 200);
-     fabricsMaster = result.value.fabricsList;
+    const fabrics = result.value.fabricsList.slice(150, 200);
+    fabricsMaster = result.value.fabricsList;
     fabs = result.value.fabricsList;
 
     // create a card for each fabric
@@ -164,18 +164,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const taxonomiesBtn = document.getElementById("taxonomies-btn");
   taxonomiesBtn.addEventListener("click", () => openTaxonomiesCard());
 
+  // search by name
   const searchBar = document.getElementById("search-bar");
   const searchResults = document.getElementById("search-results");
   const searchResultsBody = document.getElementById("search-results__body");
-  searchBar.addEventListener("focus", ()=>{
+  searchBar.addEventListener("focus", () => {
     searchResults.style.display = "block";
   });
-  searchBar.addEventListener("blur", ()=>{
-    setTimeout(()=>{
+  searchBar.addEventListener("blur", () => {
+    setTimeout(() => {
       searchResults.style.display = "none";
     }, 200);
-  }
-  );
+  });
 
   searchBar.addEventListener("input", (e) => {
     const query = e.target.value;
@@ -186,7 +186,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // any word of fab patternColorCombo starts with any word of query
         const queryWords = query.toLowerCase().split(" ");
         const fabWords = f.patternColorCombo.toLowerCase().split(" ");
-        return queryWords.every((qw) => fabWords.some((fw) => fw.startsWith(qw)));
+        return queryWords.every((qw) =>
+          fabWords.some((fw) => fw.startsWith(qw))
+        );
       });
 
       results.forEach((r) => {
@@ -197,12 +199,99 @@ document.addEventListener("DOMContentLoaded", function () {
         result.setAttribute("data-bs-target", "#exampleModal");
         result.innerText = r.patternColorCombo;
         result.addEventListener("click", () => {
-           openCard(r);
+          openCard(r);
         });
         searchResultsBody.appendChild(result);
       });
     }
   });
 
-  
+  //search by id
+  const searchIdBar = document.getElementById("search-id-bar");
+  const searchIdResults = document.getElementById("search-results-id");
+  const searchIdResultsBody = document.getElementById(
+    "search-results-id__body"
+  );
+  searchIdBar.addEventListener("focus", () => {
+    searchIdResults.style.display = "block";
+  });
+  searchIdBar.addEventListener("blur", () => {
+    setTimeout(() => {
+      searchIdResults.style.display = "none";
+    }, 200);
+  });
+
+  searchIdBar.addEventListener("input", (e) => {
+    const query = e.target.value;
+    searchIdResultsBody.innerHTML = "";
+    fabs = fabricsMaster;
+    if (query.length > 0) {
+      const results = fabs.filter((f) => {
+        // any word of fab Pattern Code starts with any word of query
+        const queryWords = query.toLowerCase().split(" ");
+        const fabWords = f.productCode.toLowerCase().split(" ");
+        return queryWords.every((qw) =>
+          fabWords.some((fw) => fw.startsWith(qw))
+        );
+      });
+
+      results.forEach((r) => {
+        const result = document.createElement("div");
+        result.classList.add("row", "mb-2");
+        result.style.cursor = "pointer";
+        result.setAttribute("data-bs-toggle", "modal");
+        result.setAttribute("data-bs-target", "#exampleModal");
+        result.innerText = r.productCode;
+        result.addEventListener("click", () => {
+          openCard(r);
+        });
+        searchIdResultsBody.appendChild(result);
+      });
+    }
+  });
+
+  //search by sku
+  const searchSkuBar = document.getElementById("search-sku-bar");
+  const searchSkuResults = document.getElementById("search-results-sku");
+  const searchSkuResultsBody = document.getElementById(
+    "search-results-sku__body"
+  );
+  searchSkuBar.addEventListener("focus", () => {
+    searchSkuResults.style.display = "block";
+  });
+
+  searchSkuBar.addEventListener("blur", () => {
+    setTimeout(() => {
+      searchSkuResults.style.display = "none";
+    }, 200);
+  });
+
+  searchSkuBar.addEventListener("input", (e) => {
+    const query = e.target.value;
+    searchSkuResultsBody.innerHTML = "";
+    fabs = fabricsMaster;
+    if (query.length > 0) {
+      const results = fabs.filter((f) => {
+        // any word of fab patternColorCombo starts with any word of query
+        const queryWords = query.toLowerCase().split(" ");
+        const fabWords = f.sku.toLowerCase().split(" ");
+        return queryWords.every((qw) =>
+          fabWords.some((fw) => fw.startsWith(qw))
+        );
+      });
+
+      results.forEach((r) => {
+        const result = document.createElement("div");
+        result.classList.add("row", "mb-2");
+        result.style.cursor = "pointer";
+        result.setAttribute("data-bs-toggle", "modal");
+        result.setAttribute("data-bs-target", "#exampleModal");
+        result.innerText = r.sku;
+        result.addEventListener("click", () => {
+          openCard(r);
+        });
+        searchSkuResultsBody.appendChild(result);
+      });
+    }
+  });
 });

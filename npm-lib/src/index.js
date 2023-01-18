@@ -11,6 +11,7 @@ import {
   GetFabricByIDRequest,
   GetFabricByNameRequest,
 } from "../api/js/magnolia_service_grpc_web_pb.js";
+import { GetFabricBySKURequest } from "../api/js/magnolia_service_pb.js";
 
 ///////////////////////////////////////
 // The object that will be exposed to
@@ -205,7 +206,7 @@ magfabrics.getFabricBySku = async (sku) => {
   try {
     const request = new GetFabricBySKURequest();
     request.setFabricSku(sku);
-    fabric = await magfabrics.client.getFabricBySKU(
+    fabric = await magfabrics.client.getFabricBySku(
       request,
       magfabrics.metadata
     );

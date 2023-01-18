@@ -1,5 +1,6 @@
 "use strict";
 
+import { GetFabricBySKURequest } from "../../npm-lib/api/js/magnolia_service_pb.js";
 import createReturnObj from "./createReturnObj.js";
 import {
   MagnoliaFabricsServicePromiseClient,
@@ -201,9 +202,9 @@ magfabrics.getFabricBySku = async (sku) => {
   let fabric;
 
   try {
-    const request = new GetFabricBySkuRequest();
+    const request = new GetFabricBySKURequest();
     request.setFabricSku(sku);
-    fabric = await magfabrics.client.getFabricBySKU(
+    fabric = await magfabrics.client.getFabricBySku(
       request,
       magfabrics.metadata
     );
