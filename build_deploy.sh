@@ -78,6 +78,7 @@ cdnVersionRegex="magfabrics-(.*).min.js"
 cdnVersionNew="magfabrics-$version.min.js"
 sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./README.md
 sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./browser-lib/demo/index.html
+sed -i.bak -E "s/$cdnVersionRegex/$cdnVersionNew/" ./browser-lib/demo/demo-simple.html
 
 # build the npm lib
 cd npm-lib
