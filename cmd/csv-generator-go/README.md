@@ -31,9 +31,9 @@ Usage:
 
 # Download links for latest prebuilt versions
 
-[Windows x64](https://images.magfabrics.com/apps/magfabrics-csv-amd64-v3.exe)
+[Windows x64](https://images.magfabrics.com/apps/magfabrics-csv-win-amd64-v3.exe)
 
-[Windows x32](https://images.magfabrics.com/apps/magfabrics-csv-386-v3.exe)
+[Windows x32](https://images.magfabrics.com/apps/magfabrics-csv-win-386-v3.exe)
 
 [macOS Intel-based](https://images.magfabrics.com/apps/magfabrics-csv-macos-amd64-v3)
 
