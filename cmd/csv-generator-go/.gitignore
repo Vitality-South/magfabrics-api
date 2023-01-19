@@ -1,3 +1,4 @@
 *.csv
 *.exe
 csv-generator-go
+magfabrics-csv-macos-*
