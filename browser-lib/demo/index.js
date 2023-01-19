@@ -129,12 +129,20 @@ function openTaxonomiesCard() {
 
 let fabs = [];
 let fabricsMaster = [];
+let apiKey = "Zah3QYGl471fdlhw";
 
 document.addEventListener("DOMContentLoaded", function () {
   const fabSection = document.getElementById("fab-section");
-  // fabSection.appendChild(createFabricsCard());
+  
+  // set the apikey field
+  const apiKeyField = document.getElementById("api-key-bar");
+  apiKeyField.value = apiKey;
 
-  const apiKey = "Zah3QYGl471fdlhw";
+  // make api-key-bar input update the api key
+  apiKeyField.addEventListener("input", (e) => {
+   apiKey = e.target.value;
+   magfabrics.initialize(apiKey);
+  }); 
 
   const magfabricsAPIClient = magfabrics.initialize(apiKey);
 

@@ -51,7 +51,20 @@
     </section> -->
 
     <section class="w-full d-flex justify-content-center align-items-center">
-      <div class="input-group mx-2" style="max-width: 300px">
+      <div class="input-group mx-2" style="max-width: 200px">
+        <input
+        id="api-key-bar"
+        type="text"
+        class="form-control"
+        placeholder="API Key"
+        aria-label="API Key"
+        aria-describedby="button-addon2"
+        value="sdf"
+      />
+      <div class="w-100 px-2" style="font-size: 10px;">API Key</div>
+      </div>
+
+      <div class="input-group mx-2" style="max-width: 200px">
         <input
           id="search-bar"
           type="text"
@@ -76,9 +89,11 @@
         >
           <div id="search-results__body" class="card-body"></div>
         </div>
+
+        <div class="w-100 px-2" style="font-size: 10px;">Search By Name</div>
       </div>
 
-      <div class="input-group mx-2" style="max-width: 300px">
+      <div class="input-group mx-2" style="max-width: 200px">
         <input
           id="search-id-bar"
           type="text"
@@ -103,9 +118,11 @@
         >
           <div id="search-results-id__body" class="card-body"></div>
         </div>
+
+        <div class="w-100 px-2" style="font-size: 10px;">Search By Id</div>
       </div>
 
-      <div class="input-group mx-2" style="max-width: 300px">
+      <div class="input-group mx-2" style="max-width: 200px">
         <input
           id="search-sku-bar"
           type="text"
@@ -130,6 +147,8 @@
         >
           <div id="search-results-sku__body" class="card-body"></div>
         </div>
+
+        <div class="w-100 px-2" style="font-size: 10px;">Search By SKU</div>
       </div>
 
       <button
