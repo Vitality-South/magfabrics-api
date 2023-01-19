@@ -18,7 +18,7 @@ Usage:
   -shopify
       Turns the output into a Shopify-ready CSV Product Import format
   -shopifyHandlePrefix="example"
-      Set a prefix for the Handle on all shopify products, in the case that your Shopify store sells multiple products from different brands (requires -shopify to be enabled)
+      Set a prefix for the Handle on all shopify products, in the case that your Shopify store sells multiple products from different brands (requires -shopify to be enabled, default is "")
   -shopifyArchiveDiscontinued=true/false
       Set products as Archived/Unpublished if they are discontinued (requires -shopify to be enabled, default is set to true)
   -shopifyVariantInventoryPolicy="continue"/"deny"
