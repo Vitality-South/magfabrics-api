@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MagFabrics API</title>
+    
+    </head>
+
+    <body class="">
+
+        <h1 style="font-weight: bold">Example Item</h1>
+        <br/>
+
+        <div>
+            <div>
+                <img id="image-el" src="" style="max-width:400px" />
+            </div>
+            <span style="font-weight: bold">Name: </span><span id="name-div"></span>
+            <br/>
+            <span style="font-weight: bold">Price: </span>$<span id="price-div"></span>
+        </div>
+
+        <!-- Load the MagFabrics SDK -->
+        <script
+        src="https://demo.magfabrics.com/magfabrics-1.5.11.min.js"
+        integrity="sha384-MbOT8aqH2sg23FwdSzaKTDn1G6rlvqkyEX+50NrimJ5oeBrK3H3Udd3rgN9BHx3s"
+        crossorigin="anonymous"
+        ></script>
+        
+        <script>
+            // Once the page has fully loaded
+            window.addEventListener('load', function() {
+            
+                // initialize the MagFabrics SDK
+                // replace the API key with your own !!!
+                magfabrics.initialize("Zah3QYGl471fdlhw");
+
+                // get the item
+                // using the patternColorCombo filed as the name
+                magfabrics.getFabricBySKU('9991').then(function(fabric) {
+                    var item = fabric.value.fabric;
+                    var itemName = item.patternColorCombo;
+                    var itemPrice = item.displayPrice;
+
+                    var nameDiv = document.getElementById('name-div');
+                    nameDiv.innerHTML = itemName;
+
+                    var priceDiv = document.getElementById('price-div');
+                    priceDiv.innerHTML = itemPrice;
+
+                    var imageEl = document.getElementById('image-el');
+                    imageEl.src = item.image;
+
+                })
+
+        });
+        </script>
+
+    </body>
+</html>

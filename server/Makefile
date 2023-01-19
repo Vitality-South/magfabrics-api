@@ -5,6 +5,8 @@ version = 7
 
 getauth:
 	aws s3 cp s3://vs-git-private-files/auth.go auth.go
+putauth:
+	aws s3 cp auth.go s3://vs-git-private-files/auth.go
 test:
 	@echo "Running go test -v..."
 	go test -v
