@@ -17,13 +17,13 @@ Usage:
         ignore discontinued fabrics (default is false)
   -shopify
       Turns the output into a Shopify-ready CSV Product Import format
-  -shopifyHandlePrefix=example
+  -shopifyHandlePrefix="example"
       Set a prefix for the Handle on all shopify products, in the case that your Shopify store sells multiple products from different brands (requires -shopify to be enabled)
   -shopifyArchiveDiscontinued=true/false
       Set products as Archived/Unpublished if they are discontinued (requires -shopify to be enabled, default is set to true)
-  -shopifyVariantInventoryPolicy=continue/deny
+  -shopifyVariantInventoryPolicy="continue"/"deny"
       Sets Shopify Variant Inventory Policy (requires -shopify to be enabled, default is set to continue)
-  -shopifyFulfillmentService=example
+  -shopifyFulfillmentService="manual"
       Sets Shopify Fulillment Service (requires -shopify to be enabled, default is set to manual)
   -version
         print version number and exit
