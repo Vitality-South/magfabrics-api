@@ -31,13 +31,17 @@ Usage:
 
 # Download links for latest prebuilt versions
 
-[Windows x64](https://images.magfabrics.com/apps/magfabrics-csv-amd64-v2.exe)
+[Windows x64](https://images.magfabrics.com/apps/magfabrics-csv-amd64-v3.exe)
 
-[Windows x32](https://images.magfabrics.com/apps/magfabrics-csv-386-v2.exe)
+[Windows x32](https://images.magfabrics.com/apps/magfabrics-csv-386-v3.exe)
+
+[macOS Intel-based](https://images.magfabrics.com/apps/magfabrics-csv-macos-amd64-v3)
+
+[macOS ARM-based](https://images.magfabrics.com/apps/magfabrics-csv-macos-arm64-v3)
 
 # Shopify Mode
 
-Shopify mode outputs a CSV in the correct format for importing to Shopify.
+Shopify mode outputs a CSV in the correct format for importing to Shopify. Enable Shopify mode with the `-shopify` command line option.
 
 ## Changes for Shopify Format
 
@@ -74,7 +78,7 @@ Go 1.18+ is required
 ```bash
 GOOS=windows GOARCH=amd64 go build -o magfabrics-csv-x64.exe
 GOOS=windows GOARCH=386 go build -o magfabrics-csv-x32.exe
-GOOS=darwin GOARCH=amd64 go build -o magfabrics-csv-macos-amd64.exe
-GOOS=darwin GOARCH=arm64 go build -o magfabrics-csv-macos-arm64.exe
-GOOS=linux GOARCH=amd64 go build -o magfabrics-csv-linux-arm64.exe
+GOOS=darwin GOARCH=amd64 go build -o magfabrics-csv-macos-amd64
+GOOS=darwin GOARCH=arm64 go build -o magfabrics-csv-macos-arm64
+GOOS=linux GOARCH=amd64 go build -o magfabrics-csv-linux-arm64
 ```
