@@ -11,19 +11,19 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class DiscontinuedFabric extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DiscontinuedFabric', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'PK', protoName: 'PK')
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Name', protoName: 'Name')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Sku', protoName: 'Sku')
     ..hasRequiredFields = false
   ;
 
   DiscontinuedFabric._() : super();
   factory DiscontinuedFabric({
-    $core.String? pK,
+    $core.String? name,
     $core.String? sku,
   }) {
     final _result = create();
-    if (pK != null) {
-      _result.pK = pK;
+    if (name != null) {
+      _result.name = name;
     }
     if (sku != null) {
       _result.sku = sku;
@@ -52,13 +52,13 @@ class DiscontinuedFabric extends $pb.GeneratedMessage {
   static DiscontinuedFabric? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get pK => $_getSZ(0);
+  $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
-  set pK($core.String v) { $_setString(0, v); }
+  set name($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasPK() => $_has(0);
+  $core.bool hasName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPK() => clearField(1);
+  void clearName() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get sku => $_getSZ(1);

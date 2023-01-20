@@ -9,9 +9,9 @@ package magnoliafabrics;
 option go_package = "github.com/Vitality-South/magfabrics-api/pkg/discontinuedfabric";
 
 message DiscontinuedFabric {
-    // @gotags: dynamo:"PK"
-    string PK = 1;
+    // @gotags: dynamo:"FabricName"
+    string Name = 1;
 
-    // @gotags: dynamo:"SK"
+    // @gotags: dynamo:"FabricSKU"
     string Sku = 2;
 }

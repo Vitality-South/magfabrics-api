@@ -23,13 +23,13 @@ import { MessageType } from "@protobuf-ts/runtime";
  */
 export interface DiscontinuedFabric {
     /**
-     * @gotags: dynamo:"PK"
+     * @gotags: dynamo:"FabricName"
      *
-     * @generated from protobuf field: string PK = 1 [json_name = "PK"];
+     * @generated from protobuf field: string Name = 1 [json_name = "Name"];
      */
-    pK: string;
+    name: string;
     /**
-     * @gotags: dynamo:"SK"
+     * @gotags: dynamo:"FabricSKU"
      *
      * @generated from protobuf field: string Sku = 2 [json_name = "Sku"];
      */
@@ -39,12 +39,12 @@ export interface DiscontinuedFabric {
 class DiscontinuedFabric$Type extends MessageType<DiscontinuedFabric> {
     constructor() {
         super("magnoliafabrics.DiscontinuedFabric", [
-            { no: 1, name: "PK", kind: "scalar", jsonName: "PK", T: 9 /*ScalarType.STRING*/ },
+            { no: 1, name: "Name", kind: "scalar", jsonName: "Name", T: 9 /*ScalarType.STRING*/ },
             { no: 2, name: "Sku", kind: "scalar", jsonName: "Sku", T: 9 /*ScalarType.STRING*/ }
         ]);
     }
     create(value?: PartialMessage<DiscontinuedFabric>): DiscontinuedFabric {
-        const message = { pK: "", sku: "" };
+        const message = { name: "", sku: "" };
         globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial<DiscontinuedFabric>(this, message, value);
@@ -55,8 +55,8 @@ class DiscontinuedFabric$Type extends MessageType<DiscontinuedFabric> {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* string PK = 1 [json_name = "PK"];*/ 1:
-                    message.pK = reader.string();
+                case /* string Name = 1 [json_name = "Name"];*/ 1:
+                    message.name = reader.string();
                     break;
                 case /* string Sku = 2 [json_name = "Sku"];*/ 2:
                     message.sku = reader.string();
@@ -73,9 +73,9 @@ class DiscontinuedFabric$Type extends MessageType<DiscontinuedFabric> {
         return message;
     }
     internalBinaryWrite(message: DiscontinuedFabric, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string PK = 1 [json_name = "PK"]; */
-        if (message.pK !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.pK);
+        /* string Name = 1 [json_name = "Name"]; */
+        if (message.name !== "")
+            writer.tag(1, WireType.LengthDelimited).string(message.name);
         /* string Sku = 2 [json_name = "Sku"]; */
         if (message.sku !== "")
             writer.tag(2, WireType.LengthDelimited).string(message.sku);

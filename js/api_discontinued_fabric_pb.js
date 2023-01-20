@@ -75,7 +75,7 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.toObject = function(opt_inclu
  */
 proto.magnoliafabrics.DiscontinuedFabric.toObject = function(includeInstance, msg) {
   var f, obj = {
-    pk: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     sku: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -115,7 +115,7 @@ proto.magnoliafabrics.DiscontinuedFabric.deserializeBinaryFromReader = function(
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPk(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -150,7 +150,7 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.serializeBinary = function() 
  */
 proto.magnoliafabrics.DiscontinuedFabric.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPk();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -168,10 +168,10 @@ proto.magnoliafabrics.DiscontinuedFabric.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional string PK = 1;
+ * optional string Name = 1;
  * @return {string}
  */
-proto.magnoliafabrics.DiscontinuedFabric.prototype.getPk = function() {
+proto.magnoliafabrics.DiscontinuedFabric.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -180,7 +180,7 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.getPk = function() {
  * @param {string} value
  * @return {!proto.magnoliafabrics.DiscontinuedFabric} returns this
  */
-proto.magnoliafabrics.DiscontinuedFabric.prototype.setPk = function(value) {
+proto.magnoliafabrics.DiscontinuedFabric.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
