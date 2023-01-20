@@ -51,7 +51,20 @@
     </section> -->
 
     <section class="w-full d-flex justify-content-center align-items-center">
-      <div class="input-group mx-2" style="max-width: 300px">
+      <div class="input-group mx-2" style="max-width: 200px">
+        <input
+          id="api-key-bar"
+          type="text"
+          class="form-control"
+          placeholder="API Key"
+          aria-label="API Key"
+          aria-describedby="button-addon2"
+          value="sdf"
+        />
+        <div class="w-100 px-2" style="font-size: 10px">API Key</div>
+      </div>
+
+      <div class="input-group mx-2" style="max-width: 200px">
         <input
           id="search-bar"
           type="text"
@@ -76,9 +89,11 @@
         >
           <div id="search-results__body" class="card-body"></div>
         </div>
+
+        <div class="w-100 px-2" style="font-size: 10px">Search By Name</div>
       </div>
 
-      <div class="input-group mx-2" style="max-width: 300px">
+      <div class="input-group mx-2" style="max-width: 200px">
         <input
           id="search-id-bar"
           type="text"
@@ -103,9 +118,11 @@
         >
           <div id="search-results-id__body" class="card-body"></div>
         </div>
+
+        <div class="w-100 px-2" style="font-size: 10px">Search By Id</div>
       </div>
 
-      <div class="input-group mx-2" style="max-width: 300px">
+      <div class="input-group mx-2" style="max-width: 200px">
         <input
           id="search-sku-bar"
           type="text"
@@ -130,13 +147,15 @@
         >
           <div id="search-results-sku__body" class="card-body"></div>
         </div>
+
+        <div class="w-100 px-2" style="font-size: 10px">Search By SKU</div>
       </div>
 
       <button
         id="cleaning-btn"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
-        class="btn-secondary btn mx-2"
+        class="btn-secondary btn mx-2 mb-3"
       >
         Cleaning Codes
       </button>
@@ -145,11 +164,19 @@
         id="taxonomies-btn"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
-        class="btn-secondary btn mx-2"
+        class="btn-secondary btn mx-2 mb-3"
       >
         Taxonomies
       </button>
     </section>
+
+    <div
+      id="api-error-section"
+      class="w-100 d-flex justify-content-center mt-2"
+      style="color: red; font-weight: bold"
+    >
+      <span id="api-error-text"></span>
+    </div>
 
     <section
       id="fab-section"
@@ -195,7 +222,7 @@
 
     <script
       src="magfabrics-1.5.21.min.js"
-integrity="sha384-h5fKyF1jgDsxx9QoKHcZ+H/wjahlyl+EyYdHWPU+7CwNkNNOsufRg70rRps368OH"
+      integrity="sha384-h5fKyF1jgDsxx9QoKHcZ+H/wjahlyl+EyYdHWPU+7CwNkNNOsufRg70rRps368OH"
     ></script>
     <script src="index.js"></script>
   </body>
