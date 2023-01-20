@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p  ../pkg/taxonomy ../pkg/fabric ../pkg/inventory ../pkg/cleaningcode ../ts ../dart/mag_fabrics/lib/src/grpc ../js ../js/doc ../npm-lib/api
+mkdir -p  ../pkg/taxonomy ../pkg/fabric ../pkg/inventory ../pkg/cleaningcode ../pkg/discontinuedfabric ../ts ../dart/mag_fabrics/lib/src/grpc ../js ../js/doc ../npm-lib/api
 
 protoc -I. --go_out=../pkg/taxonomy --go_opt=paths=source_relative \
 --js_out=import_style=commonjs:../js \
@@ -41,6 +41,17 @@ protoc -I. --go_out=../pkg/fabric --go_opt=paths=source_relative \
 --dart_out=grpc:../dart/mag_fabrics/lib/src/grpc  \
 api_fabric.proto
 protoc-go-inject-tag -input=../pkg/fabric/api_fabric.pb.go
+
+
+protoc -I. --go_out=../pkg/discontinuedfabric --go_opt=paths=source_relative \
+--js_out=import_style=commonjs:../js \
+--ts_out ../ts \
+--ts_opt eslint_disable \
+--ts_opt add_pb_suffix \
+--ts_opt long_type_number \
+--dart_out=grpc:../dart/mag_fabrics/lib/src/grpc  \
+api_discontinued_fabric.proto
+protoc-go-inject-tag -input=../pkg/discontinuedfabric/api_discontinued_fabric.pb.go
 
 # currently unable to generate the client files as .ts?
 # that feature is experimental in grpcweb

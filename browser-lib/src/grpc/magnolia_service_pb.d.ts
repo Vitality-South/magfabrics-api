@@ -4,6 +4,7 @@ import * as api_inventory_pb from './api_inventory_pb';
 import * as api_fabric_pb from './api_fabric_pb';
 import * as api_taxonomy_pb from './api_taxonomy_pb';
 import * as cleaning_code_pb from './cleaning_code_pb';
+import * as api_discontinued_fabric_pb from './api_discontinued_fabric_pb';
 
 
 export class GetAllFabricsRequest extends jspb.Message {
@@ -285,6 +286,40 @@ export class GetFabricBySKUResponse extends jspb.Message {
 export namespace GetFabricBySKUResponse {
   export type AsObject = {
     fabric?: api_fabric_pb.Fabric.AsObject,
+  }
+}
+
+export class GetDiscontinuedFabricsRequest extends jspb.Message {
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDiscontinuedFabricsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDiscontinuedFabricsRequest): GetDiscontinuedFabricsRequest.AsObject;
+  static serializeBinaryToWriter(message: GetDiscontinuedFabricsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDiscontinuedFabricsRequest;
+  static deserializeBinaryFromReader(message: GetDiscontinuedFabricsRequest, reader: jspb.BinaryReader): GetDiscontinuedFabricsRequest;
+}
+
+export namespace GetDiscontinuedFabricsRequest {
+  export type AsObject = {
+  }
+}
+
+export class GetDiscontinuedFabricsResponse extends jspb.Message {
+  getFabricList(): Array<api_discontinued_fabric_pb.DiscontinuedFabric>;
+  setFabricList(value: Array<api_discontinued_fabric_pb.DiscontinuedFabric>): GetDiscontinuedFabricsResponse;
+  clearFabricList(): GetDiscontinuedFabricsResponse;
+  addFabric(value?: api_discontinued_fabric_pb.DiscontinuedFabric, index?: number): api_discontinued_fabric_pb.DiscontinuedFabric;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDiscontinuedFabricsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDiscontinuedFabricsResponse): GetDiscontinuedFabricsResponse.AsObject;
+  static serializeBinaryToWriter(message: GetDiscontinuedFabricsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDiscontinuedFabricsResponse;
+  static deserializeBinaryFromReader(message: GetDiscontinuedFabricsResponse, reader: jspb.BinaryReader): GetDiscontinuedFabricsResponse;
+}
+
+export namespace GetDiscontinuedFabricsResponse {
+  export type AsObject = {
+    fabricList: Array<api_discontinued_fabric_pb.DiscontinuedFabric.AsObject>,
   }
 }
 

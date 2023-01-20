@@ -63,6 +63,12 @@ class MagnoliaFabricsServiceClient extends $grpc.Client {
       ($0.GetCleaningCodesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.GetCleaningCodesResponse.fromBuffer(value));
+  static final _$getDiscontinuedFabrics = $grpc.ClientMethod<
+          $0.GetDiscontinuedFabricsRequest, $0.GetDiscontinuedFabricsResponse>(
+      '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+      ($0.GetDiscontinuedFabricsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.GetDiscontinuedFabricsResponse.fromBuffer(value));
 
   MagnoliaFabricsServiceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -117,6 +123,13 @@ class MagnoliaFabricsServiceClient extends $grpc.Client {
       $0.GetCleaningCodesRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getCleaningCodes, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetDiscontinuedFabricsResponse>
+      getDiscontinuedFabrics($0.GetDiscontinuedFabricsRequest request,
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDiscontinuedFabrics, request,
+        options: options);
   }
 }
 
@@ -197,6 +210,15 @@ abstract class MagnoliaFabricsServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.GetCleaningCodesRequest.fromBuffer(value),
         ($0.GetCleaningCodesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetDiscontinuedFabricsRequest,
+            $0.GetDiscontinuedFabricsResponse>(
+        'GetDiscontinuedFabrics',
+        getDiscontinuedFabrics_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.GetDiscontinuedFabricsRequest.fromBuffer(value),
+        ($0.GetDiscontinuedFabricsResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.GetAllFabricsResponse> getAllFabrics_Pre(
@@ -249,6 +271,12 @@ abstract class MagnoliaFabricsServiceBase extends $grpc.Service {
     return getCleaningCodes(call, await request);
   }
 
+  $async.Future<$0.GetDiscontinuedFabricsResponse> getDiscontinuedFabrics_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.GetDiscontinuedFabricsRequest> request) async {
+    return getDiscontinuedFabrics(call, await request);
+  }
+
   $async.Future<$0.GetAllFabricsResponse> getAllFabrics(
       $grpc.ServiceCall call, $0.GetAllFabricsRequest request);
   $async.Future<$0.GetAllFabricsWithoutInventoryResponse>
@@ -266,4 +294,6 @@ abstract class MagnoliaFabricsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $0.GetAllFabricTaxonomyRequest request);
   $async.Future<$0.GetCleaningCodesResponse> getCleaningCodes(
       $grpc.ServiceCall call, $0.GetCleaningCodesRequest request);
+  $async.Future<$0.GetDiscontinuedFabricsResponse> getDiscontinuedFabrics(
+      $grpc.ServiceCall call, $0.GetDiscontinuedFabricsRequest request);
 }

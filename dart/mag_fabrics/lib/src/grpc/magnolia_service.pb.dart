@@ -13,6 +13,7 @@ import 'api_fabric.pb.dart' as $1;
 import 'api_inventory.pb.dart' as $2;
 import 'api_taxonomy.pb.dart' as $3;
 import 'cleaning_code.pb.dart' as $4;
+import 'api_discontinued_fabric.pb.dart' as $5;
 
 class GetAllFabricsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetAllFabricsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
@@ -658,5 +659,75 @@ class GetFabricBySKUResponse extends $pb.GeneratedMessage {
   void clearFabric() => clearField(1);
   @$pb.TagNumber(1)
   $1.Fabric ensureFabric() => $_ensure(0);
+}
+
+class GetDiscontinuedFabricsRequest extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDiscontinuedFabricsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  GetDiscontinuedFabricsRequest._() : super();
+  factory GetDiscontinuedFabricsRequest() => create();
+  factory GetDiscontinuedFabricsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDiscontinuedFabricsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDiscontinuedFabricsRequest clone() => GetDiscontinuedFabricsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDiscontinuedFabricsRequest copyWith(void Function(GetDiscontinuedFabricsRequest) updates) => super.copyWith((message) => updates(message as GetDiscontinuedFabricsRequest)) as GetDiscontinuedFabricsRequest; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetDiscontinuedFabricsRequest create() => GetDiscontinuedFabricsRequest._();
+  GetDiscontinuedFabricsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDiscontinuedFabricsRequest> createRepeated() => $pb.PbList<GetDiscontinuedFabricsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDiscontinuedFabricsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDiscontinuedFabricsRequest>(create);
+  static GetDiscontinuedFabricsRequest? _defaultInstance;
+}
+
+class GetDiscontinuedFabricsResponse extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDiscontinuedFabricsResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
+    ..pc<$5.DiscontinuedFabric>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fabric', $pb.PbFieldType.PM, subBuilder: $5.DiscontinuedFabric.create)
+    ..hasRequiredFields = false
+  ;
+
+  GetDiscontinuedFabricsResponse._() : super();
+  factory GetDiscontinuedFabricsResponse({
+    $core.Iterable<$5.DiscontinuedFabric>? fabric,
+  }) {
+    final _result = create();
+    if (fabric != null) {
+      _result.fabric.addAll(fabric);
+    }
+    return _result;
+  }
+  factory GetDiscontinuedFabricsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDiscontinuedFabricsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDiscontinuedFabricsResponse clone() => GetDiscontinuedFabricsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDiscontinuedFabricsResponse copyWith(void Function(GetDiscontinuedFabricsResponse) updates) => super.copyWith((message) => updates(message as GetDiscontinuedFabricsResponse)) as GetDiscontinuedFabricsResponse; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static GetDiscontinuedFabricsResponse create() => GetDiscontinuedFabricsResponse._();
+  GetDiscontinuedFabricsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetDiscontinuedFabricsResponse> createRepeated() => $pb.PbList<GetDiscontinuedFabricsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetDiscontinuedFabricsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDiscontinuedFabricsResponse>(create);
+  static GetDiscontinuedFabricsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$5.DiscontinuedFabric> get fabric => $_getList(0);
 }
 

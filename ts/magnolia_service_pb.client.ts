@@ -11,6 +11,8 @@
 import type { RpcTransport } from "@protobuf-ts/runtime-rpc";
 import type { ServiceInfo } from "@protobuf-ts/runtime-rpc";
 import { MagnoliaFabricsService } from "./magnolia_service_pb";
+import type { GetDiscontinuedFabricsResponse } from "./magnolia_service_pb";
+import type { GetDiscontinuedFabricsRequest } from "./magnolia_service_pb";
 import type { GetCleaningCodesResponse } from "./magnolia_service_pb";
 import type { GetCleaningCodesRequest } from "./magnolia_service_pb";
 import type { GetAllFabricTaxonomyResponse } from "./magnolia_service_pb";
@@ -66,6 +68,10 @@ export interface IMagnoliaFabricsServiceClient {
      * @generated from protobuf rpc: GetCleaningCodes(magnoliafabrics.GetCleaningCodesRequest) returns (magnoliafabrics.GetCleaningCodesResponse);
      */
     getCleaningCodes(input: GetCleaningCodesRequest, options?: RpcOptions): UnaryCall<GetCleaningCodesRequest, GetCleaningCodesResponse>;
+    /**
+     * @generated from protobuf rpc: GetDiscontinuedFabrics(magnoliafabrics.GetDiscontinuedFabricsRequest) returns (magnoliafabrics.GetDiscontinuedFabricsResponse);
+     */
+    getDiscontinuedFabrics(input: GetDiscontinuedFabricsRequest, options?: RpcOptions): UnaryCall<GetDiscontinuedFabricsRequest, GetDiscontinuedFabricsResponse>;
 }
 /**
  * @generated from protobuf service magnoliafabrics.MagnoliaFabricsService
@@ -131,5 +137,12 @@ export class MagnoliaFabricsServiceClient implements IMagnoliaFabricsServiceClie
     getCleaningCodes(input: GetCleaningCodesRequest, options?: RpcOptions): UnaryCall<GetCleaningCodesRequest, GetCleaningCodesResponse> {
         const method = this.methods[7], opt = this._transport.mergeOptions(options);
         return stackIntercept<GetCleaningCodesRequest, GetCleaningCodesResponse>("unary", this._transport, method, opt, input);
+    }
+    /**
+     * @generated from protobuf rpc: GetDiscontinuedFabrics(magnoliafabrics.GetDiscontinuedFabricsRequest) returns (magnoliafabrics.GetDiscontinuedFabricsResponse);
+     */
+    getDiscontinuedFabrics(input: GetDiscontinuedFabricsRequest, options?: RpcOptions): UnaryCall<GetDiscontinuedFabricsRequest, GetDiscontinuedFabricsResponse> {
+        const method = this.methods[8], opt = this._transport.mergeOptions(options);
+        return stackIntercept<GetDiscontinuedFabricsRequest, GetDiscontinuedFabricsResponse>("unary", this._transport, method, opt, input);
     }
 }

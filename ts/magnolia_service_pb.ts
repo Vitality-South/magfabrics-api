@@ -19,6 +19,7 @@ import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
+import { DiscontinuedFabric } from "./api_discontinued_fabric_pb";
 import { CleaningCode } from "./cleaning_code_pb";
 import { Taxonomy } from "./api_taxonomy_pb";
 import { Inventory } from "./api_inventory_pb";
@@ -148,6 +149,20 @@ export interface GetFabricBySKUResponse {
      * @generated from protobuf field: magnoliafabrics.Fabric fabric = 1;
      */
     fabric?: Fabric;
+}
+/**
+ * @generated from protobuf message magnoliafabrics.GetDiscontinuedFabricsRequest
+ */
+export interface GetDiscontinuedFabricsRequest {
+}
+/**
+ * @generated from protobuf message magnoliafabrics.GetDiscontinuedFabricsResponse
+ */
+export interface GetDiscontinuedFabricsResponse {
+    /**
+     * @generated from protobuf field: repeated magnoliafabrics.DiscontinuedFabric fabric = 1;
+     */
+    fabric: DiscontinuedFabric[];
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class GetAllFabricsRequest$Type extends MessageType<GetAllFabricsRequest> {
@@ -816,6 +831,79 @@ class GetFabricBySKUResponse$Type extends MessageType<GetFabricBySKUResponse> {
  * @generated MessageType for protobuf message magnoliafabrics.GetFabricBySKUResponse
  */
 export const GetFabricBySKUResponse = new GetFabricBySKUResponse$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class GetDiscontinuedFabricsRequest$Type extends MessageType<GetDiscontinuedFabricsRequest> {
+    constructor() {
+        super("magnoliafabrics.GetDiscontinuedFabricsRequest", []);
+    }
+    create(value?: PartialMessage<GetDiscontinuedFabricsRequest>): GetDiscontinuedFabricsRequest {
+        const message = {};
+        globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
+        if (value !== undefined)
+            reflectionMergePartial<GetDiscontinuedFabricsRequest>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetDiscontinuedFabricsRequest): GetDiscontinuedFabricsRequest {
+        return target ?? this.create();
+    }
+    internalBinaryWrite(message: GetDiscontinuedFabricsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message magnoliafabrics.GetDiscontinuedFabricsRequest
+ */
+export const GetDiscontinuedFabricsRequest = new GetDiscontinuedFabricsRequest$Type();
+// @generated message type with reflection information, may provide speed optimized methods
+class GetDiscontinuedFabricsResponse$Type extends MessageType<GetDiscontinuedFabricsResponse> {
+    constructor() {
+        super("magnoliafabrics.GetDiscontinuedFabricsResponse", [
+            { no: 1, name: "fabric", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => DiscontinuedFabric }
+        ]);
+    }
+    create(value?: PartialMessage<GetDiscontinuedFabricsResponse>): GetDiscontinuedFabricsResponse {
+        const message = { fabric: [] };
+        globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
+        if (value !== undefined)
+            reflectionMergePartial<GetDiscontinuedFabricsResponse>(this, message, value);
+        return message;
+    }
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetDiscontinuedFabricsResponse): GetDiscontinuedFabricsResponse {
+        let message = target ?? this.create(), end = reader.pos + length;
+        while (reader.pos < end) {
+            let [fieldNo, wireType] = reader.tag();
+            switch (fieldNo) {
+                case /* repeated magnoliafabrics.DiscontinuedFabric fabric */ 1:
+                    message.fabric.push(DiscontinuedFabric.internalBinaryRead(reader, reader.uint32(), options));
+                    break;
+                default:
+                    let u = options.readUnknownField;
+                    if (u === "throw")
+                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
+                    let d = reader.skip(wireType);
+                    if (u !== false)
+                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
+            }
+        }
+        return message;
+    }
+    internalBinaryWrite(message: GetDiscontinuedFabricsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
+        /* repeated magnoliafabrics.DiscontinuedFabric fabric = 1; */
+        for (let i = 0; i < message.fabric.length; i++)
+            DiscontinuedFabric.internalBinaryWrite(message.fabric[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
+        let u = options.writeUnknownFields;
+        if (u !== false)
+            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+        return writer;
+    }
+}
+/**
+ * @generated MessageType for protobuf message magnoliafabrics.GetDiscontinuedFabricsResponse
+ */
+export const GetDiscontinuedFabricsResponse = new GetDiscontinuedFabricsResponse$Type();
 /**
  * @generated ServiceType for protobuf service magnoliafabrics.MagnoliaFabricsService
  */
@@ -827,5 +915,6 @@ export const MagnoliaFabricsService = new ServiceType("magnoliafabrics.MagnoliaF
     { name: "GetFabricByName", options: {}, I: GetFabricByNameRequest, O: GetFabricByNameResponse },
     { name: "GetFabricBySKU", options: {}, I: GetFabricBySKURequest, O: GetFabricBySKUResponse },
     { name: "GetAllFabricTaxonomy", options: {}, I: GetAllFabricTaxonomyRequest, O: GetAllFabricTaxonomyResponse },
-    { name: "GetCleaningCodes", options: {}, I: GetCleaningCodesRequest, O: GetCleaningCodesResponse }
+    { name: "GetCleaningCodes", options: {}, I: GetCleaningCodesRequest, O: GetCleaningCodesResponse },
+    { name: "GetDiscontinuedFabrics", options: {}, I: GetDiscontinuedFabricsRequest, O: GetDiscontinuedFabricsResponse }
 ]);

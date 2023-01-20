@@ -203,3 +203,22 @@ func (s *server) GetFabricBySKU(ctx context.Context, request *service.GetFabricB
 		Fabric: l,
 	}, nil
 }
+
+// GetDiscontinuedFabrics
+func (s *server) GetDiscontinuedFabrics(ctx context.Context, req *service.GetDiscontinuedFabricsRequest) (*service.GetDiscontinuedFabricsResponse, error) {
+	md, _ := metadata.FromIncomingContext(ctx)
+
+	if !isAuthenticated(md.Get(APIKEY)) {
+		return nil, status.Error(codes.Unauthenticated, "invalid api key")
+	}
+
+	df, dferr := storage.GetDiscontinuedFabrics(ctx)
+
+	if dferr != nil {
+		return nil, status.Error(codes.Unavailable, dferr.Error())
+	}
+
+	return &service.GetDiscontinuedFabricsResponse{
+		Fabric: df,
+	}, nil
+}

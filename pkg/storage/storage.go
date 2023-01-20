@@ -18,6 +18,7 @@ import (
 	"github.com/guregu/dynamo"
 
 	"github.com/Vitality-South/magfabrics-api/pkg/cleaningcode"
+	"github.com/Vitality-South/magfabrics-api/pkg/discontinuedfabric"
 	"github.com/Vitality-South/magfabrics-api/pkg/fabric"
 	"github.com/Vitality-South/magfabrics-api/pkg/inventory"
 	"github.com/Vitality-South/magfabrics-api/pkg/taxonomy"
@@ -25,13 +26,14 @@ import (
 
 const (
 	// dynamodb config.
-	PK              = "PK"
-	SK              = "SK"
-	TaxonomyAllPK   = "Taxonomy"
-	TaxonomyAllSK   = "All"
-	FabricByNameSK  = "FabricByName"
-	CleaningCodesPK = "CleaningCodes"
-	FabricBySKUSK   = "FabricBySKU"
+	PK                        = "PK"
+	SK                        = "SK"
+	TaxonomyAllPK             = "Taxonomy"
+	TaxonomyAllSK             = "All"
+	FabricByNameSK            = "FabricByName"
+	CleaningCodesPK           = "CleaningCodes"
+	FabricBySKUSK             = "FabricBySKU"
+	DiscontinuedFabricBySKUPK = "DiscontinuedFabricsBySKU"
 
 	// s3 config.
 	CMSBucket       = "cms.magnoliaco.com"
@@ -279,4 +281,22 @@ func GetFabricBySKU(ctx context.Context, sku string) (*fabric.Fabric, error) {
 	f.Inventory = i
 
 	return f, nil
+}
+
+func GetDiscontinuedFabrics(ctx context.Context) ([]*discontinuedfabric.DiscontinuedFabric, error) {
+	_, table, dberr := database()
+
+	if dberr != nil {
+		return nil, dberr
+	}
+
+	var df []*discontinuedfabric.DiscontinuedFabric
+
+	gerr := table.Get(PK, DiscontinuedFabricBySKUPK).AllWithContext(ctx, &df)
+
+	if gerr != nil {
+		return nil, gerr
+	}
+
+	return df, nil
 }

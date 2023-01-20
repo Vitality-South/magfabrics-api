@@ -27,6 +27,8 @@ var api_fabric_pb = require('./api_fabric_pb.js')
 var api_taxonomy_pb = require('./api_taxonomy_pb.js')
 
 var cleaning_code_pb = require('./cleaning_code_pb.js')
+
+var api_discontinued_fabric_pb = require('./api_discontinued_fabric_pb.js')
 const proto = {};
 proto.magnoliafabrics = require('./magnolia_service_pb.js');
 
@@ -567,6 +569,67 @@ proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getCleaningC
       request,
       metadata || {},
       methodDescriptor_MagnoliaFabricsService_GetCleaningCodes);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.magnoliafabrics.GetDiscontinuedFabricsRequest,
+ *   !proto.magnoliafabrics.GetDiscontinuedFabricsResponse>}
+ */
+const methodDescriptor_MagnoliaFabricsService_GetDiscontinuedFabrics = new grpc.web.MethodDescriptor(
+  '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+  grpc.web.MethodType.UNARY,
+  proto.magnoliafabrics.GetDiscontinuedFabricsRequest,
+  proto.magnoliafabrics.GetDiscontinuedFabricsResponse,
+  /**
+   * @param {!proto.magnoliafabrics.GetDiscontinuedFabricsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.magnoliafabrics.GetDiscontinuedFabricsResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.magnoliafabrics.GetDiscontinuedFabricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.magnoliafabrics.GetDiscontinuedFabricsResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.magnoliafabrics.GetDiscontinuedFabricsResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.magnoliafabrics.MagnoliaFabricsServiceClient.prototype.getDiscontinuedFabrics =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+      request,
+      metadata || {},
+      methodDescriptor_MagnoliaFabricsService_GetDiscontinuedFabrics,
+      callback);
+};
+
+
+/**
+ * @param {!proto.magnoliafabrics.GetDiscontinuedFabricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.magnoliafabrics.GetDiscontinuedFabricsResponse>}
+ *     Promise that resolves to the response
+ */
+proto.magnoliafabrics.MagnoliaFabricsServicePromiseClient.prototype.getDiscontinuedFabrics =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+      request,
+      metadata || {},
+      methodDescriptor_MagnoliaFabricsService_GetDiscontinuedFabrics);
 };
 
 

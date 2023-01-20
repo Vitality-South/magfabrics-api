@@ -12,6 +12,7 @@ import "api_inventory.proto";
 import "api_fabric.proto";
 import "api_taxonomy.proto";
 import "cleaning_code.proto";
+import "api_discontinued_fabric.proto";
 
 service MagnoliaFabricsService {
 	rpc GetAllFabrics(GetAllFabricsRequest) returns (GetAllFabricsResponse) {}
@@ -22,6 +23,7 @@ service MagnoliaFabricsService {
 	rpc GetFabricBySKU(GetFabricBySKURequest) returns (GetFabricBySKUResponse) {}
 	rpc GetAllFabricTaxonomy(GetAllFabricTaxonomyRequest) returns (GetAllFabricTaxonomyResponse) {}
 	rpc GetCleaningCodes(GetCleaningCodesRequest) returns (GetCleaningCodesResponse) {}
+	rpc GetDiscontinuedFabrics(GetDiscontinuedFabricsRequest) returns (GetDiscontinuedFabricsResponse) {}
 }
 
 message GetAllFabricsRequest {}
@@ -76,4 +78,10 @@ message GetFabricBySKURequest {
 
 message GetFabricBySKUResponse {
 	Fabric fabric = 1;
+}
+
+message GetDiscontinuedFabricsRequest {}
+
+message GetDiscontinuedFabricsResponse {
+	repeated DiscontinuedFabric fabric = 1;
 }

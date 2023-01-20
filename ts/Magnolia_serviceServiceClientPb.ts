@@ -383,5 +383,48 @@ export class MagnoliaFabricsServiceClient {
     this.methodDescriptorGetCleaningCodes);
   }
 
+  methodDescriptorGetDiscontinuedFabrics = new grpcWeb.MethodDescriptor(
+    '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+    grpcWeb.MethodType.UNARY,
+    magnolia_service_pb.GetDiscontinuedFabricsRequest,
+    magnolia_service_pb.GetDiscontinuedFabricsResponse,
+    (request: magnolia_service_pb.GetDiscontinuedFabricsRequest) => {
+      return request.serializeBinary();
+    },
+    magnolia_service_pb.GetDiscontinuedFabricsResponse.deserializeBinary
+  );
+
+  getDiscontinuedFabrics(
+    request: magnolia_service_pb.GetDiscontinuedFabricsRequest,
+    metadata: grpcWeb.Metadata | null): Promise<magnolia_service_pb.GetDiscontinuedFabricsResponse>;
+
+  getDiscontinuedFabrics(
+    request: magnolia_service_pb.GetDiscontinuedFabricsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.RpcError,
+               response: magnolia_service_pb.GetDiscontinuedFabricsResponse) => void): grpcWeb.ClientReadableStream<magnolia_service_pb.GetDiscontinuedFabricsResponse>;
+
+  getDiscontinuedFabrics(
+    request: magnolia_service_pb.GetDiscontinuedFabricsRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.RpcError,
+               response: magnolia_service_pb.GetDiscontinuedFabricsResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+        request,
+        metadata || {},
+        this.methodDescriptorGetDiscontinuedFabrics,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/magnoliafabrics.MagnoliaFabricsService/GetDiscontinuedFabrics',
+    request,
+    metadata || {},
+    this.methodDescriptorGetDiscontinuedFabrics);
+  }
+
 }
 

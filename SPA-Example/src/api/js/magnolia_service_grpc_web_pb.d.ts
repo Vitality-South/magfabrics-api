@@ -64,6 +64,13 @@ export class MagnoliaFabricsServiceClient {
                response: magnolia_service_pb.GetCleaningCodesResponse) => void
   ): grpcWeb.ClientReadableStream<magnolia_service_pb.GetCleaningCodesResponse>;
 
+  getDiscontinuedFabrics(
+    request: magnolia_service_pb.GetDiscontinuedFabricsRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: magnolia_service_pb.GetDiscontinuedFabricsResponse) => void
+  ): grpcWeb.ClientReadableStream<magnolia_service_pb.GetDiscontinuedFabricsResponse>;
+
 }
 
 export class MagnoliaFabricsServicePromiseClient {
@@ -110,6 +117,11 @@ export class MagnoliaFabricsServicePromiseClient {
     request: magnolia_service_pb.GetCleaningCodesRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<magnolia_service_pb.GetCleaningCodesResponse>;
+
+  getDiscontinuedFabrics(
+    request: magnolia_service_pb.GetDiscontinuedFabricsRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<magnolia_service_pb.GetDiscontinuedFabricsResponse>;
 
 }
 
