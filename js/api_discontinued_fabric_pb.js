@@ -75,8 +75,8 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.toObject = function(opt_inclu
  */
 proto.magnoliafabrics.DiscontinuedFabric.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    sku: jspb.Message.getFieldWithDefault(msg, 2, "")
+    sku: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    productCode: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -115,11 +115,11 @@ proto.magnoliafabrics.DiscontinuedFabric.deserializeBinaryFromReader = function(
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
+      msg.setSku(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setSku(value);
+      msg.setProductCode(value);
       break;
     default:
       reader.skipField();
@@ -150,14 +150,14 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.serializeBinary = function() 
  */
 proto.magnoliafabrics.DiscontinuedFabric.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getName();
+  f = message.getSku();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getSku();
+  f = message.getProductCode();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -168,10 +168,10 @@ proto.magnoliafabrics.DiscontinuedFabric.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional string Name = 1;
+ * optional string sku = 1;
  * @return {string}
  */
-proto.magnoliafabrics.DiscontinuedFabric.prototype.getName = function() {
+proto.magnoliafabrics.DiscontinuedFabric.prototype.getSku = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -180,16 +180,16 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.getName = function() {
  * @param {string} value
  * @return {!proto.magnoliafabrics.DiscontinuedFabric} returns this
  */
-proto.magnoliafabrics.DiscontinuedFabric.prototype.setName = function(value) {
+proto.magnoliafabrics.DiscontinuedFabric.prototype.setSku = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string Sku = 2;
+ * optional string product_code = 2;
  * @return {string}
  */
-proto.magnoliafabrics.DiscontinuedFabric.prototype.getSku = function() {
+proto.magnoliafabrics.DiscontinuedFabric.prototype.getProductCode = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -198,7 +198,7 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.getSku = function() {
  * @param {string} value
  * @return {!proto.magnoliafabrics.DiscontinuedFabric} returns this
  */
-proto.magnoliafabrics.DiscontinuedFabric.prototype.setSku = function(value) {
+proto.magnoliafabrics.DiscontinuedFabric.prototype.setProductCode = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 

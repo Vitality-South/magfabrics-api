@@ -83,5 +83,5 @@ message GetFabricBySKUResponse {
 message GetDiscontinuedFabricsRequest {}
 
 message GetDiscontinuedFabricsResponse {
-	repeated DiscontinuedFabric fabric = 1;
+	repeated DiscontinuedFabric fabrics = 1;
 }

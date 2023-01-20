@@ -23,28 +23,28 @@ import { MessageType } from "@protobuf-ts/runtime";
  */
 export interface DiscontinuedFabric {
     /**
-     * @gotags: dynamo:"FabricName"
+     * @gotags: dynamo:"DiscontinuedFabricSKU"
      *
-     * @generated from protobuf field: string Name = 1 [json_name = "Name"];
-     */
-    name: string;
-    /**
-     * @gotags: dynamo:"FabricSKU"
-     *
-     * @generated from protobuf field: string Sku = 2 [json_name = "Sku"];
+     * @generated from protobuf field: string sku = 1;
      */
     sku: string;
+    /**
+     * @gotags: dynamo:"DiscontinuedFabricProductCode"
+     *
+     * @generated from protobuf field: string product_code = 2;
+     */
+    productCode: string;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class DiscontinuedFabric$Type extends MessageType<DiscontinuedFabric> {
     constructor() {
         super("magnoliafabrics.DiscontinuedFabric", [
-            { no: 1, name: "Name", kind: "scalar", jsonName: "Name", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "Sku", kind: "scalar", jsonName: "Sku", T: 9 /*ScalarType.STRING*/ }
+            { no: 1, name: "sku", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 2, name: "product_code", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
         ]);
     }
     create(value?: PartialMessage<DiscontinuedFabric>): DiscontinuedFabric {
-        const message = { name: "", sku: "" };
+        const message = { sku: "", productCode: "" };
         globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial<DiscontinuedFabric>(this, message, value);
@@ -55,11 +55,11 @@ class DiscontinuedFabric$Type extends MessageType<DiscontinuedFabric> {
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* string Name = 1 [json_name = "Name"];*/ 1:
-                    message.name = reader.string();
-                    break;
-                case /* string Sku = 2 [json_name = "Sku"];*/ 2:
+                case /* string sku */ 1:
                     message.sku = reader.string();
+                    break;
+                case /* string product_code */ 2:
+                    message.productCode = reader.string();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -73,12 +73,12 @@ class DiscontinuedFabric$Type extends MessageType<DiscontinuedFabric> {
         return message;
     }
     internalBinaryWrite(message: DiscontinuedFabric, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string Name = 1 [json_name = "Name"]; */
-        if (message.name !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.name);
-        /* string Sku = 2 [json_name = "Sku"]; */
+        /* string sku = 1; */
         if (message.sku !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.sku);
+            writer.tag(1, WireType.LengthDelimited).string(message.sku);
+        /* string product_code = 2; */
+        if (message.productCode !== "")
+            writer.tag(2, WireType.LengthDelimited).string(message.productCode);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

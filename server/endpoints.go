@@ -219,6 +219,6 @@ func (s *server) GetDiscontinuedFabrics(ctx context.Context, req *service.GetDis
 	}
 
 	return &service.GetDiscontinuedFabricsResponse{
-		Fabric: df,
+		Fabrics: df,
 	}, nil
 }

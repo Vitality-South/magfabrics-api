@@ -2680,7 +2680,7 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.toObject = functi
  */
 proto.magnoliafabrics.GetDiscontinuedFabricsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricList: jspb.Message.toObjectList(msg.getFabricList(),
+    fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
     api_discontinued_fabric_pb.DiscontinuedFabric.toObject, includeInstance)
   };
 
@@ -2721,7 +2721,7 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.deserializeBinaryFromReader
     case 1:
       var value = new api_discontinued_fabric_pb.DiscontinuedFabric;
       reader.readMessage(value,api_discontinued_fabric_pb.DiscontinuedFabric.deserializeBinaryFromReader);
-      msg.addFabric(value);
+      msg.addFabrics(value);
       break;
     default:
       reader.skipField();
@@ -2752,7 +2752,7 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.serializeBinary =
  */
 proto.magnoliafabrics.GetDiscontinuedFabricsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFabricList();
+  f = message.getFabricsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
@@ -2764,10 +2764,10 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.serializeBinaryToWriter = f
 
 
 /**
- * repeated DiscontinuedFabric fabric = 1;
+ * repeated DiscontinuedFabric fabrics = 1;
  * @return {!Array<!proto.magnoliafabrics.DiscontinuedFabric>}
  */
-proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.getFabricList = function() {
+proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.getFabricsList = function() {
   return /** @type{!Array<!proto.magnoliafabrics.DiscontinuedFabric>} */ (
     jspb.Message.getRepeatedWrapperField(this, api_discontinued_fabric_pb.DiscontinuedFabric, 1));
 };
@@ -2777,7 +2777,7 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.getFabricList = f
  * @param {!Array<!proto.magnoliafabrics.DiscontinuedFabric>} value
  * @return {!proto.magnoliafabrics.GetDiscontinuedFabricsResponse} returns this
 */
-proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.setFabricList = function(value) {
+proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.setFabricsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
@@ -2787,7 +2787,7 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.setFabricList = f
  * @param {number=} opt_index
  * @return {!proto.magnoliafabrics.DiscontinuedFabric}
  */
-proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.addFabric = function(opt_value, opt_index) {
+proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.addFabrics = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.magnoliafabrics.DiscontinuedFabric, opt_index);
 };
 
@@ -2796,8 +2796,8 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.addFabric = funct
  * Clears the list making it empty but non-null.
  * @return {!proto.magnoliafabrics.GetDiscontinuedFabricsResponse} returns this
  */
-proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.clearFabricList = function() {
-  return this.setFabricList([]);
+proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.clearFabricsList = function() {
+  return this.setFabricsList([]);
 };
 
 

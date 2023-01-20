@@ -11,22 +11,22 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class DiscontinuedFabric extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DiscontinuedFabric', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Name', protoName: 'Name')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Sku', protoName: 'Sku')
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sku')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'productCode')
     ..hasRequiredFields = false
   ;
 
   DiscontinuedFabric._() : super();
   factory DiscontinuedFabric({
-    $core.String? name,
     $core.String? sku,
+    $core.String? productCode,
   }) {
     final _result = create();
-    if (name != null) {
-      _result.name = name;
-    }
     if (sku != null) {
       _result.sku = sku;
+    }
+    if (productCode != null) {
+      _result.productCode = productCode;
     }
     return _result;
   }
@@ -52,21 +52,21 @@ class DiscontinuedFabric extends $pb.GeneratedMessage {
   static DiscontinuedFabric? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get name => $_getSZ(0);
+  $core.String get sku => $_getSZ(0);
   @$pb.TagNumber(1)
-  set name($core.String v) { $_setString(0, v); }
+  set sku($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasName() => $_has(0);
+  $core.bool hasSku() => $_has(0);
   @$pb.TagNumber(1)
-  void clearName() => clearField(1);
+  void clearSku() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get sku => $_getSZ(1);
+  $core.String get productCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set sku($core.String v) { $_setString(1, v); }
+  set productCode($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSku() => $_has(1);
+  $core.bool hasProductCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSku() => clearField(2);
+  void clearProductCode() => clearField(2);
 }
 

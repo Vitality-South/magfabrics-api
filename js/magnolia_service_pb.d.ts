@@ -304,10 +304,10 @@ export namespace GetDiscontinuedFabricsRequest {
 }
 
 export class GetDiscontinuedFabricsResponse extends jspb.Message {
-  getFabricList(): Array<api_discontinued_fabric_pb.DiscontinuedFabric>;
-  setFabricList(value: Array<api_discontinued_fabric_pb.DiscontinuedFabric>): GetDiscontinuedFabricsResponse;
-  clearFabricList(): GetDiscontinuedFabricsResponse;
-  addFabric(value?: api_discontinued_fabric_pb.DiscontinuedFabric, index?: number): api_discontinued_fabric_pb.DiscontinuedFabric;
+  getFabricsList(): Array<api_discontinued_fabric_pb.DiscontinuedFabric>;
+  setFabricsList(value: Array<api_discontinued_fabric_pb.DiscontinuedFabric>): GetDiscontinuedFabricsResponse;
+  clearFabricsList(): GetDiscontinuedFabricsResponse;
+  addFabrics(value?: api_discontinued_fabric_pb.DiscontinuedFabric, index?: number): api_discontinued_fabric_pb.DiscontinuedFabric;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDiscontinuedFabricsResponse.AsObject;
@@ -319,7 +319,7 @@ export class GetDiscontinuedFabricsResponse extends jspb.Message {
 
 export namespace GetDiscontinuedFabricsResponse {
   export type AsObject = {
-    fabricList: Array<api_discontinued_fabric_pb.DiscontinuedFabric.AsObject>,
+    fabricsList: Array<api_discontinued_fabric_pb.DiscontinuedFabric.AsObject>,
   }
 }
 

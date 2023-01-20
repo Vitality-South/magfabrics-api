@@ -12,10 +12,10 @@ import 'dart:typed_data' as $typed_data;
 const DiscontinuedFabric$json = const {
   '1': 'DiscontinuedFabric',
   '2': const [
-    const {'1': 'Name', '3': 1, '4': 1, '5': 9, '10': 'Name'},
-    const {'1': 'Sku', '3': 2, '4': 1, '5': 9, '10': 'Sku'},
+    const {'1': 'sku', '3': 1, '4': 1, '5': 9, '10': 'sku'},
+    const {'1': 'product_code', '3': 2, '4': 1, '5': 9, '10': 'productCode'},
   ],
 };
 
 /// Descriptor for `DiscontinuedFabric`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List discontinuedFabricDescriptor = $convert.base64Decode('ChJEaXNjb250aW51ZWRGYWJyaWMSEgoETmFtZRgBIAEoCVIETmFtZRIQCgNTa3UYAiABKAlSA1NrdQ==');
+final $typed_data.Uint8List discontinuedFabricDescriptor = $convert.base64Decode('ChJEaXNjb250aW51ZWRGYWJyaWMSEAoDc2t1GAEgASgJUgNza3USIQoMcHJvZHVjdF9jb2RlGAIgASgJUgtwcm9kdWN0Q29kZQ==');

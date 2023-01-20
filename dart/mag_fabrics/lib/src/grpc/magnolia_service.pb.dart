@@ -692,17 +692,17 @@ class GetDiscontinuedFabricsRequest extends $pb.GeneratedMessage {
 
 class GetDiscontinuedFabricsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetDiscontinuedFabricsResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
-    ..pc<$5.DiscontinuedFabric>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fabric', $pb.PbFieldType.PM, subBuilder: $5.DiscontinuedFabric.create)
+    ..pc<$5.DiscontinuedFabric>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fabrics', $pb.PbFieldType.PM, subBuilder: $5.DiscontinuedFabric.create)
     ..hasRequiredFields = false
   ;
 
   GetDiscontinuedFabricsResponse._() : super();
   factory GetDiscontinuedFabricsResponse({
-    $core.Iterable<$5.DiscontinuedFabric>? fabric,
+    $core.Iterable<$5.DiscontinuedFabric>? fabrics,
   }) {
     final _result = create();
-    if (fabric != null) {
-      _result.fabric.addAll(fabric);
+    if (fabrics != null) {
+      _result.fabrics.addAll(fabrics);
     }
     return _result;
   }
@@ -728,6 +728,6 @@ class GetDiscontinuedFabricsResponse extends $pb.GeneratedMessage {
   static GetDiscontinuedFabricsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$5.DiscontinuedFabric> get fabric => $_getList(0);
+  $core.List<$5.DiscontinuedFabric> get fabrics => $_getList(0);
 }
 

@@ -9,6 +9,7 @@ import (
 	"google.golang.org/grpc/metadata"
 
 	"github.com/Vitality-South/magfabrics-api/pkg/cleaningcode"
+	"github.com/Vitality-South/magfabrics-api/pkg/discontinuedfabric"
 	"github.com/Vitality-South/magfabrics-api/pkg/fabric"
 	"github.com/Vitality-South/magfabrics-api/pkg/inventory"
 	"github.com/Vitality-South/magfabrics-api/pkg/taxonomy"
@@ -163,4 +164,20 @@ func (c *Client) GetCleaningCodes(ctx context.Context) (map[string]*cleaningcode
 	}
 
 	return resp.CleaningCodes, nil
+}
+
+func (c *Client) GetDiscontinuedFabrics(ctx context.Context) ([]*discontinuedfabric.DiscontinuedFabric, error) {
+	req := &service.GetDiscontinuedFabricsRequest{}
+
+	apictx := metadata.AppendToOutgoingContext(ctx, "x-api-key", c.apiKey)
+
+	var callopts []grpc.CallOption
+
+	resp, rerr := c.client.GetDiscontinuedFabrics(apictx, req, callopts...)
+
+	if rerr != nil {
+		return nil, rerr
+	}
+
+	return resp.Fabrics, nil
 }

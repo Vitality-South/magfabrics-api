@@ -175,9 +175,9 @@ final $typed_data.Uint8List getDiscontinuedFabricsRequestDescriptor = $convert.b
 const GetDiscontinuedFabricsResponse$json = const {
   '1': 'GetDiscontinuedFabricsResponse',
   '2': const [
-    const {'1': 'fabric', '3': 1, '4': 3, '5': 11, '6': '.magnoliafabrics.DiscontinuedFabric', '10': 'fabric'},
+    const {'1': 'fabrics', '3': 1, '4': 3, '5': 11, '6': '.magnoliafabrics.DiscontinuedFabric', '10': 'fabrics'},
   ],
 };
 
 /// Descriptor for `GetDiscontinuedFabricsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDiscontinuedFabricsResponseDescriptor = $convert.base64Decode('Ch5HZXREaXNjb250aW51ZWRGYWJyaWNzUmVzcG9uc2USOwoGZmFicmljGAEgAygLMiMubWFnbm9saWFmYWJyaWNzLkRpc2NvbnRpbnVlZEZhYnJpY1IGZmFicmlj');
+final $typed_data.Uint8List getDiscontinuedFabricsResponseDescriptor = $convert.base64Decode('Ch5HZXREaXNjb250aW51ZWRGYWJyaWNzUmVzcG9uc2USPQoHZmFicmljcxgBIAMoCzIjLm1hZ25vbGlhZmFicmljcy5EaXNjb250aW51ZWRGYWJyaWNSB2ZhYnJpY3M=');

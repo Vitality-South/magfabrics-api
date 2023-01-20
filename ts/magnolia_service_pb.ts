@@ -160,9 +160,9 @@ export interface GetDiscontinuedFabricsRequest {
  */
 export interface GetDiscontinuedFabricsResponse {
     /**
-     * @generated from protobuf field: repeated magnoliafabrics.DiscontinuedFabric fabric = 1;
+     * @generated from protobuf field: repeated magnoliafabrics.DiscontinuedFabric fabrics = 1;
      */
-    fabric: DiscontinuedFabric[];
+    fabrics: DiscontinuedFabric[];
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class GetAllFabricsRequest$Type extends MessageType<GetAllFabricsRequest> {
@@ -861,11 +861,11 @@ export const GetDiscontinuedFabricsRequest = new GetDiscontinuedFabricsRequest$T
 class GetDiscontinuedFabricsResponse$Type extends MessageType<GetDiscontinuedFabricsResponse> {
     constructor() {
         super("magnoliafabrics.GetDiscontinuedFabricsResponse", [
-            { no: 1, name: "fabric", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => DiscontinuedFabric }
+            { no: 1, name: "fabrics", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => DiscontinuedFabric }
         ]);
     }
     create(value?: PartialMessage<GetDiscontinuedFabricsResponse>): GetDiscontinuedFabricsResponse {
-        const message = { fabric: [] };
+        const message = { fabrics: [] };
         globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial<GetDiscontinuedFabricsResponse>(this, message, value);
@@ -876,8 +876,8 @@ class GetDiscontinuedFabricsResponse$Type extends MessageType<GetDiscontinuedFab
         while (reader.pos < end) {
             let [fieldNo, wireType] = reader.tag();
             switch (fieldNo) {
-                case /* repeated magnoliafabrics.DiscontinuedFabric fabric */ 1:
-                    message.fabric.push(DiscontinuedFabric.internalBinaryRead(reader, reader.uint32(), options));
+                case /* repeated magnoliafabrics.DiscontinuedFabric fabrics */ 1:
+                    message.fabrics.push(DiscontinuedFabric.internalBinaryRead(reader, reader.uint32(), options));
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -891,9 +891,9 @@ class GetDiscontinuedFabricsResponse$Type extends MessageType<GetDiscontinuedFab
         return message;
     }
     internalBinaryWrite(message: GetDiscontinuedFabricsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated magnoliafabrics.DiscontinuedFabric fabric = 1; */
-        for (let i = 0; i < message.fabric.length; i++)
-            DiscontinuedFabric.internalBinaryWrite(message.fabric[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
+        /* repeated magnoliafabrics.DiscontinuedFabric fabrics = 1; */
+        for (let i = 0; i < message.fabrics.length; i++)
+            DiscontinuedFabric.internalBinaryWrite(message.fabrics[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
