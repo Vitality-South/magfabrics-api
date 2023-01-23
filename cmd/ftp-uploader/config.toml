@@ -1,4 +1,4 @@
-host = "ftp.example.com"
+hostname = "ftp.example.com"
 port = 21
 username = "user"
 password = "pass"
