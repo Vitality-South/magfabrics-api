@@ -1,7 +1,7 @@
 .phony: test build
 
 appname = magnoliafabrics
-version = 9
+version = 10
 
 getauth:
 	aws s3 cp s3://vs-git-private-files/auth.go auth.go

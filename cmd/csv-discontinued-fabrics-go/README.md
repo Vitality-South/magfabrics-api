@@ -2,7 +2,7 @@
 
 ## Short Description
 
-Instead of getting all of the sellable and current list of in-stock Fabrics, this program will give you a list of permanently discontinued and deleted fabrics. You can use this output to compare to your existing list of Fabrics and check if you still display any discontinued or deleted fabrics.
+This program will give you a list of permanently discontinued and deleted fabrics. You can use this output to compare to your existing list of Fabrics and check if you still display any permanently discontinued or deleted fabrics.
 
 # Usage
 
@@ -17,6 +17,11 @@ Usage:
         API key for MagFabrics API (required)
   -version
         print version number and exit
+
+Example Usage:
+
+THE FOLLOWING KEY IS A DEMO KEY.
+path/to/file/magfabrics-discontinued-fabrics-csv-x64.exe -apikey Zah3QYGl471fdlhw
 ```
 
 # Build your own version for any OS and architecture that Go supports

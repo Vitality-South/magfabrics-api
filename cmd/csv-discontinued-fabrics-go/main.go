@@ -53,8 +53,6 @@ func main() {
 	df, dferr := c.GetDiscontinuedFabrics(ctx)
 
 	if dferr != nil {
-		c.Close()
-
 		panic(dferr)
 	}
 

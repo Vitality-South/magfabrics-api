@@ -1,3 +1,4 @@
 *.csv
 *.exe
-csv-discontinued-fabrics-go
+csv-*
+magfabrics-*
