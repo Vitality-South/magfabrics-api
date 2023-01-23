@@ -11,11 +11,16 @@ import (
 )
 
 type SessionInfo struct {
-	Hostname      string   `toml:"hostname"`
-	Port          int64    `toml:"port"`
-	Username      string   `toml:"username"`
-	Password      string   `toml:"password"`
-	FilesToUpload []string `toml:"files_to_upload"`
+	Hostname      string          `toml:"hostname"`
+	Port          int64           `toml:"port"`
+	Username      string          `toml:"username"`
+	Password      string          `toml:"password"`
+	FilesToUpload []FilesToUpload `toml:"files_to_upload"`
+}
+
+type FilesToUpload struct {
+	WriterPath string `toml:"write_path"`
+	ReaderPath string `toml:"read_path"`
 }
 
 func useFTPServer(creds SessionInfo) error {
@@ -31,9 +36,9 @@ func useFTPServer(creds SessionInfo) error {
 		return lerr
 	}
 
-	for _, v := range creds.FilesToUpload {
+	for _, fu := range creds.FilesToUpload {
 		// store file on ftp server
-		f, ferr := os.ReadFile(v)
+		f, ferr := os.ReadFile(fu.ReaderPath)
 
 		if ferr != nil {
 			return ferr
@@ -41,7 +46,7 @@ func useFTPServer(creds SessionInfo) error {
 
 		reader := bytes.NewReader(f)
 
-		serr := c.Stor(v, reader)
+		serr := c.Stor(fu.WriterPath, reader)
 
 		if serr != nil {
 			return serr
@@ -54,10 +59,6 @@ func useFTPServer(creds SessionInfo) error {
 func main() {
 	// load command line arguments
 	config := flag.String("config", "", "configuration file")
-	host := flag.String("hostname", "", "ftp server host name")
-	prt := flag.Int64("port", 0, "ftp server port")
-	username := flag.String("username", "", "ftp username")
-	password := flag.String("password", "", "ftp password")
 
 	flag.Parse()
 
@@ -77,25 +78,6 @@ func main() {
 			panic(fmt.Sprintf("config file error: %v", cerr))
 		}
 	}
-
-	// possibly use command line arguments to override config file
-	if *host != "" {
-		creds.Hostname = *host
-	}
-
-	if *prt != 0 {
-		creds.Port = *prt
-	}
-
-	if *username != "" {
-		creds.Username = *username
-	}
-
-	if *password != "" {
-		creds.Password = *password
-	}
-
-	creds.FilesToUpload = append(creds.FilesToUpload, flag.Args()...)
 
 	// if neither command line arguments or config file loaded data we need,
 	// then panic

@@ -2,4 +2,11 @@ hostname = "ftp.example.com"
 port = 21
 username = "user"
 password = "pass"
-files_to_upload = ["/path/to/file.csv", "/path/to/anotherfile.csv"]
+
+[[files_to_upload]]
+read_path = "/path/to/file.csv"
+write_path = "file.csv"
+
+[[files_to_upload]]
+read_path = "/path/to/file2.csv"
+write_path = "file2.csv"
