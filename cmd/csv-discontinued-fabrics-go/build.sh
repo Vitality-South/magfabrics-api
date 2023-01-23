@@ -6,7 +6,7 @@ CACHECONTROL='public, max-age=604800'
 CONTENTTYPE=application/octet-stream
 
 # cleanup binaries
-rm -f *.exe csv-generator-go
+rm -f *.exe csv-discontinued-fabrics-go
 
 # Windows
 GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -o ${APP}-win-amd64-v${VERSION}.exe

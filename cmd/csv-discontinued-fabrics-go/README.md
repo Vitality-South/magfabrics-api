@@ -20,9 +20,19 @@ Usage:
 
 Example Usage:
 
-THE FOLLOWING KEY IS A DEMO KEY.
+THE FOLLOWING KEY IS A DEMO API KEY.
 path/to/file/magfabrics-discontinued-fabrics-csv-x64.exe -apikey Zah3QYGl471fdlhw > magfabrics-discontinued.csv
 ```
+
+# Download Links for latest prebuilt version
+
+[Windows x64](https://images.magfabrics.com/apps/magfabrics-csv-discontinued-fabrics-win-amd64-v1.exe)
+
+[Windows x32](https://images.magfabrics.com/apps/magfabrics-csv-discontinued-fabrics-win-386-v1.exe)
+
+[macOS Intel-based](https://images.magfabrics.com/apps/magfabrics-csv-discontinued-fabrics-macos-amd64-v1)
+
+[macOS ARM-based](https://images.magfabrics.com/apps/magfabrics-csv-discontinued-fabrics-macos-arm64-v1)
 
 # Build your own version for any OS and architecture that Go supports
 
