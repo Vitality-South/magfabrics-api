@@ -21,7 +21,7 @@ Usage:
 Example Usage:
 
 THE FOLLOWING KEY IS A DEMO KEY.
-path/to/file/magfabrics-discontinued-fabrics-csv-x64.exe -apikey Zah3QYGl471fdlhw
+path/to/file/magfabrics-discontinued-fabrics-csv-x64.exe -apikey Zah3QYGl471fdlhw > magfabrics-discontinued.csv
 ```
 
 # Build your own version for any OS and architecture that Go supports
