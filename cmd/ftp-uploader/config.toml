@@ -1,0 +1,5 @@
+host = "ftp.example.com"
+port = 21
+username = "user"
+password = "pass"
+files_to_upload = ["/path/to/file.csv", "/path/to/anotherfile.csv"]
