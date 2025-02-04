@@ -38,6 +38,10 @@ spec:
               value: "FALSE"
             - name: DYNAMO_TABLE
               value: "MagnoliaFabrics"
+            - name: DYNAMODB_TABLE_PK
+              value: "PK"
+            - name: DYNAMODB_TABLE_SK
+              value: "SK"
           ports:
             - containerPort: 27019
               name: magfab-port

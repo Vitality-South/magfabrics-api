@@ -1,15 +1,17 @@
-FROM --platform=linux/arm64/v8 ubuntu:latest
+FROM --platform=$TARGETPLATFORM debian:latest
 
-RUN mkdir -p /home/vsouth /app \
+RUN mkdir -p -m 0700 /home/vsouth \
+    && mkdir -p -m 0750 /app \
     && groupadd -r vsouth --gid=999 \
-    && useradd --no-log-init -M -r -g vsouth --uid=999 --home-dir=/home/vsouth --shell=/bin/bash vsouth \
-    && chown -R vsouth:vsouth /home/vsouth
+    && useradd --no-log-init -M -r -g vsouth --uid=999 --home-dir=/home/vsouth --shell=/sbin/nologin vsouth \
+    && chown -R vsouth:vsouth /home/vsouth \
+    && chown -R root:vsouth /app
 
-COPY ./appserver /app/server
+COPY --chown=root:vsouth --chmod=750 ./appserver /app/server
 
-RUN apt update \
-    && apt upgrade -y \
-    && apt install ca-certificates tzdata locales -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y ca-certificates tzdata locales \
     && rm -rf /var/lib/apt/lists/* \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
