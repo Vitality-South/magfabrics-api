@@ -22,10 +22,6 @@ const (
 	DefaultServerPort     = 27019
 )
 
-type server struct {
-	service.UnimplementedMagnoliaFabricsServiceServer
-}
-
 // printEnv prints some of the environment variables used by the service.
 func printEnv(logger Logger, port int) {
 	logger.Infof("Listening on port: %d", port)
