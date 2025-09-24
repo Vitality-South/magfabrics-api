@@ -1,25 +1,22 @@
-///
-//  Generated code. Do not modify.
-//  source: api_taxonomy.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from api_taxonomy.proto.
+
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Taxonomy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Taxonomy', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
-    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Brands', protoName: 'Brands')
-    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Uses', protoName: 'Uses')
-    ..pPS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Colors', protoName: 'Colors')
-    ..pPS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Designs', protoName: 'Designs')
-    ..pPS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'Categories', protoName: 'Categories')
-    ..hasRequiredFields = false
-  ;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
-  Taxonomy._() : super();
+class Taxonomy extends $pb.GeneratedMessage {
   factory Taxonomy({
     $core.Iterable<$core.String>? brands,
     $core.Iterable<$core.String>? uses,
@@ -27,58 +24,77 @@ class Taxonomy extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? designs,
     $core.Iterable<$core.String>? categories,
   }) {
-    final _result = create();
-    if (brands != null) {
-      _result.brands.addAll(brands);
-    }
-    if (uses != null) {
-      _result.uses.addAll(uses);
-    }
-    if (colors != null) {
-      _result.colors.addAll(colors);
-    }
-    if (designs != null) {
-      _result.designs.addAll(designs);
-    }
-    if (categories != null) {
-      _result.categories.addAll(categories);
-    }
-    return _result;
+    final result = create();
+    if (brands != null) result.brands.addAll(brands);
+    if (uses != null) result.uses.addAll(uses);
+    if (colors != null) result.colors.addAll(colors);
+    if (designs != null) result.designs.addAll(designs);
+    if (categories != null) result.categories.addAll(categories);
+    return result;
   }
-  factory Taxonomy.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Taxonomy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  Taxonomy._();
+
+  factory Taxonomy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Taxonomy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Taxonomy',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'magnoliafabrics'),
+      createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'Brands', protoName: 'Brands')
+    ..pPS(2, _omitFieldNames ? '' : 'Uses', protoName: 'Uses')
+    ..pPS(3, _omitFieldNames ? '' : 'Colors', protoName: 'Colors')
+    ..pPS(4, _omitFieldNames ? '' : 'Designs', protoName: 'Designs')
+    ..pPS(5, _omitFieldNames ? '' : 'Categories', protoName: 'Categories')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   Taxonomy clone() => Taxonomy()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Taxonomy copyWith(void Function(Taxonomy) updates) => super.copyWith((message) => updates(message as Taxonomy)) as Taxonomy; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Taxonomy copyWith(void Function(Taxonomy) updates) =>
+      super.copyWith((message) => updates(message as Taxonomy)) as Taxonomy;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Taxonomy create() => Taxonomy._();
+  @$core.override
   Taxonomy createEmptyInstance() => create();
   static $pb.PbList<Taxonomy> createRepeated() => $pb.PbList<Taxonomy>();
   @$core.pragma('dart2js:noInline')
-  static Taxonomy getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Taxonomy>(create);
+  static Taxonomy getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Taxonomy>(create);
   static Taxonomy? _defaultInstance;
 
+  /// @gotags: dynamo:"TaxonomyBrands"
   @$pb.TagNumber(1)
-  $core.List<$core.String> get brands => $_getList(0);
+  $pb.PbList<$core.String> get brands => $_getList(0);
 
+  /// @gotags: dynamo:"TaxonomyUses"
   @$pb.TagNumber(2)
-  $core.List<$core.String> get uses => $_getList(1);
+  $pb.PbList<$core.String> get uses => $_getList(1);
 
+  /// @gotags: dynamo:"TaxonomyColors"
   @$pb.TagNumber(3)
-  $core.List<$core.String> get colors => $_getList(2);
+  $pb.PbList<$core.String> get colors => $_getList(2);
 
+  /// @gotags: dynamo:"TaxonomyDesigns"
   @$pb.TagNumber(4)
-  $core.List<$core.String> get designs => $_getList(3);
+  $pb.PbList<$core.String> get designs => $_getList(3);
 
+  /// @gotags: dynamo:"TaxonomyCategories"
   @$pb.TagNumber(5)
-  $core.List<$core.String> get categories => $_getList(4);
+  $pb.PbList<$core.String> get categories => $_getList(4);
 }
 
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

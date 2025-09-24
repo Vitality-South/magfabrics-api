@@ -75,8 +75,8 @@ proto.magnoliafabrics.CleaningCode.prototype.toObject = function(opt_includeInst
  */
 proto.magnoliafabrics.CleaningCode.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    description: jspb.Message.getFieldWithDefault(msg, 2, "")
+id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+description: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {

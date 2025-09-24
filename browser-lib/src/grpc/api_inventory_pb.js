@@ -126,14 +126,14 @@ proto.magnoliafabrics.Inventory.prototype.toObject = function(opt_includeInstanc
  */
 proto.magnoliafabrics.Inventory.toObject = function(includeInstance, msg) {
   var f, obj = {
-    productcode: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    rollsList: jspb.Message.toObjectList(msg.getRollsList(),
+productcode: jspb.Message.getFieldWithDefault(msg, 1, ""),
+rollsList: jspb.Message.toObjectList(msg.getRollsList(),
     proto.magnoliafabrics.Inventory.Roll.toObject, includeInstance),
-    total: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    purchaseordersList: jspb.Message.toObjectList(msg.getPurchaseordersList(),
+total: jspb.Message.getFieldWithDefault(msg, 3, ""),
+purchaseordersList: jspb.Message.toObjectList(msg.getPurchaseordersList(),
     proto.magnoliafabrics.Inventory.PO.toObject, includeInstance),
-    totalonpo: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    onbackorder: jspb.Message.getFieldWithDefault(msg, 6, "")
+totalonpo: jspb.Message.getFieldWithDefault(msg, 5, ""),
+onbackorder: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -304,8 +304,8 @@ proto.magnoliafabrics.Inventory.Roll.prototype.toObject = function(opt_includeIn
  */
 proto.magnoliafabrics.Inventory.Roll.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    quantity: jspb.Message.getFieldWithDefault(msg, 2, "")
+id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+quantity: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -464,8 +464,8 @@ proto.magnoliafabrics.Inventory.PO.prototype.toObject = function(opt_includeInst
  */
 proto.magnoliafabrics.Inventory.PO.toObject = function(includeInstance, msg) {
   var f, obj = {
-    eta: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    amount: jspb.Message.getFieldWithDefault(msg, 2, "")
+eta: jspb.Message.getFieldWithDefault(msg, 1, ""),
+amount: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {

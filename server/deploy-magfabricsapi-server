@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# -e: Exit immediately if any command exits with a non-zero status.
+# -u: Treat unset variables as an error and exit.
+# -o pipefail: If any command in a pipeline fails, the entire pipeline fails
+set -euo pipefail
+
+# safer IFS for word splitting
+IFS=$'\n\t'
+
+# limit default file permissions
+umask 0027
+
+SRC="/home/xinix/fenrir/vs2/services/auth/server"
+APP="server"
+USER="magfabricsapi"
+GROUP="magfabricsapi"
+ENVFILE="env"
+
+# setup server environment
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/etc"
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/bin"
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/workingdir"
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/workingdir/${APP}"
+
+# install configs
+/usr/bin/install -m 640 -o "${USER}" -g "${GROUP}" "${SRC}/${ENVFILE}" "/home/${USER}/etc/env"
+
+# install the binary
+/usr/bin/install -m 750 -o "${USER}" -g "${GROUP}" "${SRC}/${APP}" "/home/${USER}/bin/${APP}"
+
+# restart the service
+/usr/local/bin/restart-${USER}-${APP}
+
+echo "${APP} restarted successfully."
+exit 0

@@ -8,12 +8,12 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"net"
 	"os"
 
 	"google.golang.org/grpc"
 
-	"github.com/Vitality-South/magfabrics-api/pkg/log"
 	"github.com/Vitality-South/magfabrics-api/service"
 )
 
@@ -23,13 +23,13 @@ const (
 )
 
 // printEnv prints some of the environment variables used by the service.
-func printEnv(logger Logger, port int) {
-	logger.Infof("Listening on port: %d", port)
-	logger.Infof("AWS_REGION = '%s'", os.Getenv("AWS_REGION"))
-	logger.Infof("DEBUG = '%s'", os.Getenv("DEBUG"))
-	logger.Infof("GRPC_GO_LOG_VERBOSITY_LEVEL = '%s'", os.Getenv("GRPC_GO_LOG_VERBOSITY_LEVEL"))
-	logger.Infof("GRPC_GO_LOG_SEVERITY_LEVEL = '%s'", os.Getenv("GRPC_GO_LOG_SEVERITY_LEVEL"))
-	logger.Infof("GRPC_GO_REQUIRE_HANDSHAKE = '%s'", os.Getenv("GRPC_GO_REQUIRE_HANDSHAKE"))
+func printEnv(port int) {
+	log.Printf("Listening on port: %d", port)
+	log.Printf("AWS_REGION = '%s'", os.Getenv("AWS_REGION"))
+	log.Printf("DEBUG = '%s'", os.Getenv("DEBUG"))
+	log.Printf("GRPC_GO_LOG_VERBOSITY_LEVEL = '%s'", os.Getenv("GRPC_GO_LOG_VERBOSITY_LEVEL"))
+	log.Printf("GRPC_GO_LOG_SEVERITY_LEVEL = '%s'", os.Getenv("GRPC_GO_LOG_SEVERITY_LEVEL"))
+	log.Printf("GRPC_GO_REQUIRE_HANDSHAKE = '%s'", os.Getenv("GRPC_GO_REQUIRE_HANDSHAKE"))
 }
 
 func main() {
@@ -37,37 +37,15 @@ func main() {
 
 	flag.Parse()
 
-	// set up logger
-	logger := log.NewLogger(os.Stdout, os.Getenv("DEBUG") == "TRUE")
-
 	// listening for new tcp connection on the desired port
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
 	if err != nil {
-		logger.Errorf("error listening on port %d: %v", *port, err)
-
-		os.Exit(1)
-	}
-
-	// set up database store
-	dynamoDb, err := dynamodb.NewDynamoDB(
-		os.Getenv("AWS_REGION"),
-		os.Getenv("DYNAMODB_TABLE_NAME"),
-		os.Getenv("DYNAMODB_TABLE_PK"),
-		os.Getenv("DYNAMODB_TABLE_SK"),
-		logger)
-	if err != nil {
-		logger.Errorf("error setting up database: %v", err)
+		log.Printf("error listening on port %d: %v", *port, err)
 
 		os.Exit(1)
 	}
 
 	printEnv(*port)
-
-	lis, lerr := net.Listen("tcp", fmt.Sprintf(":%d", *port))
-
-	if lerr != nil {
-		log.Fatalf("error listening on port %d", *port)
-	}
 
 	opts := []grpc.ServerOption{}
 

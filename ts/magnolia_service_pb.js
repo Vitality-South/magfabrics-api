@@ -567,7 +567,7 @@ proto.magnoliafabrics.GetAllFabricsResponse.prototype.toObject = function(opt_in
  */
 proto.magnoliafabrics.GetAllFabricsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
+fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
     api_fabric_pb.Fabric.toObject, includeInstance)
   };
 
@@ -828,7 +828,7 @@ proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.prototype.toObject =
  */
 proto.magnoliafabrics.GetAllFabricsWithoutInventoryResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
+fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
     api_fabric_pb.Fabric.toObject, includeInstance)
   };
 
@@ -1089,7 +1089,7 @@ proto.magnoliafabrics.GetAllInventoryResponse.prototype.toObject = function(opt_
  */
 proto.magnoliafabrics.GetAllInventoryResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    inventoryList: jspb.Message.toObjectList(msg.getInventoryList(),
+inventoryList: jspb.Message.toObjectList(msg.getInventoryList(),
     api_inventory_pb.Inventory.toObject, includeInstance)
   };
 
@@ -1242,7 +1242,7 @@ proto.magnoliafabrics.GetFabricByIDRequest.prototype.toObject = function(opt_inc
  */
 proto.magnoliafabrics.GetFabricByIDRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricId: jspb.Message.getFieldWithDefault(msg, 1, "")
+fabricId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -1372,7 +1372,7 @@ proto.magnoliafabrics.GetFabricByIDResponse.prototype.toObject = function(opt_in
  */
 proto.magnoliafabrics.GetFabricByIDResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
+fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1523,7 +1523,7 @@ proto.magnoliafabrics.GetFabricByNameRequest.prototype.toObject = function(opt_i
  */
 proto.magnoliafabrics.GetFabricByNameRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricName: jspb.Message.getFieldWithDefault(msg, 1, "")
+fabricName: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -1653,7 +1653,7 @@ proto.magnoliafabrics.GetFabricByNameResponse.prototype.toObject = function(opt_
  */
 proto.magnoliafabrics.GetFabricByNameResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
+fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1905,7 +1905,7 @@ proto.magnoliafabrics.GetAllFabricTaxonomyResponse.prototype.toObject = function
  */
 proto.magnoliafabrics.GetAllFabricTaxonomyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    taxonomy: (f = msg.getTaxonomy()) && api_taxonomy_pb.Taxonomy.toObject(includeInstance, f)
+taxonomy: (f = msg.getTaxonomy()) && api_taxonomy_pb.Taxonomy.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2157,7 +2157,7 @@ proto.magnoliafabrics.GetCleaningCodesResponse.prototype.toObject = function(opt
  */
 proto.magnoliafabrics.GetCleaningCodesResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    cleaningCodesMap: (f = msg.getCleaningCodesMap()) ? f.toObject(includeInstance, proto.magnoliafabrics.CleaningCode.toObject) : []
+cleaningCodesMap: (f = msg.getCleaningCodesMap()) ? f.toObject(includeInstance, proto.magnoliafabrics.CleaningCode.toObject) : []
   };
 
   if (includeInstance) {
@@ -2291,7 +2291,7 @@ proto.magnoliafabrics.GetFabricBySKURequest.prototype.toObject = function(opt_in
  */
 proto.magnoliafabrics.GetFabricBySKURequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricSku: jspb.Message.getFieldWithDefault(msg, 1, "")
+fabricSku: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -2421,7 +2421,7 @@ proto.magnoliafabrics.GetFabricBySKUResponse.prototype.toObject = function(opt_i
  */
 proto.magnoliafabrics.GetFabricBySKUResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
+fabric: (f = msg.getFabric()) && api_fabric_pb.Fabric.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2680,7 +2680,7 @@ proto.magnoliafabrics.GetDiscontinuedFabricsResponse.prototype.toObject = functi
  */
 proto.magnoliafabrics.GetDiscontinuedFabricsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
+fabricsList: jspb.Message.toObjectList(msg.getFabricsList(),
     api_discontinued_fabric_pb.DiscontinuedFabric.toObject, includeInstance)
   };
 

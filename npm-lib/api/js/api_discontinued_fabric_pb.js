@@ -75,8 +75,8 @@ proto.magnoliafabrics.DiscontinuedFabric.prototype.toObject = function(opt_inclu
  */
 proto.magnoliafabrics.DiscontinuedFabric.toObject = function(includeInstance, msg) {
   var f, obj = {
-    sku: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    productCode: jspb.Message.getFieldWithDefault(msg, 2, "")
+sku: jspb.Message.getFieldWithDefault(msg, 1, ""),
+productCode: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {

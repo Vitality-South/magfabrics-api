@@ -1,0 +1,18 @@
+cwlog[Unit]
+Description=MagFabrics Public API Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/magfabricsapi/bin/server
+Restart=always
+User=magfabricsapi
+Group=magfabricsapi
+WorkingDirectory=/home/magfabricsapi/workingdir/server
+EnvironmentFile=/home/magfabricsapi/etc/env
+EnvironmentFile=/home/magfabricsapi/etc/awskeys
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

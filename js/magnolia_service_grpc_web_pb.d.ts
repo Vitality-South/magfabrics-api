@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as magnolia_service_pb from './magnolia_service_pb';
+import * as magnolia_service_pb from './magnolia_service_pb'; // proto import: "magnolia_service.proto"
 
 
 export class MagnoliaFabricsServiceClient {

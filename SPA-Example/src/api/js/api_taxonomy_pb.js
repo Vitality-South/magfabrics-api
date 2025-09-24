@@ -82,11 +82,11 @@ proto.magnoliafabrics.Taxonomy.prototype.toObject = function(opt_includeInstance
  */
 proto.magnoliafabrics.Taxonomy.toObject = function(includeInstance, msg) {
   var f, obj = {
-    brandsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    usesList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
-    colorsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    designsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    categoriesList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
+brandsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
+usesList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
+colorsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
+designsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+categoriesList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {

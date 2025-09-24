@@ -1,72 +1,93 @@
-///
-//  Generated code. Do not modify.
-//  source: api_discontinued_fabric.proto
+// This is a generated file - do not edit.
 //
-// @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,constant_identifier_names,directives_ordering,library_prefixes,non_constant_identifier_names,prefer_final_fields,return_of_invalid_type,unnecessary_const,unnecessary_import,unnecessary_this,unused_import,unused_shown_name
+// Generated from api_discontinued_fabric.proto.
+
+// @dart = 3.3
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class DiscontinuedFabric extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DiscontinuedFabric', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'magnoliafabrics'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sku')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'productCode')
-    ..hasRequiredFields = false
-  ;
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
-  DiscontinuedFabric._() : super();
+class DiscontinuedFabric extends $pb.GeneratedMessage {
   factory DiscontinuedFabric({
     $core.String? sku,
     $core.String? productCode,
   }) {
-    final _result = create();
-    if (sku != null) {
-      _result.sku = sku;
-    }
-    if (productCode != null) {
-      _result.productCode = productCode;
-    }
-    return _result;
+    final result = create();
+    if (sku != null) result.sku = sku;
+    if (productCode != null) result.productCode = productCode;
+    return result;
   }
-  factory DiscontinuedFabric.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DiscontinuedFabric.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+
+  DiscontinuedFabric._();
+
+  factory DiscontinuedFabric.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory DiscontinuedFabric.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DiscontinuedFabric',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'magnoliafabrics'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sku')
+    ..aOS(2, _omitFieldNames ? '' : 'productCode')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   DiscontinuedFabric clone() => DiscontinuedFabric()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  DiscontinuedFabric copyWith(void Function(DiscontinuedFabric) updates) => super.copyWith((message) => updates(message as DiscontinuedFabric)) as DiscontinuedFabric; // ignore: deprecated_member_use
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  DiscontinuedFabric copyWith(void Function(DiscontinuedFabric) updates) =>
+      super.copyWith((message) => updates(message as DiscontinuedFabric))
+          as DiscontinuedFabric;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DiscontinuedFabric create() => DiscontinuedFabric._();
+  @$core.override
   DiscontinuedFabric createEmptyInstance() => create();
-  static $pb.PbList<DiscontinuedFabric> createRepeated() => $pb.PbList<DiscontinuedFabric>();
+  static $pb.PbList<DiscontinuedFabric> createRepeated() =>
+      $pb.PbList<DiscontinuedFabric>();
   @$core.pragma('dart2js:noInline')
-  static DiscontinuedFabric getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DiscontinuedFabric>(create);
+  static DiscontinuedFabric getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DiscontinuedFabric>(create);
   static DiscontinuedFabric? _defaultInstance;
 
+  /// @gotags: dynamo:"DiscontinuedFabricSKU"
   @$pb.TagNumber(1)
   $core.String get sku => $_getSZ(0);
   @$pb.TagNumber(1)
-  set sku($core.String v) { $_setString(0, v); }
+  set sku($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSku() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSku() => clearField(1);
+  void clearSku() => $_clearField(1);
 
+  /// @gotags: dynamo:"DiscontinuedFabricProductCode"
   @$pb.TagNumber(2)
   $core.String get productCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set productCode($core.String v) { $_setString(1, v); }
+  set productCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
   $core.bool hasProductCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearProductCode() => clearField(2);
+  void clearProductCode() => $_clearField(2);
 }
 
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,0 +1,1 @@
+magfabricsapi ALL=(ALL) NOPASSWD: /usr/local/bin/restart-magfabricsapi-server

@@ -1,10 +1,10 @@
 import * as jspb from 'google-protobuf'
 
-import * as api_inventory_pb from './api_inventory_pb';
-import * as api_fabric_pb from './api_fabric_pb';
-import * as api_taxonomy_pb from './api_taxonomy_pb';
-import * as cleaning_code_pb from './cleaning_code_pb';
-import * as api_discontinued_fabric_pb from './api_discontinued_fabric_pb';
+import * as api_inventory_pb from './api_inventory_pb'; // proto import: "api_inventory.proto"
+import * as api_fabric_pb from './api_fabric_pb'; // proto import: "api_fabric.proto"
+import * as api_taxonomy_pb from './api_taxonomy_pb'; // proto import: "api_taxonomy.proto"
+import * as cleaning_code_pb from './cleaning_code_pb'; // proto import: "cleaning_code.proto"
+import * as api_discontinued_fabric_pb from './api_discontinued_fabric_pb'; // proto import: "api_discontinued_fabric.proto"
 
 
 export class GetAllFabricsRequest extends jspb.Message {
