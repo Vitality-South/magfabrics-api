@@ -38,7 +38,7 @@ go build -ldflags="-s -w" -o "${APP}"
 /usr/bin/install -m 750 -o "${USER}" -g "${GROUP}" "${APP}" "/home/${USER}/bin/${APP}"
 
 # restart the service
-/usr/local/bin/restart-${USER}-${APP}
+/usr/bin/sudo /usr/local/bin/restart-${USER}-${APP}
 
 echo "${APP} restarted successfully."
 exit 0
