@@ -25,8 +25,20 @@ ENVFILE="env"
 rm -f "${APP}"
 go build -ldflags="-s -w" -o "${APP}"
 
-# deploy and restart the service
-sudo /usr/local/bin/deploy-${USER}-${APP}
+# setup server environment
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/etc"
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/bin"
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/workingdir"
+/usr/bin/install -d -m 750 -o "${USER}" -g "${GROUP}" "/home/${USER}/workingdir/${APP}"
 
-echo "${APP} deployed successfully."
+# install configs
+/usr/bin/install -m 640 -o "${USER}" -g "${GROUP}" "${ENVFILE}" "/home/${USER}/etc/env"
+
+# install the binary
+/usr/bin/install -m 750 -o "${USER}" -g "${GROUP}" "${APP}" "/home/${USER}/bin/${APP}"
+
+# restart the service
+/usr/local/bin/restart-${USER}-${APP}
+
+echo "${APP} restarted successfully."
 exit 0
