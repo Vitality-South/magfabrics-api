@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# -e: Exit immediately if any command exits with a non-zero status.
+# -u: Treat unset variables as an error and exit.
+# -o pipefail: If any command in a pipeline fails, the entire pipeline fails
+set -euo pipefail
+
+# safer IFS for word splitting
+IFS=$'\n\t'
+
+# set safe PATH
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# limit default file permissions
+umask 0027
+
+# load env vars
+# (must be "KEY=VALUE" lines, no spaces)
+if [ -f /home/magfabricsapi/.env ]; then
+  set -a
+  . /home/magfabricsapi/etc/export-email-env
+  set +a
+fi
+
+exec /home/magfabricsapi/bin/daily-export-email
