@@ -16,10 +16,8 @@ umask 0027
 
 # load env vars
 # (must be "KEY=VALUE" lines, no spaces)
-if [ -f /home/magfabricsapi/.env ]; then
-  set -a
-  . /home/magfabricsapi/etc/export-email-env
-  set +a
-fi
+set -a
+. /home/magfabricsapi/etc/export-email-env
+set +a
 
 exec /home/magfabricsapi/bin/daily-export-email
